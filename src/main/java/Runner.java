@@ -6,14 +6,15 @@ import java.time.LocalTime;
 public class Runner {
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
-        String definitionFile = "src/definitionFiles/hard_0.ttp";
+        String definitionFile = "src/main/definitionFiles/hard_0.ttp";
         ConfigurationProvider configProvider = new ConfigurationProvider();
         configProvider.readFile(definitionFile);
 
-        Evolution population = new Evolution(100, 300, 6, 0.5f, 0.02f);
+        Evolution populationWithoutClones = new Evolution(100, 300, 6, 0.5f, 0.02f, true);
 //        Multiobjective_Tabu_Search mots = new Multiobjective_Tabu_Search(4, 250, 25, 1000);
-
+        Evolution population = new Evolution(100, 300, 6, 0.5f, 0.02f, false);
         searchForPareto(population);
+        searchForPareto(populationWithoutClones);
 //        searchForPareto(mots);
         countTimeUpHere(start);
     }

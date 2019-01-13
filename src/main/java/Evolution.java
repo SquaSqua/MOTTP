@@ -3,12 +3,18 @@ import java.util.Random;
 
 class Evolution implements IMetaheuristics {
 
+    private static int attemptsToAvoidClones = 3;
+
+    public static int howManyClones = 0;
+    public static int howManyClonesHopeless = 0;
+
     private int dimension;
     private int popSize;
     private int numOfGeners;
     private float crossProb;
     private float mutProb;
     private int tournamentSize;
+    private boolean avoidClones;
 
     private ArrayList<Individual> population = new ArrayList<>();
 
@@ -19,12 +25,13 @@ class Evolution implements IMetaheuristics {
     private StringBuilder sBMiddlePopFront = new StringBuilder(middlePopFront);
     private StringBuilder sBLastPopFront = new StringBuilder(lastPopFront);
 
-    Evolution(int popSize, int numOfGeners, int tournamentSize, float crossProb, float mutProb) {
+    Evolution(int popSize, int numOfGeners, int tournamentSize, float crossProb, float mutProb, boolean avoidClones) {
         this.popSize = popSize;
         this.numOfGeners = numOfGeners;
         this.tournamentSize = tournamentSize;
         this.crossProb = crossProb;
         this.mutProb = mutProb;
+        this.avoidClones = avoidClones;
 
         dimension = Configuration.getDimension();
     }
@@ -70,13 +77,40 @@ class Evolution implements IMetaheuristics {
     private ArrayList<Individual_NSGA_II> generateOffspring(int generation) {
         ArrayList<Individual_NSGA_II> offspring = new ArrayList<>();
         while (offspring.size() < popSize) {
-            Individual_NSGA_II[] children = matingPool(generation);
+            Individual_NSGA_II[] children;
+            if(avoidClones) {
+                children = wardOffClones(generation);
+            }
+            else {
+                children = matingPool(generation);
+            }
             offspring.add(children[0]);
             if (offspring.size() < popSize) {
                 offspring.add(children[1]);
             }
         }
         return offspring;
+    }
+
+    private Individual_NSGA_II[] wardOffClones(int generation) {
+        Individual_NSGA_II[] children = matingPool(generation);
+        for (int i = 0; i < children.length; i++) {
+            int attemptsLeft = attemptsToAvoidClones;
+            while (attemptsLeft > 0) {
+                if (population.contains(children[i])) {
+                    children[i].mutate(1);//przeszukaj lokalnie przestrzeń dookoła
+                    attemptsLeft--;
+                    howManyClones++;
+                } else {
+                    break;
+                }
+            }
+            if(population.contains(children[i])) {
+                howManyClonesHopeless++;
+                children[i] = wardOffClones(generation)[i];
+            }
+        }
+        return children;
     }
 
     //at this point population is already filled out with rank and crowding distance
@@ -133,6 +167,10 @@ class Evolution implements IMetaheuristics {
                 .append(ParetoFrontsGenerator.PFS_measure(pareto)).append(", ")
                 .append(ParetoFrontsGenerator.HV_measure(pareto));
         sBMeasures.append("\n");
+        if(avoidClones){
+            System.out.println("Klonów:" + howManyClones);
+            System.out.println("Klonów powyżej 3 prób:" + howManyClonesHopeless);
+        }
     }
 
 //    private void appendPopulationToStringBuilder(StringBuilder sB) {

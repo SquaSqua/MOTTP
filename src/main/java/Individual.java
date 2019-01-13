@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 abstract class Individual {
@@ -90,6 +91,11 @@ abstract class Individual {
 
     void setRank(int rank) {
         this.rank = rank;
+    }
+
+    boolean equals(Individual individual) {
+        System.out.println("Użyto mnie");
+        return Arrays.equals(route, individual.route);
     }
 
 }
