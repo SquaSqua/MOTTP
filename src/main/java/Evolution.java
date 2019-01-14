@@ -3,10 +3,10 @@ import java.util.Random;
 
 class Evolution implements IMetaheuristics {
 
-    private static int attemptsToAvoidClones = 3;
+    private static final int attemptsToAvoidClones = 3;
 
-    public static int howManyClones = 0;
-    public static int howManyClonesHopeless = 0;
+    private static int howManyClones = 0;
+    private static int howManyClonesHopeless = 0;
 
     private int dimension;
     private int popSize;
@@ -17,6 +17,7 @@ class Evolution implements IMetaheuristics {
     private boolean avoidClones;
 
     private ArrayList<Individual> population = new ArrayList<>();
+    private ArrayList<Individual> archive = new ArrayList<>();
 
     private String measures = "", firstPopFront = "\nFirst population front\n",
             middlePopFront = "\nMiddle population front\n", lastPopFront = "\nLast population front\n";
@@ -50,7 +51,7 @@ class Evolution implements IMetaheuristics {
             population = chooseNextGeneration(paretoFronts);
             if(generation == 1) {
 //                appendPopulationToStringBuilder(sBFirstPopFront);
-                appendParetoFrontToStringBuilder(sBFirstPopFront);
+                appendParetoFrontToStringBuilder(sBFirstPopFront, population);
                 statistics(paretoFronts);
             }
         }
@@ -59,7 +60,8 @@ class Evolution implements IMetaheuristics {
         sBMeasures.append(Configuration.getNadir().x).append(", ").append(Configuration.getNadir().y).append("\n");
         sBMeasures.append(Configuration.getIdeal().x).append(", ").append(Configuration.getIdeal().y).append("\n");
 //        appendPopulationToStringBuilder(sBLastPopFront);
-        appendParetoFrontToStringBuilder(sBLastPopFront);
+        appendParetoFrontToStringBuilder(sBLastPopFront, population);
+        appendParetoFrontToStringBuilder(sBLastPopFront, archive);
         sBMiddlePopFront.append(sBLastPopFront);
         sBFirstPopFront.append(sBMiddlePopFront);
         sBMeasures.append(sBFirstPopFront);
@@ -145,6 +147,7 @@ class Evolution implements IMetaheuristics {
     private ArrayList<Individual> chooseNextGeneration(ArrayList<ArrayList<Individual>> pareto) {
         ArrayList<ArrayList<Individual>> temporaryPareto = new ArrayList<>(pareto);
         ArrayList<Individual> nextGeneration = new ArrayList<>();
+        updateArchive(pareto.get(0));
         while (nextGeneration.size() < popSize) {
             if (temporaryPareto.get(0).size() <= popSize - nextGeneration.size()) {
                 nextGeneration.addAll(temporaryPareto.get(0));
@@ -160,6 +163,15 @@ class Evolution implements IMetaheuristics {
             }
         }
         return nextGeneration;
+    }
+
+    private void updateArchive(ArrayList<Individual> youngPareto) {
+        for(Individual individual : youngPareto) {
+            if(!archive.contains(individual)) {
+                archive.add(individual);
+            }
+        }
+        archive = ParetoFrontsGenerator.generateFrontsWithAssignments(archive).get(0);
     }
 
     private void statistics(ArrayList<ArrayList<Individual>> pareto) {
@@ -187,9 +199,9 @@ class Evolution implements IMetaheuristics {
 //        }
 //    }
 
-    private void appendParetoFrontToStringBuilder(StringBuilder sB) {
+    private void appendParetoFrontToStringBuilder(StringBuilder sB, ArrayList<Individual> groupOfIndividuals) {
         sB.append("Czas podrozy").append(", ").append("Zarobek").append(", ").append("Stworzony w generacji\n");
-        for (Individual i : population) {
+        for (Individual i : groupOfIndividuals) {
             if (i.getRank() == 0) {
                 sB.append(i.getFitnessTime()).append(", ").append(i.getFitnessWage()).append(", ").append(i.getBirthday());
 //                    .append(Arrays.toString(i.getRoute())).append(", ").append(Arrays.toString(i.getPackingPlan()));

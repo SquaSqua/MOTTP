@@ -6,7 +6,7 @@ import java.time.LocalTime;
 public class Runner {
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
-        String definitionFile = "src/main/definitionFiles/hard_0.ttp";
+        String definitionFile = "src/main/resources/definitionFiles/hard_0.ttp";
         ConfigurationProvider configProvider = new ConfigurationProvider();
         configProvider.readFile(definitionFile);
 
