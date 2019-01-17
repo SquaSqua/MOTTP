@@ -1,71 +1,79 @@
 public class Configuration {
 
-    private static int dimension;
-    private static int capacity;
-    private static double minSpeed;
-    private static double maxSpeed;
-    private static double rentingRatio;
+    private int popSize;
+    private int numOfGeners;
+    private float crossProb;
+    private float mutProb;
+    private Integer tournamentSize;
+    private boolean avoidClones;
+    private Mutation mutation;
+    private CrossingOver crossingOver;
+    private Selection selection;
+    private PackingPlanSetter packingPlanSetter;
 
-    private static double[][] distances;
-    private static int[][] items;
-    private static Point ideal, nadir;
 
-//    getters
-    public static int getCapacity() {
-        return capacity;
+    //getters
+    int getPopSize() {
+        return popSize;
     }
-    public static int getDimension() {
-        return dimension;
+    int getNumOfGeners() {
+        return numOfGeners;
     }
-    public static int[][] getItems() {
-        return items;
+    float getCrossProb() {
+        return crossProb;
     }
-
-    static double getMinSpeed() {
-        return minSpeed;
+    float getMutProb() {
+        return mutProb;
     }
-    static double getMaxSpeed() {
-        return maxSpeed;
+    Integer getTournamentSize() {
+        return tournamentSize;
     }
-
-    static double[][] getDistances() {
-        return distances;
+    boolean isAvoidClones() {
+        return avoidClones;
     }
-
-    static Point getIdeal() {
-        return ideal;
+    Mutation getMutationType() {
+        return mutation;
     }
-    static Point getNadir() {
-        return nadir;
+    CrossingOver getCrossingOver() {
+        return crossingOver;
     }
-
+    Selection getSelection() {
+        return selection;
+    }
+    PackingPlanSetter getPackingPlanSetter() {
+        return packingPlanSetter;
+    }
 
     //setters
-    public static void setDimension(int dimension) { Configuration.dimension = dimension; }
-    public static void setCapacity(int capacity) {
-        Configuration.capacity = capacity;
-    }
-    public static void setItems(int[][] items) {
-        Configuration.items = items;
-    }
 
-    static void setMinSpeed(double minSpeed) {
-        Configuration.minSpeed = minSpeed;
+    public void setPopSize(int popSize) {
+        this.popSize = popSize;
     }
-    static void setMaxSpeed(double maxSpeed) {
-        Configuration.maxSpeed = maxSpeed;
+    public void setNumOfGeners(int numOfGeners) {
+        this.numOfGeners = numOfGeners;
     }
-    static void setRentingRatio(double rentingRatio) {
-        Configuration.rentingRatio = rentingRatio;
+    public void setCrossProb(float crossProb) {
+        this.crossProb = crossProb;
     }
-    static void setDistances(double[][] distances) {
-        Configuration.distances = distances;
+    public void setMutProb(float mutProb) {
+        this.mutProb = mutProb;
     }
-    static void setIdeal(Point ideal) {
-        Configuration.ideal = ideal;
+    public void setTournamentSize(Integer tournamentSize) {
+        this.tournamentSize = tournamentSize;
     }
-    static void setNadir(Point nadir) {
-        Configuration.nadir = nadir;
+    public void setAvoidClones(boolean avoidClones) {
+        this.avoidClones = avoidClones;
     }
-
+    public void setMutation(Mutation mutation) {
+        this.mutation = mutation;
+    }
+    public void setCrossingOver(CrossingOver crossingOver) {
+        this.crossingOver = crossingOver;
+    }
+    public void setSelection(Selection selection) {
+        this.selection = selection;
+    }
+    public void setPackingPlanSetter(PackingPlanSetter packingPlanSetter) {
+        this.packingPlanSetter = packingPlanSetter;
+    }
 }

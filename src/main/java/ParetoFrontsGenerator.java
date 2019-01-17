@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 class ParetoFrontsGenerator {
 
-    private static Point ideal = Configuration.getIdeal();
-    private static Point nadir = Configuration.getNadir();
+    private static Point ideal = DataFromFile.getIdeal();
+    private static Point nadir = DataFromFile.getNadir();
 
 
     //each calling overrides last set paretoFronts

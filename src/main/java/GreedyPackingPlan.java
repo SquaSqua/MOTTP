@@ -3,13 +3,13 @@ import java.util.ArrayList;
 class GreedyPackingPlan {
 
 
-    private static double maxSpeed = Configuration.getMaxSpeed();
-    private static int capacity = Configuration.getCapacity();
-    private static int dimension = Configuration.getDimension();
-    private static double[][] distances = Configuration.getDistances();
-    private static int[][] items = Configuration.getItems();
+    private static double maxSpeed = DataFromFile.getMaxSpeed();
+    private static int capacity = DataFromFile.getCapacity();
+    private static int dimension = DataFromFile.getDimension();
+    private static double[][] distances = DataFromFile.getDistances();
+    private static int[][] items = DataFromFile.getItems();
     private static Integer[][] groupedItems = createGroupedItemsArray();
-    private static double coefficient = (maxSpeed - Configuration.getMinSpeed()) / capacity;
+    private static double coefficient = (maxSpeed - DataFromFile.getMinSpeed()) / capacity;
 
     private static double countTime(short[] route, int startIndex, double currentSpeed) {
         int endIndex = route.length - 1;
@@ -62,10 +62,10 @@ class GreedyPackingPlan {
         ArrayList<double[]> gainOfItems = new ArrayList<>();
         for(int i = 0; i < items.length; i++) {
             int[] currentRow = items[i];
-            gainOfItems.add(new double[] {i, currentRow[ConfigurationProvider.PROFIT_FROM_ITEM] /
-                    (currentRow[ConfigurationProvider.WEIGHT_OF_ITEM]
-                            * countTime(route, currentRow[ConfigurationProvider.CITY_OF_ITEM],
-                            countSpeed(currentRow[ConfigurationProvider.WEIGHT_OF_ITEM])))});
+            gainOfItems.add(new double[] {i, currentRow[DataProvider.PROFIT_FROM_ITEM] /
+                    (currentRow[DataProvider.WEIGHT_OF_ITEM]
+                            * countTime(route, currentRow[DataProvider.CITY_OF_ITEM],
+                            countSpeed(currentRow[DataProvider.WEIGHT_OF_ITEM])))});
         }
         gainOfItems.sort((double[] o1, double[] o2) ->
                 o2[1] - o1[1] < 0 ? -1 : o2[1] > 0 ? 1 : 0);
@@ -83,7 +83,7 @@ class GreedyPackingPlan {
         int totalWage = 0;
         for(int i = 0; i < packingPlan.length; i++) {
             if(packingPlan[i]) {
-                totalWage += items[i][ConfigurationProvider.PROFIT_FROM_ITEM];
+                totalWage += items[i][DataProvider.PROFIT_FROM_ITEM];
             }
         }
         individual.setFitnessWage(totalWage);
@@ -98,7 +98,7 @@ class GreedyPackingPlan {
             Integer[] currentCity = groupedItems[currentPosition];
             for (Integer item : currentCity) {
                 if (packingPlan[item]) {//taken
-                    weight += items[item][ConfigurationProvider.WEIGHT_OF_ITEM];
+                    weight += items[item][DataProvider.WEIGHT_OF_ITEM];
                 }
             }
             time += countTime(route, currentPosition, ++currentPosition, countSpeed(weight));
@@ -113,7 +113,7 @@ class GreedyPackingPlan {
             groupedItemsList[i] = new ArrayList<>();
         }
         for (int[] item : items) {
-            groupedItemsList[item[ConfigurationProvider.CITY_OF_ITEM] - 1].add(item[ConfigurationProvider.INDEX_OF_ITEM] - 1);
+            groupedItemsList[item[DataProvider.CITY_OF_ITEM] - 1].add(item[DataProvider.INDEX_OF_ITEM] - 1);
         }
         for(int i = 0; i < dimension; i++) {
             groupedItems[i] = new Integer[groupedItemsList[i].size()];

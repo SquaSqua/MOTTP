@@ -26,7 +26,7 @@ class Multiobjective_Tabu_Search implements IMetaheuristics {
         this.numberOfGeners = numberOfGeners;
         this.neighbourhoodSize = neighbourhoodSize;
         Multiobjective_Tabu_Search.tabuSize = tabuSize;
-        dimension = Configuration.getDimension();
+        dimension = DataFromFile.getDimension();
         rangeNormalization();
         pi = countPi();
     }
@@ -101,10 +101,10 @@ class Multiobjective_Tabu_Search implements IMetaheuristics {
     }
 
     private void rangeNormalization() {
-        distanceNormalizingFactor_Time[MIN_FROM_RANGE] = Configuration.getIdeal().y;
-        distanceNormalizingFactor_Time[MAX_FROM_RANGE] = Configuration.getNadir().y;
-        distanceNormalizingFactor_Wage[MIN_FROM_RANGE] = Configuration.getNadir().x;
-        distanceNormalizingFactor_Wage[MAX_FROM_RANGE] = Configuration.getIdeal().x;
+        distanceNormalizingFactor_Time[MIN_FROM_RANGE] = DataFromFile.getIdeal().y;
+        distanceNormalizingFactor_Time[MAX_FROM_RANGE] = DataFromFile.getNadir().y;
+        distanceNormalizingFactor_Wage[MIN_FROM_RANGE] = DataFromFile.getNadir().x;
+        distanceNormalizingFactor_Wage[MAX_FROM_RANGE] = DataFromFile.getIdeal().x;
     }
 
     private double weight(Individual ind_i, Individual ind_j) {

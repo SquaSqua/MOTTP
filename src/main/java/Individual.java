@@ -43,52 +43,43 @@ abstract class Individual {
     short[] getRoute() {
         return route;
     }
-
     boolean[] getPackingPlan() {
         return packingPlan;
     }
-
     double getFitnessTime() {
         return fitnessTime;
     }
-
     int getFitnessWage() {
         return fitnessWage;
     }
-
     int getBirthday() { return birthday; }
-
     double getCrowdingDistance() {
         return crowdingDistance;
     }
-
     int getRank() {
         return rank;
     }
 
-
     //setters
+    public void setRoute(short[] route) {
+        this.route = route;
+    }
     void setPackingPlan(boolean[] packingPlan) {
         this.packingPlan = packingPlan;
     }
-
     void setPackingPlanAndFitness() {
         GreedyPackingPlan.settlePackingPlan(this);
         GreedyPackingPlan.setFitnessForIndividual(this);
     }
-
     void setFitnessTime(double fitnessTime) {
         this.fitnessTime = fitnessTime;
     }
-
     void setFitnessWage(int fitnessWage) {
         this.fitnessWage = fitnessWage;
     }
-
     void setCrowdingDistance(double crowdingDistance) {
         this.crowdingDistance = crowdingDistance;
     }
-
     void setRank(int rank) {
         this.rank = rank;
     }

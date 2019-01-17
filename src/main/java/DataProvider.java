@@ -5,7 +5,7 @@ import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-class ConfigurationProvider {
+class DataProvider {
 
     private static final char NUMBER_OF_INFO_PER_CITY = 3;
     private static final char COORDINATE_X_OF_CITY = 1;
@@ -29,12 +29,12 @@ class ConfigurationProvider {
             reader.readLine();//PROBLEM NAME
             reader.readLine();//KNAPSACK DATA TYPE
             dimension = (int)getNumber(reader.readLine());
-            Configuration.setDimension(dimension);
+            DataFromFile.setDimension(dimension);
             numOfItems = (int)getNumber(reader.readLine());
-            Configuration.setCapacity((int)getNumber(reader.readLine()));
-            Configuration.setMinSpeed(getNumber(reader.readLine()));
-            Configuration.setMaxSpeed(getNumber(reader.readLine()));
-            Configuration.setRentingRatio(getNumber(reader.readLine()));
+            DataFromFile.setCapacity((int)getNumber(reader.readLine()));
+            DataFromFile.setMinSpeed(getNumber(reader.readLine()));
+            DataFromFile.setMaxSpeed(getNumber(reader.readLine()));
+            DataFromFile.setRentingRatio(getNumber(reader.readLine()));
             reader.readLine();//EDGE_WEIGHT_TYPE
             reader.readLine();//NODE_COORD_SECTION...
             cities = new double[dimension][NUMBER_OF_INFO_PER_CITY];
@@ -45,7 +45,7 @@ class ConfigurationProvider {
                 }
             }
             distances = createDistancesArray(dimension, cities);
-            Configuration.setDistances(distances);
+            DataFromFile.setDistances(distances);
             reader.readLine();
             items = new int[numOfItems][NUMBER_OF_INFO_PER_ITEM];
             for (int i = 0; i < numOfItems; i++) {//filling out items array
@@ -54,9 +54,9 @@ class ConfigurationProvider {
                     items[i][j] = Integer.parseInt(st.nextToken());
                 }
             }
-            Configuration.setItems(items);
-            Configuration.setIdeal(countPoint(true, distances, dimension, items));
-            Configuration.setNadir(countPoint(false, distances, dimension, items));
+            DataFromFile.setItems(items);
+            DataFromFile.setIdeal(countPoint(true, distances, dimension, items));
+            DataFromFile.setNadir(countPoint(false, distances, dimension, items));
         } catch (FileNotFoundException fnfe) {
             System.out.println("A file doesn't exist or is in use now!");
         } catch (Exception e) {

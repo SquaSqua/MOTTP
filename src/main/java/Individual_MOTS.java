@@ -18,8 +18,8 @@ public class Individual_MOTS extends Individual {
 
     void mutate() {
         Random r = new Random();
-        int indexFrom = r.nextInt(Configuration.getDimension());
-        int indexTo = r.nextInt(Configuration.getDimension());
+        int indexFrom = r.nextInt(DataFromFile.getDimension());
+        int indexTo = r.nextInt(DataFromFile.getDimension());
         short temp = route[indexFrom];
         route[indexFrom] = route[indexTo];
         route[indexTo] = temp;
