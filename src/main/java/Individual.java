@@ -93,9 +93,21 @@ abstract class Individual {
         this.rank = rank;
     }
 
-    boolean equals(Individual individual) {
-        System.out.println("Użyto mnie");
-        return Arrays.equals(route, individual.route);
+//    na genotyp
+    public boolean equals(Object individual) {
+        if(individual instanceof Individual_NSGA_II) {
+            Individual_NSGA_II ind = (Individual_NSGA_II) individual;
+            return Arrays.equals(route, ind.route);
+        }
+        return false;
     }
 
+//    //na fenotyp
+//    public boolean equals(Object individual) {
+//        if(individual instanceof Individual_NSGA_II) {
+//            Individual_NSGA_II ind = (Individual_NSGA_II) individual;
+//            return fitnessTime == ind.getFitnessTime() && fitnessWage == ind.getFitnessWage();
+//        }
+//        return false;
+//    }
 }

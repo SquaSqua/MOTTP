@@ -52,16 +52,16 @@ class Evolution implements IMetaheuristics {
             if(generation == 1) {
 //                appendPopulationToStringBuilder(sBFirstPopFront);
                 appendParetoFrontToStringBuilder(sBFirstPopFront, population);
-                statistics(paretoFronts);
+                statistics(paretoFronts, generation);
             }
         }
         paretoFronts = ParetoFrontsGenerator.generateFrontsWithAssignments(population);
-        statistics(paretoFronts);
-        sBMeasures.append(Configuration.getNadir().x).append(", ").append(Configuration.getNadir().y).append("\n");
-        sBMeasures.append(Configuration.getIdeal().x).append(", ").append(Configuration.getIdeal().y).append("\n");
+        statistics(paretoFronts, numOfGeners);
+        sBMeasures.append("Nadir:,").append(Configuration.getNadir().x).append(", ").append(Configuration.getNadir().y).append("\n");
+        sBMeasures.append("Ideal:,").append(Configuration.getIdeal().x).append(", ").append(Configuration.getIdeal().y).append("\n");
 //        appendPopulationToStringBuilder(sBLastPopFront);
         appendParetoFrontToStringBuilder(sBLastPopFront, population);
-        appendParetoFrontToStringBuilder(sBLastPopFront, archive);
+//        appendParetoFrontToStringBuilder(sBLastPopFront, archive);
         sBMiddlePopFront.append(sBLastPopFront);
         sBFirstPopFront.append(sBMiddlePopFront);
         sBMeasures.append(sBFirstPopFront);
@@ -174,12 +174,13 @@ class Evolution implements IMetaheuristics {
         archive = ParetoFrontsGenerator.generateFrontsWithAssignments(archive).get(0);
     }
 
-    private void statistics(ArrayList<ArrayList<Individual>> pareto) {
+    private void statistics(ArrayList<ArrayList<Individual>> pareto, int generation) {
+        sBMeasures.append("Generacja ").append(generation).append("\n");
         sBMeasures.append(ParetoFrontsGenerator.ED_measure(pareto)).append(", ")
                 .append(ParetoFrontsGenerator.PFS_measure(pareto)).append(", ")
                 .append(ParetoFrontsGenerator.HV_measure(pareto));
         sBMeasures.append("\n");
-        if(avoidClones){
+        if(avoidClones && generation != 1){
             System.out.println("Klonów:" + howManyClones);
             System.out.println("Klonów powyżej 3 prób:" + howManyClonesHopeless);
         }

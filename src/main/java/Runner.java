@@ -10,10 +10,10 @@ public class Runner {
         ConfigurationProvider configProvider = new ConfigurationProvider();
         configProvider.readFile(definitionFile);
 
-        Evolution populationWithoutClones = new Evolution(100, 300, 6, 0.5f, 0.02f, true);
+        Evolution populationWithoutClones = new Evolution(1000, 300, 6, 0.5f, 0.02f, true);
 //        Multiobjective_Tabu_Search mots = new Multiobjective_Tabu_Search(4, 250, 25, 1000);
-        Evolution population = new Evolution(100, 300, 6, 0.5f, 0.02f, false);
-        searchForPareto(population);
+//        Evolution population = new Evolution(100, 300, 6, 0.5f, 0.02f, false);
+//        searchForPareto(population);
         searchForPareto(populationWithoutClones);
 //        searchForPareto(mots);
         countTimeUpHere(start);
