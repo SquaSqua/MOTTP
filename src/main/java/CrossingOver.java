@@ -2,6 +2,8 @@ import java.util.Arrays;
 
 public abstract class CrossingOver {
     private float crossProb;
+    int indexOfSplit1;
+    int indexOfSplit2;
 
     CrossingOver(float crossProb) {
         this.crossProb = crossProb;
@@ -11,7 +13,7 @@ public abstract class CrossingOver {
         return crossOver(parent1, parent2, crossProb, generation);
     }
 
-    Individual_NSGA_II[] crossOver(Individual_NSGA_II parent1, Individual_NSGA_II parent2, float crossProb, int generation) {
+    private Individual_NSGA_II[] crossOver(Individual_NSGA_II parent1, Individual_NSGA_II parent2, float crossProb, int generation) {
         short[] p1Route, p2Route, ch1, ch2;
         p1Route = Arrays.copyOf(parent1.getRoute(), parent1.getRoute().length - 1);
         p2Route = Arrays.copyOf(parent2.getRoute(), parent1.getRoute().length - 1);
@@ -35,7 +37,7 @@ public abstract class CrossingOver {
         };
     }
 
-    protected abstract short[][] crossOverSpecifically(short[] p1Route, short[] p2Route);
+    protected abstract short[][] crossOverSpecifically(short[] route1, short[] route2);
 
 
     private short[] addLastCity(short[] child) {
@@ -45,7 +47,7 @@ public abstract class CrossingOver {
         return ch;
     }
 
-    protected short findFirstEmpty(short[] route) {
+    short findFirstEmpty(short[] route) {
         short firstEmpty = -1;
         for (int i = 0; i < route.length; i++) {
             if (route[i] == -1) {
@@ -56,7 +58,7 @@ public abstract class CrossingOver {
         return firstEmpty;
     }
 
-    protected int findIndexOfaValue(int value, short[] route) {
+    int findIndexOfaValue(int value, short[] route) {
         int index = -1;
         for (int i = 0; i < route.length; i++) {
             if (route[i] == value) {
@@ -67,17 +69,23 @@ public abstract class CrossingOver {
         return index;
     }
 
-    protected void fillWithInitialValues(short[] array) {
+    void fillWithInitialValues(short[] array) {
         for (int i = 0; i < array.length; i++) {
             array[i] = -1;
         }
     }
 
-    protected short[] copyParentRoute(short[] pRoute) {
+    private short[] copyParentRoute(short[] pRoute) {
         short[] route1 = new short[pRoute.length];
-        for (int i = 0; i < route1.length; i++) {
-            route1[i] = pRoute[i];
-        }
+        System.arraycopy(pRoute, 0, route1, 0, route1.length);
         return route1;
+    }
+
+    void setInOrder(){
+        if (indexOfSplit1 > indexOfSplit2) {
+            int indexTemp = indexOfSplit1;
+            indexOfSplit1 = indexOfSplit2;
+            indexOfSplit2 = indexTemp;
+        }
     }
 }

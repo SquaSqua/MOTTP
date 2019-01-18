@@ -22,7 +22,7 @@ public class Runner {
 
         Individual_NSGA_II ind1 = new Individual_NSGA_II(new short[] {1,2,3,4,5,6,7,8,9,1}, 1);
         Individual_NSGA_II ind2 = new Individual_NSGA_II(new short[] {9,8,7,6,5,4,3,2,1,9}, 1);
-        CrossingOver cx = new OXCrossingOver(1);
+        CrossingOver cx = new CXCrossingOver(1);
         Individual_NSGA_II[] children = cx.crossOver(ind1, ind2, 1);
         System.out.println(Arrays.toString(children[0].getRoute()));
         System.out.println(Arrays.toString(children[1].getRoute()));

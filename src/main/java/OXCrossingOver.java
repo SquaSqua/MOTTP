@@ -1,8 +1,7 @@
 import java.util.Random;
 
 public class OXCrossingOver extends CrossingOver {
-    int indexOfSplit1;
-    int indexOfSplit2;
+
 
     OXCrossingOver(float crossProb) {
         super(crossProb);
@@ -22,46 +21,55 @@ public class OXCrossingOver extends CrossingOver {
             child1[i] = route1[i];
             child2[i] = route2[i];
         }
+        //create subarrays for order of elements
+        short[] orderOfChild1 = new short[route1.length - (indexOfSplit2 - indexOfSplit1 + 1)];
+        short[] orderOfChild2 = new short[route1.length - (indexOfSplit2 - indexOfSplit1 + 1)];
 
-        fillLastPartOfChild(indexOfSplit2 + 1, child1, route2);
-        fillLastPartOfChild(indexOfSplit2 + 1, child2, route1);
+        //fill subarrays with specific order
+        orderOfChild1 = fillOrderSubarray(child1, route2, orderOfChild1.length);
+        orderOfChild2 = fillOrderSubarray(child2, route1, orderOfChild2.length);
 
-        fillFirstPartOfChild(indexOfSplit1, child1, route2);
-        fillFirstPartOfChild(indexOfSplit1, child2, route1);
+        //fill right part of a child
+        fillRightPart(child1, orderOfChild1);
+        fillRightPart(child2, orderOfChild2);
+
+        //fill left part of a child
+        fillLeftPart(child1, orderOfChild1);
+        fillLeftPart(child2, orderOfChild2);
 
         return new short[][] {child1, child2};
     }
 
-    private void fillLastPartOfChild(int startIndex, short[] child1, short[] parent2) {
-        for(int i = startIndex; i < child1.length; i++) {
-            for(int j = startIndex; j < parent2.length; j++) {
-                if(findIndexOfaValue(parent2[j], child1) == -1) {
-                    child1[i] = parent2[j];
-                    break;
-                }
-                if(j == parent2.length - 1 && i < child1.length - 1) {
-                    j = -1;
-                }
+    private void fillLeftPart(short[] child1, short[] orderOfChild1) {
+        for(int i = 0; i < indexOfSplit1; ) {
+            for(int j = child1.length - indexOfSplit2 - 1; j < orderOfChild1.length; j++) {
+                child1[i++] = orderOfChild1[j];
             }
         }
     }
 
-    private void fillFirstPartOfChild(int endIndex, short[] child1, short[] parent2) {
-        for(int i = 0; i < endIndex; i++) {//tu szukać błędu jak coś
-            for(int j = 0; j < parent2.length; j++) {
-                if(findIndexOfaValue(parent2[j], child1) == -1) {
-                    child1[i] = parent2[j];
-                    break;
-                }
+    private void fillRightPart(short[] child1, short[] orderOfChild1) {
+        for(int i = indexOfSplit2 + 1; i < child1.length; ) {
+            for(int j = 0; j < child1.length - indexOfSplit2 - 1; j++) {
+                child1[i++] = orderOfChild1[j];
             }
         }
     }
 
-    private void setInOrder(){
-        if (indexOfSplit1 > indexOfSplit2) {
-            int indexTemp = indexOfSplit1;
-            indexOfSplit1 = indexOfSplit2;
-            indexOfSplit2 = indexTemp;
+    private short[] fillOrderSubarray(short[] child1, short[] route2, int orderLength) {
+        short[] order = new short[orderLength];
+        for(int i = 0; i < orderLength; ) {
+            for(int j = indexOfSplit2 + 1; j < route2.length; j++){
+                if(findIndexOfaValue(route2[j], child1) == -1) {
+                    order[i++] = route2[j];
+                }
+            }
+            for(int j = 0; j <= indexOfSplit2; j++) {
+                if(findIndexOfaValue(route2[j], child1) == -1) {
+                    order[i++] = route2[j];
+                }
+            }
         }
+        return order;
     }
 }
