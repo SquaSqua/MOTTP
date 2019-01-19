@@ -16,81 +16,61 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Mutation.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="30" selection-start-line="30" selection-end-line="36" selection-end-column="5" />
+            <state relative-caret-position="221">
+              <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#151#152#0" expanded="true" />
+                <element signature="e#175#176#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CrossingOver.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Evolution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            <state relative-caret-position="49">
+              <caret line="113" selection-start-line="113" selection-end-line="113" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#912#913#0" expanded="true" />
+                <element signature="e#935#936#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CXCrossingOver.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Selection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="51">
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/OXCrossingOver.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TournamentSelection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="238">
+              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#176#177#0" expanded="true" />
+                <element signature="e#228#229#0" expanded="true" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PMXCrossingOver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Individual_NSGA_II.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="45" selection-start-column="45" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Configuration.java">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -98,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainWindow.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            <state relative-caret-position="136">
+              <caret line="8" column="41" lean-forward="true" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -112,6 +92,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -132,22 +113,29 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/GreedyPackingPlan.java" />
         <option value="$PROJECT_DIR$/src/main/java/ParetoFrontsGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Selection.java" />
         <option value="$PROJECT_DIR$/src/main/java/PackingPlanSetter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Individual.java" />
-        <option value="$PROJECT_DIR$/src/main/java/InversionMutation.java" />
         <option value="$PROJECT_DIR$/src/main/java/SwapMutation.java" />
         <option value="$PROJECT_DIR$/src/main/java/DeplacementMutation.java" />
         <option value="$PROJECT_DIR$/src/main/java/Mutation.java" />
         <option value="$PROJECT_DIR$/src/main/java/Individual_NSGA_II.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Evolution.java" />
         <option value="$PROJECT_DIR$/src/main/java/CXCrossingOver.java" />
         <option value="$PROJECT_DIR$/src/main/java/OXCrossingOver.java" />
         <option value="$PROJECT_DIR$/src/main/java/PMXCrossingOver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CrossingOver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Runner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Configuration.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/InversionMutation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetic/ewa/Configuration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Configuration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetic/operators/mutation/SwapMutation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetic/operators/crossing/over/PMXCrossingOver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CrossingOver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Selection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TournamentSelection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Evolution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Runner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/mainWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -178,6 +166,24 @@
               <item name="MultiObjective_Travelling_Thief_Problem" type="b2602c69:ProjectViewProjectNode" />
               <item name="MOTTP" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="MultiObjective_Travelling_Thief_Problem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MOTTP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MultiObjective_Travelling_Thief_Problem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MOTTP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MultiObjective_Travelling_Thief_Problem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MOTTP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -188,7 +194,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547896791778" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547913765935" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TTPApp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -198,15 +204,20 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Workspace\GitHub\MOTTP\src\main\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Workspace\GitHub\MOTTP\src\main\java" />
       <recent name="D:\Workspace\GitHub\MOTTP\src\main" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Workspace\GitHub\MOTTP\src\main\java" />
+      <recent name="D:\Workspace\GitHub\MOTTP\src\main" />
+      <recent name="D:\Workspace\GitHub\MOTTP\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -221,7 +232,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="MOTTP" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Runner" />
       <module name="MOTTP" />
@@ -231,6 +249,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Runner" />
       </list>
     </recent_temporary>
@@ -259,18 +278,17 @@
       <workItem from="1547801432329" duration="7093000" />
       <workItem from="1547895603927" duration="1187000" />
       <workItem from="1547896827767" duration="294000" />
-      <workItem from="1547897164902" duration="488000" />
+      <workItem from="1547897164902" duration="9218000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99809000" />
+    <option name="totallyTimeSpent" value="108539000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.21140939" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" weight="0.1932886" />
       <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.1590604" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -278,9 +296,9 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.5021097" side_tool="true" weight="0.1590604" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.28470254" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.28470254" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -289,7 +307,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.1203966" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -301,7 +319,7 @@
       <window_info anchor="right" id="Database" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.20604026" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.1932886" />
       <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.1590604" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -309,9 +327,9 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.5021097" side_tool="true" weight="0.1590604" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.28470254" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.28470254" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -320,7 +338,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.1203966" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -392,13 +410,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Point.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Selection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ConfigurationProvider.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/CrowdingDistanceComparator.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -421,13 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ObjectiveFrontComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/GreedyPackingPlan.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
@@ -438,74 +442,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/IMetaheuristics.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="uml://JAVA/">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes>
-            <node x="" y="">com</node>
-            <node x="" y="">DataFromFile</node>
-            <node x="" y="">Runner</node>
-            <node x="" y="">netscape</node>
-            <node x="" y="">Configuration</node>
-            <node x="" y="">Selection</node>
-            <node x="" y="">PackingPlanSetter</node>
-            <node x="" y="">DeplacementMutation</node>
-            <node x="" y="">CrowdingDistanceComparator</node>
-            <node x="" y="">IMetaheuristics</node>
-            <node x="" y="">sun</node>
-            <node x="" y="">GreedyPackingPlan</node>
-            <node x="" y="">DataProvider</node>
-            <node x="" y="">groovyjarjarasm</node>
-            <node x="" y="">java</node>
-            <node x="" y="">javax</node>
-            <node x="" y="">Evolution</node>
-            <node x="" y="">Individual_MOTS</node>
-            <node x="" y="">javafx</node>
-            <node x="" y="">InversionMutation</node>
-            <node x="" y="">ParetoFrontsGenerator</node>
-            <node x="" y="">OXCrossingOver</node>
-            <node x="" y="">oracle</node>
-            <node x="" y="">SwapMutation</node>
-            <node x="" y="">org</node>
-            <node x="" y="">PMXCrossingOver</node>
-            <node x="" y="">Point</node>
-            <node x="" y="">ObjectiveFrontComparator</node>
-            <node x="" y="">META-INF</node>
-            <node x="" y="">jdk</node>
-            <node x="" y="">Multiobjective_Tabu_Search</node>
-            <node x="" y="">CrossingOver</node>
-            <node x="" y="">groovy</node>
-            <node x="" y="">CXCrossingOver</node>
-            <node x="" y="">Individual</node>
-            <node x="" y="">definitionFiles</node>
-            <node x="" y="">groovyjarjarcommonscli</node>
-            <node x="" y="">Mutation</node>
-            <node x="" y="">groovyjarjarantlr</node>
-            <node x="" y="">Individual_NSGA_II</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.5294117647058824" x="384.0" y="427.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DataProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1546">
           <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DataFromFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -539,74 +479,209 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="151.0" y="755.0">com</node>
+            <node x="535.0" y="607.0">DataFromFile</node>
+            <node x="281.0" y="829.0">Runner</node>
+            <node x="364.0" y="607.0">netscape</node>
+            <node x="348.0" y="385.0">Configuration</node>
+            <node x="585.0" y="755.0">Selection</node>
+            <node x="0.0" y="607.0">PackingPlanSetter</node>
+            <node x="307.0" y="79.0">DeplacementMutation</node>
+            <node x="608.0" y="153.0">IMetaheuristics</node>
+            <node x="513.0" y="306.0">CrowdingDistanceComparator</node>
+            <node x="0.0" y="829.0">sun</node>
+            <node x="619.0" y="533.0">GreedyPackingPlan</node>
+            <node x="163.0" y="681.0">DataProvider</node>
+            <node x="212.0" y="533.0">groovyjarjarasm</node>
+            <node x="298.0" y="755.0">java</node>
+            <node x="0.0" y="755.0">javax</node>
+            <node x="706.0" y="232.0">Evolution</node>
+            <node x="167.0" y="385.0">Individual_MOTS</node>
+            <node x="642.0" y="681.0">javafx</node>
+            <node x="144.0" y="79.0">InversionMutation</node>
+            <node x="486.0" y="459.0">ParetoFrontsGenerator</node>
+            <node x="313.0" y="232.0">OXCrossingOver</node>
+            <node x="485.0" y="681.0">oracle</node>
+            <node x="0.0" y="79.0">SwapMutation</node>
+            <node x="443.0" y="755.0">org</node>
+            <node x="152.0" y="232.0">PMXCrossingOver</node>
+            <node x="0.0" y="681.0">Class50</node>
+            <node x="410.0" y="829.0">Point</node>
+            <node x="252.0" y="459.0">ObjectiveFrontComparator</node>
+            <node x="348.5" y="306.0">lombok</node>
+            <node x="187.0" y="607.0">META-INF</node>
+            <node x="141.0" y="829.0">jdk</node>
+            <node x="491.0" y="232.0">Multiobjective_Tabu_Search</node>
+            <node x="164.0" y="153.0">CrossingOver</node>
+            <node x="325.0" y="681.0">groovy</node>
+            <node x="0.0" y="232.0">CXCrossingOver</node>
+            <node x="104.25" y="306.0">Individual</node>
+            <node x="421.0" y="533.0">definitionFiles</node>
+            <node x="0.0" y="459.0">groovyjarjarcommonscli</node>
+            <node x="167.5" y="0.0">Mutation</node>
+            <node x="0.0" y="533.0">groovyjarjarantlr</node>
+            <node x="0.0" y="385.0">Individual_NSGA_II</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="DeplacementMutation" target="Mutation">
+              <point x="0.0" y="-14.5" />
+              <point x="390.5" y="54.0" />
+              <point x="247.5" y="54.0" />
+              <point x="32.0" y="14.5" />
+            </edge>
+            <edge source="Individual_NSGA_II" target="Individual">
+              <point x="0.0" y="-14.5" />
+              <point x="73.5" y="360.0" />
+              <point x="129.25" y="360.0" />
+              <point x="-25.0" y="14.5" />
+            </edge>
+            <edge source="Multiobjective_Tabu_Search" target="IMetaheuristics">
+              <point x="0.0" y="-14.5" />
+              <point x="588.5" y="207.0" />
+              <point x="639.75" y="207.0" />
+              <point x="-31.75" y="14.5" />
+            </edge>
+            <edge source="Configuration" target="lombok">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="CXCrossingOver" target="CrossingOver">
+              <point x="0.0" y="-14.5" />
+              <point x="66.0" y="207.0" />
+              <point x="183.5" y="207.0" />
+              <point x="-39.0" y="14.5" />
+            </edge>
+            <edge source="PMXCrossingOver" target="CrossingOver">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="OXCrossingOver" target="CrossingOver">
+              <point x="0.0" y="-14.5" />
+              <point x="379.5" y="207.0" />
+              <point x="261.5" y="207.0" />
+              <point x="39.0" y="14.5" />
+            </edge>
+            <edge source="Individual_MOTS" target="Individual">
+              <point x="0.0" y="-14.5" />
+              <point x="235.0" y="360.0" />
+              <point x="179.25" y="360.0" />
+              <point x="25.0" y="14.5" />
+            </edge>
+            <edge source="InversionMutation" target="Mutation">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="SwapMutation" target="Mutation">
+              <point x="0.0" y="-14.5" />
+              <point x="62.0" y="54.0" />
+              <point x="183.5" y="54.0" />
+              <point x="-32.0" y="14.5" />
+            </edge>
+            <edge source="Evolution" target="IMetaheuristics">
+              <point x="0.0" y="-14.5" />
+              <point x="754.5" y="207.0" />
+              <point x="703.25" y="207.0" />
+              <point x="31.75" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.1460136674259682" x="128.9203538064003" y="189.4215861657722" />
+          <SelectedNodes>
+            <node>DeplacementMutation</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ObjectiveFrontComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Mutation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SwapMutation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        <state relative-caret-position="34">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CXCrossingOver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/OXCrossingOver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="e#104#105#0" expanded="true" />
-            <element signature="e#134#135#0" expanded="true" />
+            <element signature="e#139#140#0" expanded="true" />
+            <element signature="e#171#172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PMXCrossingOver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CrossingOver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/InversionMutation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding>
-            <element signature="e#100#101#0" expanded="true" />
-            <element signature="e#120#121#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DeplacementMutation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Evolution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
-          <caret line="116" column="26" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Mutation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="30" selection-start-line="30" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CrossingOver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CXCrossingOver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/OXCrossingOver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PMXCrossingOver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -617,31 +692,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DataFromFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TournamentSelection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#176#177#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="916" selection-start-line="916" selection-end-line="916" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Selection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Evolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="3206" selection-start-line="3206" selection-end-line="3206" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="747" selection-start-line="747" selection-end-line="747" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mainWindow.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        <state relative-caret-position="136">
+          <caret line="8" column="41" lean-forward="true" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state relative-caret-position="221">
+          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#175#176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
         </state>
       </provider>
     </entry>

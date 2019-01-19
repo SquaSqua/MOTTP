@@ -5,8 +5,6 @@ public class InversionMutation extends Mutation {
     }
 
     public short[] mutateSpecifically() {
-
-
         fillInReversedOrder(subArray);
         int j = 0;
         for (int i = startIndex; i <= stopIndex; i++, j++) {
