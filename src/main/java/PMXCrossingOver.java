@@ -18,8 +18,5 @@ public class PMXCrossingOver extends CrossingOver{
             route1[i] = route2[i];
             route2[i] = temp;
         }
-        // na tym etapie mamy w routach zamienione podstringi np. {1,2,3,6,5,4,3,8,9} i {9,8,7,4,5,6,7,2,1}
-
-        return new short[0][];
     }
 }
