@@ -1,3 +1,4 @@
+import lombok.Data;
 public class Configuration {
 
     private int popSize;
