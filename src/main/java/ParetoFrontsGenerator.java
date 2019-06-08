@@ -109,7 +109,7 @@ class ParetoFrontsGenerator {
 
     private static void objectiveSorting(ArrayList<ArrayList<Individual>> paretoFronts) {
         for (ArrayList<Individual> paretoFront : paretoFronts) {
-            paretoFront.sort(new ObjectiveFrontComparator());
+            paretoFront.sort(new Comparator_ObjectiveFront());
         }
     }
 
@@ -133,7 +133,7 @@ class ParetoFrontsGenerator {
     static String ED_measure(ArrayList<ArrayList<Individual>> paretoFronts) {
         double sumED = 0;
         ArrayList<Individual> paretoFront = paretoFronts.get(0);
-        paretoFront.sort(new ObjectiveFrontComparator());
+        paretoFront.sort(new Comparator_ObjectiveFront());
         for (Individual ind : paretoFront) {
             sumED += Math.sqrt((long)((ind.getFitnessTime() - ideal.x)
                     * (ind.getFitnessTime() - ideal.x) + (ind.getFitnessWage() - ideal.y)
@@ -149,7 +149,7 @@ class ParetoFrontsGenerator {
 
     static double HV_measure(ArrayList<ArrayList<Individual>> paretoFronts) {
         ArrayList<Individual> paretoFront = paretoFronts.get(0);
-        paretoFront.sort(new ObjectiveFrontComparator());
+        paretoFront.sort(new Comparator_ObjectiveFront());
         long hyperVolume = 0L;
         double lastY = nadir.y;
         for (Individual ind : paretoFront) {

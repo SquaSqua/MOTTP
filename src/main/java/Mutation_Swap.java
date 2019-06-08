@@ -1,8 +1,8 @@
 import java.util.Random;
 
-public class SwapMutation extends Mutation {
+public class Mutation_Swap extends Mutation {
 
-    SwapMutation(float mutProb) {
+    Mutation_Swap(float mutProb) {
         super(mutProb);
     }
 

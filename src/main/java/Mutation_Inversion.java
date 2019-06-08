@@ -1,6 +1,6 @@
-public class InversionMutation extends Mutation {
+public class Mutation_Inversion extends Mutation {
 
-    InversionMutation(float mutProb){
+    Mutation_Inversion(float mutProb){
         super(mutProb);
     }
 

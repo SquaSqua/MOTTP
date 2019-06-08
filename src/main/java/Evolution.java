@@ -1,6 +1,13 @@
+import org.knowm.xchart.SwingWrapper;
+import org.knowm.xchart.XYChart;
+import org.knowm.xchart.XYChartBuilder;
+
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * performs a whole test of NSGA-II and saves
+ */
 class Evolution implements IMetaheuristics {
 
     private static final int attemptsToAvoidClones = 3;
@@ -31,7 +38,7 @@ class Evolution implements IMetaheuristics {
     public String run() {
         ArrayList<ArrayList<Individual>> paretoFronts;
         initialize();
-        for (int generation = 1; generation < configuration.getNumOfGeners(); generation++) {
+        for (int generation = 1; generation < configuration.getNumOfGenerations(); generation++) {
             ParetoFrontsGenerator.generateFrontsWithAssignments(population);
             population.addAll(generateOffspring(generation));
             paretoFronts = ParetoFrontsGenerator.generateFrontsWithAssignments(population);
@@ -43,7 +50,7 @@ class Evolution implements IMetaheuristics {
             }
         }
         paretoFronts = ParetoFrontsGenerator.generateFrontsWithAssignments(population);
-        statistics(paretoFronts, configuration.getNumOfGeners());
+        statistics(paretoFronts, configuration.getNumOfGenerations());
         sBMeasures.append("Nadir:,").append(DataFromFile.getNadir().x).append(", ").append(DataFromFile.getNadir().y).append("\n");
         sBMeasures.append("Ideal:,").append(DataFromFile.getIdeal().x).append(", ").append(DataFromFile.getIdeal().y).append("\n");
 //        appendPopulationToStringBuilder(sBLastPopFront);
@@ -53,6 +60,10 @@ class Evolution implements IMetaheuristics {
         sBFirstPopFront.append(sBMiddlePopFront);
         sBMeasures.append(sBFirstPopFront);
         measures = sBMeasures.toString();
+
+        XYChart chart = getChart();
+        new SwingWrapper<>(chart).displayChart();
+
         return measures;
     }
 
@@ -106,7 +117,7 @@ class Evolution implements IMetaheuristics {
     private Individual_NSGA_II[] matingPool(int generation) {
         Individual_NSGA_II[] children = configuration.getCrossingOver()
                 .crossOver(
-                        configuration.getSelection().select(population), configuration.getSelection().select(population), generation);
+                        select(population), select(population), generation);
         configuration.getMutation().mutate(children[0]);
         configuration.getMutation().mutate(children[1]);
         return children;
@@ -122,7 +133,7 @@ class Evolution implements IMetaheuristics {
                 temporaryPareto.remove(0);
             } else {
                 ArrayList<Individual> firstFront = temporaryPareto.get(0);
-                firstFront.sort(new CrowdingDistanceComparator());
+                firstFront.sort(new Comparator_CrowdingDistance());
                 for (Individual ind : firstFront) {
                     if (nextGeneration.size() < configuration.getPopSize()) {
                         nextGeneration.add(ind);
@@ -131,6 +142,26 @@ class Evolution implements IMetaheuristics {
             }
         }
         return nextGeneration;
+    }
+
+    private Individual_NSGA_II select(ArrayList<Individual> population) {
+        Individual_NSGA_II bestIndividual = (Individual_NSGA_II)population.get(0);//just any individual to initialize
+        int bestRank = Integer.MAX_VALUE;
+        Random rand = new Random();
+        int tournamentSize = configuration.getTournamentSize();
+        for (int i = 0; i < tournamentSize; i++) {
+            Individual_NSGA_II individual = (Individual_NSGA_II)population.get(rand.nextInt(population.size()));
+            int rank = individual.getRank();
+            if (rank < bestRank) {
+                bestRank = rank;
+                bestIndividual = individual;
+            } else if (rank == bestRank) {
+                if (bestIndividual.getCrowdingDistance() < individual.getCrowdingDistance()) {
+                    bestIndividual = individual;
+                }
+            }
+        }
+        return bestIndividual;
     }
 
     private void updateArchive(ArrayList<Individual> youngPareto) {
@@ -202,4 +233,21 @@ class Evolution implements IMetaheuristics {
 //        }
 //        return sB.toString();
 //    }
+
+    private XYChart getChart() {
+        // Create Chart
+        XYChart chart = new XYChartBuilder().width(1000).height(600).title(getClass().getSimpleName()).xAxisTitle("Numer generacji").yAxisTitle("Zarobek (fitness)").build();
+
+
+        //Series
+/*
+        chart.addSeries("Fareto Front", );
+        chart.addSeries("Reszta populacji", );
+        chart.addSeries("max", generationData, maxData);
+        chart.addSeries("avg", generationData, avgData);
+        chart.addSeries("min", generationData, minData);
+*/
+
+        return chart;
+    }
 }

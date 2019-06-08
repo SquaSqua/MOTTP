@@ -1,6 +1,6 @@
-public class DeplacementMutation extends Mutation{
+public class Mutation_Displacement extends Mutation{
 
-    DeplacementMutation(float mutProb) {
+    Mutation_Displacement(float mutProb) {
         super(mutProb);
     }
 

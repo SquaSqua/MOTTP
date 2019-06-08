@@ -1,18 +1,19 @@
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+/**
+ * Contains configuration needed to run one test
+ */
 @AllArgsConstructor
 @Data
 class Configuration {
-
     private int popSize;
-    private int numOfGeners;
+    private int numOfGenerations;
     private float crossProb;
     private float mutProb;
-    private Integer tournamentSize;
+    private float tournamentSize;
     private boolean avoidClones;
     private Mutation mutation;
     private CrossingOver crossingOver;
-    private Selection selection;
     private PackingPlanSetter packingPlanSetter;
 }

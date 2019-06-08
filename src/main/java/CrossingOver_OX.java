@@ -1,9 +1,9 @@
 import java.util.Random;
 
-public class OXCrossingOver extends CrossingOver {
+public class CrossingOver_OX extends CrossingOver {
 
 
-    OXCrossingOver(float crossProb) {
+    CrossingOver_OX(float crossProb) {
         super(crossProb);
     }
 

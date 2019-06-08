@@ -1,6 +1,10 @@
-public class CXCrossingOver extends CrossingOver{
+public class CrossingOver_CX extends CrossingOver{
 
-    CXCrossingOver(float crossProb) {
+    /**
+     *
+     * @param crossProb given probability of crossing
+     */
+    CrossingOver_CX(float crossProb) {
         super(crossProb);
     }
 

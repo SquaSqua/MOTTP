@@ -5,6 +5,9 @@ import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * provides all data from given file and saves it in DataFromFile
+ */
 class DataProvider {
 
     private static final char NUMBER_OF_INFO_PER_CITY = 3;

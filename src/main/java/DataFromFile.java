@@ -1,3 +1,14 @@
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+/**
+ * contains all data from given file
+ * dimension, capacity, min/max speed, renting ratio
+ *
+ * calculates nadir and ideal point, adjusts items and distances as an array
+ */
 public class DataFromFile {
 
     private static int dimension;
