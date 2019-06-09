@@ -123,8 +123,8 @@ class ParetoFrontsGenerator {
                 Individual currentInd = paretoFront.get(j);
                 double a = Math.abs(paretoFront.get(j + 1).getFitnessTime()
                         - paretoFront.get(j - 1).getFitnessTime());
-                double b = Math.abs(paretoFront.get(0).getFitnessWage()
-                        - paretoFront.get(paretoFront.size() - 1).getFitnessWage());
+                double b = Math.abs(paretoFront.get(j + 1).getFitnessWage()
+                        - paretoFront.get(j - 1).getFitnessWage());
                 currentInd.setCrowdingDistance(a * b);
             }
         }

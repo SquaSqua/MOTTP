@@ -17,13 +17,13 @@ public abstract class Mutation {
 
     void mutate(Individual individual, float mutProb) {
         if(Math.random() < mutProb) {
-            short[] route = individual.getRoute();
+            route = individual.getRoute();
             startIndex = random.nextInt(route.length - 1);
             stopIndex = random.nextInt(route.length - 1);
             setInOrder();
             subArray = new short[stopIndex - (startIndex - 1)];
             individual.setRoute(mutateSpecifically());
-            individual.setPackingPlanAndFitness();
+            individual.setPackingPlanAndFitness();//todo uwaga, odkomentować
         }
     }
     protected abstract short[] mutateSpecifically();

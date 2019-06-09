@@ -23,6 +23,7 @@ public class CrossingOver_CX extends CrossingOver{
                 if (route1[currentInd] == route2[currentInd]) {
                     isSwapTurn = !isSwapTurn;
                 }
+                int lastCurr = currentInd;//todo to można usunąć - przydatne przy debugowaniu
                 currentInd = findIndexOfaValue(route2[currentInd], route1);
                 if (route2[currentInd] == beginningValue) {
                     assignGens(isSwapTurn, currentInd, route1, route2, child1, child2);

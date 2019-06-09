@@ -30,6 +30,8 @@ public abstract class CrossingOver {
                 ch1[i] = p1Route[i];
                 ch2[i] = p2Route[i];
             }
+            ch1 = addLastCity(ch1);
+            ch2 = addLastCity(ch2);
         }
         return new Individual_NSGA_II[]{
                 new Individual_NSGA_II(ch1, generation),

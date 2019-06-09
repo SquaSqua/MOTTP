@@ -98,7 +98,7 @@ class Evolution implements IMetaheuristics {
             int attemptsLeft = attemptsToAvoidClones;
             while (attemptsLeft > 0) {
                 if (population.contains(children[i])) {
-                    configuration.getMutation().mutate(children[i], 1f);//przeszukaj lokalnie przestrzeń dookoła
+                    configuration.getMutation().mutate(children[i], 1);//przeszukaj lokalnie przestrzeń dookoła
                     attemptsLeft--;
                     howManyClones++;
                 } else {
@@ -148,7 +148,7 @@ class Evolution implements IMetaheuristics {
         Individual_NSGA_II bestIndividual = (Individual_NSGA_II)population.get(0);//just any individual to initialize
         int bestRank = Integer.MAX_VALUE;
         Random rand = new Random();
-        int tournamentSize = configuration.getTournamentSize();
+        float tournamentSize = configuration.getTournamentSize() * configuration.getPopSize();
         for (int i = 0; i < tournamentSize; i++) {
             Individual_NSGA_II individual = (Individual_NSGA_II)population.get(rand.nextInt(population.size()));
             int rank = individual.getRank();

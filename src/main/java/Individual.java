@@ -4,7 +4,7 @@ import java.util.Collections;
 
 abstract class Individual {
 
-    short[] route;
+    protected short[] route;
     private boolean[] packingPlan;
     private double fitnessTime;
     private int fitnessWage;
@@ -88,7 +88,7 @@ abstract class Individual {
     public boolean equals(Object individual) {
         if(individual instanceof Individual_NSGA_II) {
             Individual_NSGA_II ind = (Individual_NSGA_II) individual;
-            return Arrays.equals(route, ind.route);
+            return Arrays.equals(this.route, ind.getRoute());
         }
         return false;
     }
