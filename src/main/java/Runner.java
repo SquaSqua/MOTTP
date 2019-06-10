@@ -2,7 +2,6 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Arrays;
 
 public class Runner {
     public static void main(String[] args) {
@@ -15,15 +14,15 @@ public class Runner {
                 new Configuration(100, 100, 0.6f, true,
                         new Mutation_Swap(0.5f), new CrossingOver_CX(0.02f))
         );
-//        Multiobjective_Tabu_Search mots = new Multiobjective_Tabu_Search(
-//                4, 250, 25, 1000);
-//        Evolution population = new Evolution(
-//                new Configuration(100, 300, 0.6f,false,
-//                        new Mutation_Swap(0.02f), new CrossingOver_CX(0.5f))
-//        );
-//        searchForPareto(population);
+        Evolution population = new Evolution(
+                new Configuration(100, 100, 0.6f,false,
+                        new Mutation_Swap(0.5f), new CrossingOver_CX(0.02f))
+        );
+        Multiobjective_Tabu_Search mots = new Multiobjective_Tabu_Search(
+                4, 250, 25, 1000);
         searchForPareto(populationWithoutClones);
-//        searchForPareto(mots);
+        searchForPareto(population);
+        searchForPareto(mots);
         countTimeUpHere(start);
 
         /**

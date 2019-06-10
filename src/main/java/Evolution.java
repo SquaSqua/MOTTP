@@ -3,6 +3,7 @@ import org.knowm.xchart.XYChart;
 import org.knowm.xchart.XYChartBuilder;
 import org.knowm.xchart.XYSeries;
 import org.knowm.xchart.style.Styler;
+import org.knowm.xchart.style.markers.SeriesMarkers;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -30,8 +31,6 @@ class Evolution implements IMetaheuristics {
     private StringBuilder sBMiddlePopFront = new StringBuilder(middlePopFront);
     private StringBuilder sBLastPopFront = new StringBuilder(lastPopFront);
 
-    private ArrayList<Integer> wageDataLast = new ArrayList<>();
-    private ArrayList<Double> timeDataLast = new ArrayList<>();
     private ArrayList<Integer> wageDataAllPrevious = new ArrayList<>();
     private ArrayList<Double> timeDataAllPrevious = new ArrayList<>();
 
@@ -57,23 +56,25 @@ class Evolution implements IMetaheuristics {
 //                appendPopulationToStringBuilder(sBFirstPopFront);
                 statistics(paretoFronts, generation);
             }
-            addParetoToChartSeries(false, population);
+            addParetoToChartSeries(population);
         }
         paretoFronts = ParetoFrontsGenerator.generateFrontsWithAssignments(population);
         statistics(paretoFronts, configuration.getNumOfGenerations());
         sBMeasures.append("Nadir:,").append(DataFromFile.getNadir().x).append(", ").append(DataFromFile.getNadir().y).append("\n");
         sBMeasures.append("Ideal:,").append(DataFromFile.getIdeal().x).append(", ").append(DataFromFile.getIdeal().y).append("\n");
-//        appendPopulationToStringBuilder(sBLastPopFront);
         appendParetoFrontToStringBuilder(sBLastPopFront, population);
-//        appendParetoFrontToStringBuilder(sBLastPopFront, archive);
         sBMiddlePopFront.append(sBLastPopFront);
         sBFirstPopFront.append(sBMiddlePopFront);
         sBMeasures.append(sBFirstPopFront);
         measures = sBMeasures.toString();
 
-        addParetoToChartSeries(true, population);
-
         XYChart chart = getChart();
+//        XYSeries idealAndNadir = chart.addSeries(
+//                "Ideal and Nadir point",
+//                new double[] {DataFromFile.getIdeal().x, DataFromFile.getNadir().x},
+//                new double[] {DataFromFile.getIdeal().y, DataFromFile.getNadir().y}
+//                );
+//        idealAndNadir.setMarkerColor(Color.BLACK);
         new SwingWrapper<>(chart).displayChart();
 
         return measures;
@@ -222,30 +223,6 @@ class Evolution implements IMetaheuristics {
         }
     }
 
-    //nie dziala bo pareto jest juz modyfikowane przy chooseNextGeneration
-    //da sie latwo naprawic wywolujac jeszcze raz generateFronts na populacji i przekazujac to nowe pareto,
-    //ale zwyczajnie sie to nie oplaca
-//    private String printPopulationHorizontally(StringBuilder sB, ArrayList<ArrayList<Individual>> pareto) {
-//        int maxLength = 0;
-//        for (int i = 0; i < pareto.size(); i++) {
-//            ArrayList<Individual> currentFront = pareto.get(i);
-//            if (maxLength < currentFront.size()) {
-//                maxLength = currentFront.size();
-//            }
-//        }
-//        for (int i = 0; i < 1/*maxLength*/; i++) {//number of row
-//            for (int j = 0; j < pareto.size(); j++) {//j - number of front
-//                if (pareto.get(j).size() <= i) {
-//                    sB.append(",,");
-//                } else {
-//                    sB.append(pareto.get(j).get(i).getFitnessTime()).append(", ").append(pareto.get(j).get(i).getFitnessWage()).append(", ");
-//                }
-//            }
-//            sB.append("\n");
-//        }
-//        return sB.toString();
-//    }
-
     private XYChart getChart() {
         // Create Chart
         XYChart chart = new XYChartBuilder().width(1000).height(600).build();
@@ -256,46 +233,83 @@ class Evolution implements IMetaheuristics {
         //Customize chart
         chart.getStyler().setDefaultSeriesRenderStyle(XYSeries.XYSeriesRenderStyle.Scatter);
         chart.getStyler().setChartTitleVisible(true);
-        chart.getStyler().setLegendPosition(Styler.LegendPosition.InsideSW);
+        chart.getStyler().setLegendPosition(Styler.LegendPosition.InsideNW);
+        chart.getStyler().setChartPadding(20);
 //        chart.getStyler().setMarkerSize(16);
 
         //Series
         XYSeries previous = chart.addSeries("Wcześniejsze Pareto Fronty", wageDataAllPrevious, timeDataAllPrevious);
         previous.setMarkerColor(Color.LIGHT_GRAY);
-        XYSeries last = chart.addSeries("Pareto Front", wageDataLast, timeDataLast);
-        last.setMarkerColor(Color.RED);
+        previous.setMarker(SeriesMarkers.CIRCLE);
+        addColouredParetoToChart(population, chart);
 
         return chart;
     }
 
-    private void addParetoToChartSeries(boolean isLast, ArrayList<? extends Individual> population) {
+    private void addParetoToChartSeries(ArrayList<? extends Individual> population) {
         ArrayList<Individual> paretoFront = new ArrayList<>();
         for(Individual individual : population) {
             if(individual.getRank() == 0) {
                 paretoFront.add(individual);
             }
         }
-        if(!isLast) {
-            for(Individual individual : paretoFront) {
-                wageDataAllPrevious.add(individual.getFitnessWage());
-                timeDataAllPrevious.add(individual.getFitnessTime());
-            }
-        }
-        else {
-            for(Individual individual : paretoFront) {
-                wageDataLast.add(individual.getFitnessWage());
-                timeDataLast.add(individual.getFitnessTime());
-            }
+        for(Individual individual : paretoFront) {
+            wageDataAllPrevious.add(individual.getFitnessWage());
+            timeDataAllPrevious.add(individual.getFitnessTime());
         }
     }
 
-    private ArrayList<XYSeries> addColouredParetoToChart(ArrayList<? extends Individual> population) {
+
+    private void addColouredParetoToChart(ArrayList<? extends Individual> population, XYChart chart) {
         ArrayList<Individual> paretoFront = new ArrayList<>();
         for(Individual individual : population) {
             if(individual.getRank() == 0) {
                 paretoFront.add(individual);
             }
         }
+        paretoFront.sort(new Comparator_Generation());
+        int lastGeneration = paretoFront.get(0).getBirthday();
+        ArrayList<Integer> wageSeries = new ArrayList<>();
+        ArrayList<Double> timeSeries = new ArrayList<>();
+        Color currentColor = new Color(100,0,0);
+        XYSeries currentSeries;
+        for (Individual ind : paretoFront) {
+            if (ind.getBirthday() == lastGeneration) {
+                wageSeries.add(ind.getFitnessWage());
+                timeSeries.add(ind.getFitnessTime());
+            } else {
+                currentSeries = chart.addSeries(lastGeneration + "", wageSeries, timeSeries);
+                currentSeries.setMarkerColor(currentColor);
+                currentSeries.setMarker(SeriesMarkers.CIRCLE);
+                currentSeries.setShowInLegend(false);
+                wageSeries = new ArrayList<>();
+                timeSeries = new ArrayList<>();
+                currentColor = nextColor(currentColor);
+                lastGeneration = ind.getBirthday();
 
+                wageSeries.add(ind.getFitnessWage());
+                timeSeries.add(ind.getFitnessTime());
+            }
+        }
+        currentSeries = chart.addSeries("Pareto Front", wageSeries, timeSeries);
+        currentSeries.setMarker(SeriesMarkers.CIRCLE);
+        currentSeries.setMarkerColor(Color.RED);
+        currentSeries.setShowInLegend(true);
+    }
+
+    private Color nextColor(Color color) {
+        int r = color.getRed();
+        int g = color.getGreen();
+        int b = color.getBlue();
+        if(r < 255) {
+            r += 5;
+        }
+        else if (g < 255) {
+            g += 5;
+        }
+        else {
+            b += 5;
+        }
+        return new Color(r,g,b);
     }
 }
