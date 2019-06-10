@@ -7,23 +7,23 @@ import java.util.Arrays;
 public class Runner {
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
-        String definitionFile = "src/main/resources/definitionFiles/trivial_0.ttp";
+        String definitionFile = "src/main/resources/definitionFiles/hard_1.ttp";
         DataProvider configProvider = new DataProvider();
         configProvider.readFile(definitionFile);
 
         Evolution populationWithoutClones = new Evolution(
-                new Configuration(100, 300, 0.6f, true,
+                new Configuration(100, 100, 0.6f, true,
                         new Mutation_Swap(0.5f), new CrossingOver_CX(0.02f))
         );
-        Multiobjective_Tabu_Search mots = new Multiobjective_Tabu_Search(
-                4, 250, 25, 1000);
-        Evolution population = new Evolution(
-                new Configuration(100, 300, 0.6f,false,
-                        new Mutation_Swap(0.02f), new CrossingOver_CX(0.5f))
-        );
-        searchForPareto(population);
+//        Multiobjective_Tabu_Search mots = new Multiobjective_Tabu_Search(
+//                4, 250, 25, 1000);
+//        Evolution population = new Evolution(
+//                new Configuration(100, 300, 0.6f,false,
+//                        new Mutation_Swap(0.02f), new CrossingOver_CX(0.5f))
+//        );
+//        searchForPareto(population);
         searchForPareto(populationWithoutClones);
-        searchForPareto(mots);
+//        searchForPareto(mots);
         countTimeUpHere(start);
 
         /**

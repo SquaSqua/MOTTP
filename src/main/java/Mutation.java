@@ -23,8 +23,8 @@ public abstract class Mutation {
             setInOrder();
             subArray = new short[stopIndex - (startIndex - 1)];
             individual.setRoute(mutateSpecifically());
-            individual.setPackingPlanAndFitness();//todo uwaga, odkomentować
         }
+        individual.setPackingPlanAndFitness();
     }
     protected abstract short[] mutateSpecifically();
 

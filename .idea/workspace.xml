@@ -21,10 +21,64 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Evolution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3140">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="454">
+              <caret line="295" column="44" lean-forward="true" selection-start-line="295" selection-start-column="44" selection-end-line="295" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;class#Evolution#0" />
+                <element signature="e#1175#1227#0" />
+                <element signature="e#2911#3176#0" />
+                <element signature="e#3000#3170#1" />
+                <element signature="e#3182#3836#0" />
+                <element signature="e#3387#3804#1" />
+                <element signature="e#3478#3547#1" />
+                <element signature="e#3565#3631#1" />
+                <element signature="e#3735#3794#1" />
+                <element signature="e#3842#4643#0" />
+                <element signature="e#4017#4612#1" />
+                <element signature="e#4110#4436#1" />
+                <element signature="e#4166#4370#1" />
+                <element signature="e#4376#4422#1" />
+                <element signature="e#4486#4602#1" />
+                <element signature="e#4649#5113#0" />
+                <element signature="e#5119#6122#0" />
+                <element signature="e#5468#6085#1" />
+                <element signature="e#5571#5692#1" />
+                <element signature="e#5698#6075#1" />
+                <element signature="e#5893#6061#1" />
+                <element signature="e#5971#6043#1" />
+                <element signature="e#6128#7076#0" />
+                <element signature="e#6538#7039#1" />
+                <element signature="e#6731#6824#1" />
+                <element signature="e#6852#7029#1" />
+                <element signature="e#6947#7015#1" />
+                <element signature="e#7082#7402#0" />
+                <element signature="e#7408#8043#0" />
+                <element signature="e#8045#8115#0" />
+                <element signature="e#8737#9349#0" />
+                <element signature="e#9355#9425#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Mutation_Swap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Mutation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+              <folding>
+                <element signature="e#292#293#0" expanded="true" />
+                <element signature="e#335#336#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -33,77 +87,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Configuration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ParetoFrontsGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="98" selection-start-line="98" selection-end-line="98" />
-              <folding>
-                <element signature="method#assignRank#0;class#ParetoFrontsGenerator#0" />
-                <element signature="e#6749#6750#0" expanded="true" />
-                <element signature="e#6803#6804#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CrossingOver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Individual_NSGA_II.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#85#86#0" expanded="true" />
-                <element signature="e#117#118#0" expanded="true" />
-                <element signature="e#174#175#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CrossingOver_CX.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
+            <state relative-caret-position="459">
               <caret line="27" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Individual.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Mutation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
-                <element signature="e#292#293#0" expanded="true" />
+                <element signature="e#0#366#0" expanded="true" />
+                <element signature="e#432#433#0" expanded="true" />
+                <element signature="e#553#554#0" expanded="true" />
+                <element signature="e#592#593#0" expanded="true" />
+                <element signature="e#749#750#0" expanded="true" />
+                <element signature="e#786#787#0" expanded="true" />
+                <element signature="e#935#936#0" expanded="true" />
+                <element signature="e#969#970#0" expanded="true" />
+                <element signature="e#1501#1502#0" expanded="true" />
+                <element signature="e#1532#1533#0" expanded="true" />
+                <element signature="e#1166#1167#0" expanded="true" />
+                <element signature="e#1201#1202#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+            <state relative-caret-position="-568">
+              <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -172,16 +170,16 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/DataProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/DataFromFile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Configuration.java" />
         <option value="$PROJECT_DIR$/src/main/java/CrossingOver_PMX.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ParetoFrontsGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Evolution.java" />
         <option value="$PROJECT_DIR$/src/main/java/Individual.java" />
         <option value="$PROJECT_DIR$/src/main/java/CrossingOver_CX.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CrossingOver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ParetoFrontsGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Configuration.java" />
         <option value="$PROJECT_DIR$/src/main/java/Mutation.java" />
         <option value="$PROJECT_DIR$/src/main/java/Runner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CrossingOver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Evolution.java" />
       </list>
     </option>
   </component>
@@ -231,6 +229,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -271,15 +270,10 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MOTTP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -412,18 +406,19 @@
       <workItem from="1559217522909" duration="6211000" />
       <workItem from="1559224551073" duration="2594000" />
       <workItem from="1559996565435" duration="13743000" />
-      <workItem from="1560108263215" duration="5943000" />
+      <workItem from="1560108263215" duration="8419000" />
+      <workItem from="1560152844575" duration="15889000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174250000" />
+    <option name="totallyTimeSpent" value="192615000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.18993288" />
-      <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.1590604" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49643704" visible="true" weight="0.19261745" />
+      <window_info id="Structure" order="1" sideWeight="0.5035629" side_tool="true" weight="0.19261745" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -431,7 +426,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5021097" side_tool="true" weight="0.1590604" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31586403" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31586403" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4036827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -455,8 +450,8 @@
       <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3295302" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.18993288" />
-      <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.1590604" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49643704" visible="true" weight="0.19261745" />
+      <window_info id="Structure" order="1" sideWeight="0.5035629" side_tool="true" weight="0.19261745" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -465,7 +460,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.31586403" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4036827" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4036827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -474,7 +469,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.14305949" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.14305949" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24966443" />
@@ -541,6 +536,12 @@
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Evolution.java</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -567,149 +568,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/src.zip!/java/util/Comparator.java" />
-    <entry file="file://$PROJECT_DIR$/MOTTP.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/definitionFiles/easy_0.ttp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ConfigurationProvider.java" />
-    <entry file="uml://JAVA/">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes>
-            <node x="151.0" y="755.0">com</node>
-            <node x="535.0" y="607.0">DataFromFile</node>
-            <node x="281.0" y="829.0">Runner</node>
-            <node x="364.0" y="607.0">netscape</node>
-            <node x="348.0" y="385.0">Configuration</node>
-            <node x="585.0" y="755.0">Selection</node>
-            <node x="0.0" y="607.0">PackingPlanSetter</node>
-            <node x="307.0" y="79.0">DeplacementMutation</node>
-            <node x="608.0" y="153.0">IMetaheuristics</node>
-            <node x="513.0" y="306.0">CrowdingDistanceComparator</node>
-            <node x="0.0" y="829.0">sun</node>
-            <node x="619.0" y="533.0">GreedyPackingPlan</node>
-            <node x="163.0" y="681.0">DataProvider</node>
-            <node x="212.0" y="533.0">groovyjarjarasm</node>
-            <node x="298.0" y="755.0">java</node>
-            <node x="0.0" y="755.0">javax</node>
-            <node x="706.0" y="232.0">Evolution</node>
-            <node x="167.0" y="385.0">Individual_MOTS</node>
-            <node x="642.0" y="681.0">javafx</node>
-            <node x="144.0" y="79.0">InversionMutation</node>
-            <node x="486.0" y="459.0">ParetoFrontsGenerator</node>
-            <node x="313.0" y="232.0">OXCrossingOver</node>
-            <node x="485.0" y="681.0">oracle</node>
-            <node x="0.0" y="79.0">SwapMutation</node>
-            <node x="443.0" y="755.0">org</node>
-            <node x="152.0" y="232.0">PMXCrossingOver</node>
-            <node x="0.0" y="681.0">Class50</node>
-            <node x="410.0" y="829.0">Point</node>
-            <node x="252.0" y="459.0">ObjectiveFrontComparator</node>
-            <node x="348.5" y="306.0">lombok</node>
-            <node x="187.0" y="607.0">META-INF</node>
-            <node x="141.0" y="829.0">jdk</node>
-            <node x="491.0" y="232.0">Multiobjective_Tabu_Search</node>
-            <node x="164.0" y="153.0">CrossingOver</node>
-            <node x="325.0" y="681.0">groovy</node>
-            <node x="0.0" y="232.0">CXCrossingOver</node>
-            <node x="104.25" y="306.0">Individual</node>
-            <node x="421.0" y="533.0">definitionFiles</node>
-            <node x="0.0" y="459.0">groovyjarjarcommonscli</node>
-            <node x="167.5" y="0.0">Mutation</node>
-            <node x="0.0" y="533.0">groovyjarjarantlr</node>
-            <node x="0.0" y="385.0">Individual_NSGA_II</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="DeplacementMutation" target="Mutation">
-              <point x="0.0" y="-14.5" />
-              <point x="390.5" y="54.0" />
-              <point x="247.5" y="54.0" />
-              <point x="32.0" y="14.5" />
-            </edge>
-            <edge source="Individual_NSGA_II" target="Individual">
-              <point x="0.0" y="-14.5" />
-              <point x="73.5" y="360.0" />
-              <point x="129.25" y="360.0" />
-              <point x="-25.0" y="14.5" />
-            </edge>
-            <edge source="Multiobjective_Tabu_Search" target="IMetaheuristics">
-              <point x="0.0" y="-14.5" />
-              <point x="588.5" y="207.0" />
-              <point x="639.75" y="207.0" />
-              <point x="-31.75" y="14.5" />
-            </edge>
-            <edge source="Configuration" target="lombok">
-              <point x="0.0" y="-14.5" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="CXCrossingOver" target="CrossingOver">
-              <point x="0.0" y="-14.5" />
-              <point x="66.0" y="207.0" />
-              <point x="183.5" y="207.0" />
-              <point x="-39.0" y="14.5" />
-            </edge>
-            <edge source="PMXCrossingOver" target="CrossingOver">
-              <point x="0.0" y="-14.5" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="OXCrossingOver" target="CrossingOver">
-              <point x="0.0" y="-14.5" />
-              <point x="379.5" y="207.0" />
-              <point x="261.5" y="207.0" />
-              <point x="39.0" y="14.5" />
-            </edge>
-            <edge source="Individual_MOTS" target="Individual">
-              <point x="0.0" y="-14.5" />
-              <point x="235.0" y="360.0" />
-              <point x="179.25" y="360.0" />
-              <point x="25.0" y="14.5" />
-            </edge>
-            <edge source="InversionMutation" target="Mutation">
-              <point x="0.0" y="-14.5" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="SwapMutation" target="Mutation">
-              <point x="0.0" y="-14.5" />
-              <point x="62.0" y="54.0" />
-              <point x="183.5" y="54.0" />
-              <point x="-32.0" y="14.5" />
-            </edge>
-            <edge source="Evolution" target="IMetaheuristics">
-              <point x="0.0" y="-14.5" />
-              <point x="754.5" y="207.0" />
-              <point x="703.25" y="207.0" />
-              <point x="31.75" y="14.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.1460136674259682" x="129.0" y="189.0" />
-          <SelectedNodes>
-            <node>DeplacementMutation</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.fxml" />
-    <entry file="jar://C:/Program Files/Java/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
-    <entry file="jar://C:/Program Files/Java/src.zip!/java/lang/Thread.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/fxml/mainWindow.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Selection.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -751,33 +609,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Point.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="21" />
-          <folding>
-            <element signature="e#0#657#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CrossingOver_OX.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CrossingOver_PMX.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="22" />
-          <folding>
-            <element signature="e#0#632#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -821,25 +652,39 @@
     <entry file="file://$PROJECT_DIR$/JUNE_8__15_54_52_Evolution.csv" />
     <entry file="file://$PROJECT_DIR$/JUNE_8__15_54_40_Evolution.csv" />
     <entry file="file://$PROJECT_DIR$/JUNE_9__18_6_58_Evolution.csv" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Mutation_Inversion.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definitionFiles/trivial_10.ttp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definitionFiles/trivial_1.ttp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definitionFiles/trivial_0.ttp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JUNE_9__21_31_34_Evolution.csv" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/CrossingOver_CX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CrossingOver_OX.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Individual_MOTS.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/CrossingOver_PMX.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="26" />
+        <state>
+          <caret selection-end-line="22" />
+          <folding>
+            <element signature="e#0#632#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/definitionFiles/trivial_10.ttp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/definitionFiles/trivial_1.ttp">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Mutation_Displacement.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -848,49 +693,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/definitionFiles/trivial_0.ttp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Mutation_Swap.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Mutation_Inversion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CrossingOver_CX.java">
+    <entry file="file://$PROJECT_DIR$/JUNE_9__23_21_0_Evolution.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-874" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JUNE_9__23_20_57_Evolution.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="17">
+          <caret line="91" column="9" lean-forward="true" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+          <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JUNE_10__10_3_24_Evolution.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JUNE_10__10_2_5_Evolution.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JUNE_10__10_5_11_Evolution.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CrossingOver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Individual_MOTS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ParetoFrontsGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
-          <folding>
-            <element signature="method#assignRank#0;class#ParetoFrontsGenerator#0" />
-            <element signature="e#6749#6750#0" expanded="true" />
-            <element signature="e#6803#6804#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Individual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="289">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -906,45 +774,186 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Mutation.java">
+    <entry file="file://$PROJECT_DIR$/JUNE_10__10_52_56_Evolution.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JUNE_10__11_9_34_Evolution.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JUNE_10__11_49_27_Evolution.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JUNE_10__12_43_0_Evolution.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JUNE_10__12_43_29_Evolution.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Mutation_Swap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ParetoFrontsGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
           <folding>
-            <element signature="e#292#293#0" expanded="true" />
+            <element signature="method#assignRank#0;class#ParetoFrontsGenerator#0" />
+            <element signature="e#6749#6750#0" expanded="true" />
+            <element signature="e#6803#6804#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Configuration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#366#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
+            <element signature="e#1501#1502#0" expanded="true" />
+            <element signature="e#1532#1533#0" expanded="true" />
+            <element signature="e#1166#1167#0" expanded="true" />
+            <element signature="e#1201#1202#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JUNE_10__12_49_29_Evolution.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JUNE_10__12_50_29_Evolution.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JUNE_10__12_50_21_Evolution.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JUNE_10__12_50_9_Evolution.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JUNE_10__12_53_10_Evolution.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Individual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+          <folding>
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1243#1244#0" expanded="true" />
+            <element signature="e#1656#1657#0" expanded="true" />
+            <element signature="e#1690#1691#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Mutation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+          <folding>
+            <element signature="e#292#293#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-568">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CrossingOver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JUNE_9__21_31_34_Evolution.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Evolution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3140">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="454">
+          <caret line="295" column="44" lean-forward="true" selection-start-line="295" selection-start-column="44" selection-end-line="295" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Evolution#0" />
+            <element signature="e#1175#1227#0" />
+            <element signature="e#2911#3176#0" />
+            <element signature="e#3000#3170#1" />
+            <element signature="e#3182#3836#0" />
+            <element signature="e#3387#3804#1" />
+            <element signature="e#3478#3547#1" />
+            <element signature="e#3565#3631#1" />
+            <element signature="e#3735#3794#1" />
+            <element signature="e#3842#4643#0" />
+            <element signature="e#4017#4612#1" />
+            <element signature="e#4110#4436#1" />
+            <element signature="e#4166#4370#1" />
+            <element signature="e#4376#4422#1" />
+            <element signature="e#4486#4602#1" />
+            <element signature="e#4649#5113#0" />
+            <element signature="e#5119#6122#0" />
+            <element signature="e#5468#6085#1" />
+            <element signature="e#5571#5692#1" />
+            <element signature="e#5698#6075#1" />
+            <element signature="e#5893#6061#1" />
+            <element signature="e#5971#6043#1" />
+            <element signature="e#6128#7076#0" />
+            <element signature="e#6538#7039#1" />
+            <element signature="e#6731#6824#1" />
+            <element signature="e#6852#7029#1" />
+            <element signature="e#6947#7015#1" />
+            <element signature="e#7082#7402#0" />
+            <element signature="e#7408#8043#0" />
+            <element signature="e#8045#8115#0" />
+            <element signature="e#8737#9349#0" />
+            <element signature="e#9355#9425#0" />
           </folding>
         </state>
       </provider>
