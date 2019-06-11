@@ -9,10 +9,21 @@ public abstract class CrossingOver {
         this.crossProb = crossProb;
     }
 
+    /**
+     * parent class of various kinds of crossover
+     * @param parent1 First of two individuals to be crossed. Won't be modified
+     * @param parent2 Second of two individuals to be crossed. Won't be modified
+     * @param generation indicates number of population
+     * @return array of two new individuals which are offspring of given individuals
+     */
     Individual_NSGA_II[] crossOver(Individual_NSGA_II parent1, Individual_NSGA_II parent2, int generation) {
         return crossOver(parent1, parent2, crossProb, generation);
     }
 
+    /**
+     * inside method which shells route from individual, cuts last city and calls specific method of chosen
+     * crossing, then adds last city
+     */
     private Individual_NSGA_II[] crossOver(Individual_NSGA_II parent1, Individual_NSGA_II parent2, float crossProb, int generation) {
         short[] p1Route, p2Route, ch1, ch2;
         p1Route = Arrays.copyOf(parent1.getRoute(), parent1.getRoute().length - 1);
