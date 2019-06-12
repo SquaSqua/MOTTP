@@ -10,65 +10,50 @@ class ParetoFrontsGenerator {
     private static ArrayList<ArrayList<Individual>> generateFronts(ArrayList<? extends Individual> population) {
         ArrayList<ArrayList<Individual>> paretoFronts = new ArrayList<>();
         paretoFronts.add(new ArrayList<>());
-        for(int i = 0; i < population.size(); i++) {
-            for (int j = 0; j < paretoFronts.size(); j++) {
-                ArrayList<Individual> currentFront = paretoFronts.get(j);
+        for(int individualIndex = 0; individualIndex < population.size(); individualIndex++) {
+            for (int frontIndex = 0; frontIndex < paretoFronts.size(); frontIndex++) {
+                ArrayList<Individual> currentFront = paretoFronts.get(frontIndex);
                 if (currentFront.size() == 0) {
-                    currentFront.add(population.get(i));
+                    currentFront.add(population.get(individualIndex));
                     break;
                 } else {
-                    for (int k = 0; k < currentFront.size(); k++) {
-                        int compared = population.get(i).compareTo(currentFront.get(k));
-                        if ((compared == 0) && (k == currentFront.size() - 1)) {
-                            currentFront.add(population.get(i));
-                            if(i < population.size() - 1) {
-                                i++;
-                                j = -1;
-                            }else {
-                                j = paretoFronts.size();
-                            }
+                    for (int comparedIndividualIndex = 0; comparedIndividualIndex < currentFront.size(); comparedIndividualIndex++) {
+                        int compared = population.get(individualIndex).compareTo(currentFront.get(comparedIndividualIndex));
+                        if ((compared == 0) && (comparedIndividualIndex == currentFront.size() - 1)) {
+                            currentFront.add(population.get(individualIndex));
+                            frontIndex = paretoFronts.size();
                             break;
-                        } else if (compared == 1) {
+                        } else if (compared == 1) {//1 to idivFromPop wygrał z comparedInd
                             //zamiana miejsc
                             ArrayList<Individual> betterFront = new ArrayList<>();
-                            betterFront.add(population.get(i));
-                            for(int z = 0; z < k; ) {
+                            betterFront.add(population.get(individualIndex));
+                            for(int z = 0; z < comparedIndividualIndex; ) {
                                 betterFront.add(currentFront.get(z));
                                 currentFront.remove(z);
-                                k--;
+                                comparedIndividualIndex--;
                             }
                             for(int z = 1; z < currentFront.size(); z++) {
-                                if(population.get(i).compareTo(currentFront.get(z)) == 0) {
+                                if(population.get(individualIndex).compareTo(currentFront.get(z)) == 0) {
                                     betterFront.add(currentFront.get(z));
                                     currentFront.remove(z);
                                     z--;
                                 }
                             }
-                            paretoFronts.add(j, betterFront);
+                            paretoFronts.add(frontIndex, betterFront);
                             ArrayList<ArrayList<Individual>> fixedPareto = new ArrayList<>();
-                            for(int correctParetoIndex = 0; correctParetoIndex < j + 1; correctParetoIndex++) {
+                            for(int correctParetoIndex = 0; correctParetoIndex < frontIndex + 1; correctParetoIndex++) {
                                 fixedPareto.add(paretoFronts.get(correctParetoIndex));
                             }
-                            fixedPareto.addAll(fixFronts(paretoFronts, j));
+                            fixedPareto.addAll(fixFronts(paretoFronts, frontIndex));
                             paretoFronts = fixedPareto;
-                            if(i < population.size() - 1) {
-                                i++;
-                                j = -1;
-                            }else {
-                                j = paretoFronts.size();
-                            }
+                            frontIndex = paretoFronts.size();
                             break;
-                        } else if (compared == -1) {
+                        } else if (compared == -1) {//jeśli przegrałem
                             //nowy gorszy front
-                            if (paretoFronts.size() < j + 2) {//1+1
+                            if (paretoFronts.size() == frontIndex + 1) { //jeśli sprawdzany front jest ostatnim
                                 paretoFronts.add(new ArrayList<>());
-                                paretoFronts.get(j + 1).add(population.get(i));
-                                if(i < population.size() - 1) {
-                                    i++;
-                                    j = -1;
-                                }else {
-                                    j = paretoFronts.size();
-                                }
+                                paretoFronts.get(frontIndex + 1).add(population.get(individualIndex));
+                                frontIndex = paretoFronts.size();
                                 break;
                             }
                             else {

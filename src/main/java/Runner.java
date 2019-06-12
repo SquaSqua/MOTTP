@@ -12,7 +12,7 @@ public class Runner {
         configProvider.readFile(definitionFile);
 
         Evolution populationWithoutClones = new Evolution(
-                new Configuration(100, 100, 0.6f, true,
+                new Configuration(100, 300, 0.6f, true,
                         new Mutation_Swap(0.5f), new CrossingOver_PMX(0.02f))
         );
 //        Evolution population = new Evolution(
