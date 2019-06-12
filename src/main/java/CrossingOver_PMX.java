@@ -72,23 +72,30 @@ public class CrossingOver_PMX extends CrossingOver{
     }
 
     private void fixCycles(ArrayList<short[]> cycles) {
-        boolean isAnyFixed = false;
+        boolean isAnyFixed;
         do{
-            Iterator itr = cycles.iterator();
-            while (itr.hasNext()) {
-                short[] firstCycle = (short[]) itr.next();
+            isAnyFixed = false;
+            ArrayList<short[]> elementsToRemove;
+            for(int i = 0; i < cycles.size(); i++) {
+                elementsToRemove = new ArrayList<>();
+                short[] firstCycle = cycles.get(i);
                 if(firstCycle[FirstElement] == firstCycle[SecondElement]) {
                     continue;
                 }
-                for(short[] secondCycle : cycles) {//wygląda jakby miało działać, seiro. Ale źle jest usuwać w czasie iteracji, jeśli mamy dwa iteratory na raz
-                    if(firstCycle[FirstElement] == secondCycle[SecondElement]) {
+                for (short[] secondCycle : cycles) {
+                    if (firstCycle[FirstElement] == secondCycle[SecondElement]) {
                         secondCycle[SecondElement] = firstCycle[SecondElement];
-                        itr.remove();
+                        cycles.get(i)[FirstElement] = -1;
+                        cycles.get(i)[SecondElement] = -1;
+                        elementsToRemove.add(cycles.get(i));
                         isAnyFixed = true;
+                        break;
                     }
                 }
+                i -= elementsToRemove.size();
+                cycles.removeAll(elementsToRemove);
             }
-        }while (!isAnyFixed);
+        }while (isAnyFixed);
     }
 
     /**
