@@ -4,13 +4,15 @@ public class Mutation_Inversion extends Mutation {
         super(mutProb);
     }
 
-    public short[] mutateSpecifically() {
-        fillInReversedOrder(subArray);
-        int j = 0;
-        for (int i = startIndex; i <= stopIndex; i++, j++) {
-            route[i] = subArray[j];
+    public short[] mutateSpecifically(float mutProb) {
+        if(Math.random() < mutProb) {
+            fillInReversedOrder(subArray);
+            int j = 0;
+            for (int i = startIndex; i <= stopIndex; i++, j++) {
+                route[i] = subArray[j];
+            }
+            route[route.length - 1] = route[0];
         }
-        route[route.length - 1] = route[0];
         return route;
     }
 

@@ -16,17 +16,16 @@ public abstract class Mutation {
     }
 
     void mutate(Individual individual, float mutProb) {
-        if(Math.random() < mutProb) {
-            route = individual.getRoute();
-            startIndex = random.nextInt(route.length - 1);
-            stopIndex = random.nextInt(route.length - 1);
-            setInOrder();
-            subArray = new short[stopIndex - (startIndex - 1)];
-            individual.setRoute(mutateSpecifically());
-        }
+
+        route = individual.getRoute();
+        startIndex = random.nextInt(route.length - 1);
+        stopIndex = random.nextInt(route.length - 1);
+        setInOrder();
+        subArray = new short[stopIndex - (startIndex - 1)];
+        individual.setRoute(mutateSpecifically(mutProb));
         individual.setPackingPlanAndFitness();
     }
-    protected abstract short[] mutateSpecifically();
+    protected abstract short[] mutateSpecifically(float mutProb);
 
     private void setInOrder(){
         if (startIndex > stopIndex) {
