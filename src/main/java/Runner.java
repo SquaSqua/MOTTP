@@ -1,8 +1,14 @@
+import crossingOver.PMX;
+import infoToRun.Configuration;
+import infoToRun.DataProvider;
+import metaheuristic.IMetaheuristics;
+import metaheuristic.NSGAII;
+import mutation.MutationSwap;
+
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Arrays;
 
 public class Runner {
     public static void main(String[] args) {
@@ -11,43 +17,14 @@ public class Runner {
         DataProvider configProvider = new DataProvider();
         configProvider.readFile(definitionFile);
 
-        Evolution populationWithoutClones = new Evolution(
+        NSGAII populationWithoutClones = new NSGAII(
                 new Configuration(100, 100, 0.6f, true,
-                        new Mutation_Swap(0), new CrossingOver_PMX(0.02f))
+                        new MutationSwap(0.3f), new PMX(0.02f))
         );
-//        Evolution population = new Evolution(
-//                new Configuration(100, 100, 0.6f,false,
-//                        new Mutation_Swap(0.5f), new CrossingOver_CX(0.02f))
-//        );
-//        Multiobjective_Tabu_Search mots = new Multiobjective_Tabu_Search(
-//                4, 250, 25, 1000);
         searchForPareto(populationWithoutClones);
 //        searchForPareto(population);
 //        searchForPareto(mots);
         countTimeUpHere(start);
-
-//        /**
-//         * Niezobowiązujące testy jednostkowe XD
-//         */
-//        Individual_NSGA_II ind1 = new Individual_NSGA_II(new short[] {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,1}, 1);
-//        Individual_NSGA_II ind2 = new Individual_NSGA_II(new short[] {5,1,20,14,19,6,18,11,3,16,7,12,2,9,17,10,13,4,8,15,5}, 1);
-//        CrossingOver pmx = new CrossingOver_PMX(1);
-//        CrossingOver cx = new CrossingOver_CX(1);
-////        Mutation_Swap mut = new Mutation_Swap(1);
-//        Individual_NSGA_II[] children = pmx.crossOver(ind1, ind2, 1);
-//        System.out.println(Arrays.toString(children[0].getRoute()));
-//        System.out.println(Arrays.toString(children[1].getRoute()));
-//
-//        System.out.println();
-//
-//        Individual_NSGA_II[] childrenCX = cx.crossOver(ind1, ind2, 1);
-//        System.out.println(Arrays.toString(childrenCX[0].getRoute()));
-//        System.out.println(Arrays.toString(childrenCX[1].getRoute()));
-//        System.out.println();
-////        mut.mutate(ind1);
-////        mut.mutate(ind2);
-//        System.out.println(Arrays.toString(ind1.getRoute()));
-//        System.out.println(Arrays.toString(ind2.getRoute()));
     }
 
     private static void searchForPareto(IMetaheuristics algorithm) {

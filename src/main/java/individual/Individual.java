@@ -1,0 +1,108 @@
+package individual;
+
+import generator.PackingPlanGenerator;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+public abstract class Individual {
+
+    public short[] route;
+    private boolean[] packingPlan;
+    private double fitnessTime;
+    private int fitnessWage;
+    private int birthday;
+
+    //fields accessed only through methods in ParetoFrontGenerator
+    private double crowdingDistance;
+    private int rank;
+
+    Individual(short[] route, int birthday) {
+        this.route = route;
+        packingPlan = null;
+        this.birthday = birthday;
+    }
+
+    Individual(int dimension) {
+        short[] route = new short[dimension + 1];
+        ArrayList<Integer> routeList = new ArrayList<>();
+        for (int i = 0; i < dimension; i++) {
+            routeList.add(i);
+        }
+        Collections.shuffle(routeList);
+        for (int i = 0; i < dimension; i++) {
+            route[i] = routeList.get(i).shortValue();
+        }
+        route[dimension] = route[0];
+        this.route = route;
+        this.birthday = 0;
+    }
+
+    public int compareTo(Individual o) {
+        return (int) Math.signum((Math.signum(fitnessTime - o.fitnessTime) * -1)+ Math.signum((fitnessWage - o.fitnessWage)));
+    }
+
+    //getters
+    public short[] getRoute() {
+        return route;
+    }
+    public boolean[] getPackingPlan() {
+        return packingPlan;
+    }
+    public double getFitnessTime() {
+        return fitnessTime;
+    }
+    public int getFitnessWage() {
+        return fitnessWage;
+    }
+    public int getBirthday() { return birthday; }
+    public double getCrowdingDistance() {
+        return crowdingDistance;
+    }
+    public int getRank() {
+        return rank;
+    }
+
+    //setters
+    public void setRoute(short[] route) {
+        this.route = route;
+    }
+    public void setPackingPlan(boolean[] packingPlan) {
+        this.packingPlan = packingPlan;
+    }
+    public void setPackingPlanAndFitness() {
+        PackingPlanGenerator.settlePackingPlan(this);
+        PackingPlanGenerator.setFitnessForIndividual(this);
+    }
+    public void setFitnessTime(double fitnessTime) {
+        this.fitnessTime = fitnessTime;
+    }
+    public void setFitnessWage(int fitnessWage) {
+        this.fitnessWage = fitnessWage;
+    }
+    public void setCrowdingDistance(double crowdingDistance) {
+        this.crowdingDistance = crowdingDistance;
+    }
+    public void setRank(int rank) {
+        this.rank = rank;
+    }
+
+//    na genotyp
+    public boolean equals(Object individual) {
+        if(individual instanceof Individual_NSGAII) {
+            Individual_NSGAII ind = (Individual_NSGAII) individual;
+            return Arrays.equals(this.route, ind.getRoute());
+        }
+        return false;
+    }
+
+//    //na fenotyp
+//    public boolean equals(Object individual) {
+//        if(individual instanceof individual.Individual_NSGAII) {
+//            individual.Individual_NSGAII ind = (individual.Individual_NSGAII) individual;
+//            return fitnessTime == ind.getFitnessTime() && fitnessWage == ind.getFitnessWage();
+//        }
+//        return false;
+//    }
+}

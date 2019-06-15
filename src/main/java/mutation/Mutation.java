@@ -1,0 +1,41 @@
+package mutation;
+
+import individual.Individual;
+
+import java.util.Random;
+
+public abstract class Mutation {
+    float mutProb;
+    Random random = new Random();
+    int startIndex, stopIndex;
+    short[] route;
+    short[] subArray;
+
+    Mutation(float mutProb) {
+        this.mutProb = mutProb;
+    }
+
+    public void mutate(Individual individual){
+        mutate(individual, mutProb);
+    }
+
+    public void mutate(Individual individual, float mutProb) {
+
+        route = individual.getRoute();
+        startIndex = random.nextInt(route.length - 1);
+        stopIndex = random.nextInt(route.length - 1);
+        setInOrder();
+        subArray = new short[stopIndex - (startIndex - 1)];
+        individual.setRoute(mutateSpecifically(mutProb));
+        individual.setPackingPlanAndFitness();
+    }
+    protected abstract short[] mutateSpecifically(float mutProb);
+
+    private void setInOrder(){
+        if (startIndex > stopIndex) {
+            int indexTemp = startIndex;
+            startIndex = stopIndex;
+            stopIndex = indexTemp;
+        }
+    }
+}
