@@ -9,12 +9,21 @@ public class OX extends CrossingOver {
         super(crossProb);
     }
 
-    protected short[][] crossOverSpecifically(short[] route1, short[] route2) {
+    /**
+     * crossover routes with Ordered Crossing
+     * @param route1 route of first parent without last city (doubled with first one)
+     * @param route2 route of first parent without last city (doubled with first one)
+     * @return crossed routes without doubled first city
+     */
+    protected short[][] crossOverAccordingToType(short[] route1, short[] route2, long... seed) {
         short[] child1 = new short[route1.length];
         short[] child2 = new short[route1.length];
         fillWithInitialValues(child1);
         fillWithInitialValues(child2);
         Random random = new Random();
+        if(seed != null) {
+            random.setSeed(seed[0]);
+        }
         indexOfSplit1 = random.nextInt(route1.length);
         indexOfSplit2 = random.nextInt(route1.length);
         setInOrder();

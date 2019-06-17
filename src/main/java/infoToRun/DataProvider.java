@@ -22,6 +22,10 @@ public class DataProvider {
     public static final char WEIGHT_OF_ITEM = 2;
     public static final char CITY_OF_ITEM = 3;
 
+    /**
+     * saves data from file and counts: Ideal, Nadir Point, creates distances array
+     * @param definitionFile path to file containing data defining problem
+     */
     public void readFile(String definitionFile) {
         int dimension;
         int numOfItems;

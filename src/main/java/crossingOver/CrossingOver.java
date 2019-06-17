@@ -9,26 +9,36 @@ public abstract class CrossingOver {
     int indexOfSplit1;
     int indexOfSplit2;
 
+    /**
+     * parent class of various kinds of crossover
+     * @param crossProb default probability of crossing for the whole test
+     */
     CrossingOver(float crossProb) {
         this.crossProb = crossProb;
     }
 
     /**
-     * parent class of various kinds of crossover
-     * @param parent1 First of two individuals to be crossed. Won't be modified
-     * @param parent2 Second of two individuals to be crossed. Won't be modified
-     * @param generation indicates number of population
+     *
+     * @param parent1 First of two individuals to be crossed. Will not be modified
+     * @param parent2 Second of two individuals to be crossed. Will not be modified
+     * @param generation indicates the number of population
+     * @param seed only for test to make method deterministic
      * @return array of two new individuals which are offspring of given individuals
      */
-    public Individual_NSGAII[] crossOver(Individual_NSGAII parent1, Individual_NSGAII parent2, int generation) {
-        return crossOver(parent1, parent2, crossProb, generation);
+    public Individual_NSGAII[] crossOver(Individual_NSGAII parent1, Individual_NSGAII parent2, int generation, long...seed) {
+        if(seed.length != 0) {
+            return crossOver(parent1, parent2, crossProb, generation, seed);
+        }
+        else {
+            return crossOver(parent1, parent2, crossProb, generation);
+        }
     }
 
     /**
-     * inside method which shells route from individual, cuts last city and calls specific method of chosen
-     * crossing, then adds last city
+     * inside method which shells route from individual, cuts last city and calls specific method of chosen crossing,
+     * and then adds last city
      */
-    private Individual_NSGAII[] crossOver(Individual_NSGAII parent1, Individual_NSGAII parent2, float crossProb, int generation) {
+    private Individual_NSGAII[] crossOver(Individual_NSGAII parent1, Individual_NSGAII parent2, float crossProb, int generation, long...seed) {
         short[] p1Route, p2Route, ch1, ch2;
         p1Route = Arrays.copyOf(parent1.getRoute(), parent1.getRoute().length - 1);
         p2Route = Arrays.copyOf(parent2.getRoute(), parent1.getRoute().length - 1);
@@ -37,7 +47,13 @@ public abstract class CrossingOver {
         if(Math.random() < crossProb){
             short[] route1 = copyParentRoute(p1Route);
             short[] route2 = copyParentRoute(p2Route);
-            short[][] children = crossOverSpecifically(route1, route2);
+            short[][] children;
+            if(seed.length != 0) {
+                children = crossOverAccordingToType(route1, route2, seed);
+            }
+            else {
+                children = crossOverAccordingToType(route1, route2);
+            }
             ch1 = addLastCity(children[0]);
             ch2 = addLastCity(children[1]);
         } else {
@@ -54,15 +70,14 @@ public abstract class CrossingOver {
         };
     }
 
-    protected abstract short[][] crossOverSpecifically(short[] route1, short[] route2);
-
-
-    private short[] addLastCity(short[] child) {
-        short[] ch = new short[child.length + 1];
-        System.arraycopy(child, 0, ch, 0, child.length);
-        ch[ch.length - 1] = ch[0];
-        return ch;
-    }
+    /**
+     *
+     * @param route1 route without last city of parent1
+     * @param route2 route without last city of parent2
+     * @param seed only for tests to make them deterministic
+     * @return  array of two new routes
+     */
+    abstract short[][] crossOverAccordingToType(short[] route1, short[] route2, long... seed);
 
     short findFirstEmpty(short[] route) {
         short firstEmpty = -1;
@@ -92,17 +107,24 @@ public abstract class CrossingOver {
         }
     }
 
-    private short[] copyParentRoute(short[] pRoute) {
-        short[] route1 = new short[pRoute.length];
-        System.arraycopy(pRoute, 0, route1, 0, route1.length);
-        return route1;
-    }
-
     void setInOrder(){
         if (indexOfSplit1 > indexOfSplit2) {
             int indexTemp = indexOfSplit1;
             indexOfSplit1 = indexOfSplit2;
             indexOfSplit2 = indexTemp;
         }
+    }
+
+    private short[] copyParentRoute(short[] pRoute) {
+        short[] route1 = new short[pRoute.length];
+        System.arraycopy(pRoute, 0, route1, 0, route1.length);
+        return route1;
+    }
+
+    private short[] addLastCity(short[] child) {
+        short[] ch = new short[child.length + 1];
+        System.arraycopy(child, 0, ch, 0, child.length);
+        ch[ch.length - 1] = ch[0];
+        return ch;
     }
 }

@@ -44,7 +44,7 @@ public class MultiObjectiveTabuSearch implements IMetaheuristics {
         }
     }
 
-    public String run() {
+    public String run(String... chartName) {
 //        appendTitleToStringBuilder(sbResults);
         appendTitleToStringBuilder_alternative(sbResults);
         initialize();

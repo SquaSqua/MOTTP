@@ -2,15 +2,18 @@ package crossingOver;
 
 public class CX extends CrossingOver {
 
-    /**
-     *
-     * @param crossProb given probability of crossing
-     */
+
     CX(float crossProb) {
         super(crossProb);
     }
 
-    protected short[][] crossOverSpecifically(short[] route1, short[] route2) {
+    /**
+     * crossover routes with Cycle Crossing
+     * @param route1 route of first parent without last city (doubled with first one)
+     * @param route2 route of first parent without last city (doubled with first one)
+     * @return crossed routes without doubled first city
+     */
+    protected short[][] crossOverAccordingToType(short[] route1, short[] route2, long... seed) {
             short[] child1 = new short[route1.length];
             short[] child2 = new short[route2.length];
             fillWithInitialValues(child1);

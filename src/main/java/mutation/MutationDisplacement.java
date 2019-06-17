@@ -2,52 +2,43 @@ package mutation;
 
 public class MutationDisplacement extends Mutation{
 
-    MutationDisplacement(float mutProb) {
+    public MutationDisplacement(float mutProb) {
         super(mutProb);
     }
 
-    public short[] mutateSpecifically(float mutProb) {
+    /**
+     * performs mutation with displacement PER INDIVIDUAL
+     * @param mutProb probability of mutation
+     * @return mutated route
+     */
+    public short[] mutateAccordingToType(float mutProb) {
         if(Math.random() < mutProb) {
-            //create left subArray
-            short[] leftSubArray = new short[route.length - subArray.length];
+            short[] mutated = new short[route.length];
+            mutated = fillWithInitialValues(mutated.length);
+            int subarrayLength = stopIndex - startIndex;
 
-            //fill Left subArray
-            int i = 0;
-            for (int j = 0; j < startIndex; j++) {
-                leftSubArray[i++] = route[j];
-            }
-            for (int j = stopIndex + 1; j < route.length; j++) {
-                leftSubArray[i++] = route[j];
-            }
+            //choose new index for subarray. For tests it's 2
+            int nextIndex = random.nextInt(route.length - subarrayLength);
 
-            //choose index to insert
-            int indexToInsert = random.nextInt(leftSubArray.length - 1);
-            startIndex = indexToInsert;
-            stopIndex = startIndex + subArray.length;
-
-            //rewrite left subArray up to chosen index
-            for (int j = 0; j < indexToInsert; j++) {
-                route[j] = leftSubArray[j];
+            //place subarray in a new place
+            int indexOfNew = nextIndex;
+            for(int indexOfOld = startIndex; indexOfOld < stopIndex; indexOfOld++, indexOfNew++) {
+                    mutated[indexOfNew] = route[indexOfOld];
             }
 
-            //rewrite subArray
-            for (int j = 0; j < subArray.length; j++) {
-                route[startIndex++] = subArray[j];
-            }
+            fillTheRest(subarrayLength, mutated, nextIndex);
 
-            //rewrite last part of left subArray
-            for (int j = stopIndex; j < route.length; j++) {
-                route[j] = leftSubArray[indexToInsert++];
-            }
-            route[route.length - 1] = route[0];
+            mutated[route.length - 1] = route[0];
+            route = mutated;
         }
         return route;
     }
 
-    private void fillSubArray(short[] subArray){
-        int j = 0;
-        for(int i = startIndex; i <= stopIndex; i++) {
-            subArray[j++] = route[i];
+    private short[] fillWithInitialValues(int length) {
+        short[] result = new short[length];
+        for(int i = 0; i < length; i++) {
+            result[i] = -1;
         }
+        return result;
     }
 }

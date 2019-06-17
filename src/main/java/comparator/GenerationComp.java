@@ -4,6 +4,9 @@ import individual.Individual;
 
 import java.util.Comparator;
 
+/**
+ * compares two individuals by their number of generation (birth)
+ */
 public class GenerationComp implements Comparator<Individual> {
 
     @Override

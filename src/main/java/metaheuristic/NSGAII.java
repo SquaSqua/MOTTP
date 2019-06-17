@@ -7,21 +7,19 @@ import individual.Individual;
 import individual.Individual_NSGAII;
 import infoToRun.Configuration;
 import infoToRun.DataFromFile;
-import org.knowm.xchart.SwingWrapper;
-import org.knowm.xchart.XYChart;
-import org.knowm.xchart.XYChartBuilder;
-import org.knowm.xchart.XYSeries;
+import org.knowm.xchart.*;
 import org.knowm.xchart.style.Styler;
 import org.knowm.xchart.style.markers.SeriesMarkers;
 
 import java.awt.*;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Random;
 
 
 /**
- * performs a whole test of NSGA-II and saves
+ * performs a whole test of NSGA-II and producing String with whole needed solutions data
  */
 public class NSGAII implements IMetaheuristics {
 
@@ -51,10 +49,11 @@ public class NSGAII implements IMetaheuristics {
     }
 
     /**
-     * cos robi
-     * @return zwraca...
+     * performs NSGA-II test
+     * @param chartName String with name of chart file
+     * @return all connected solutions and measures for one run as String
      */
-    public String run() {
+    public String run(String... chartName) {
         ArrayList<ArrayList<Individual>> paretoFronts;
         initialize();
         for (int generation = 1; generation < configuration.getNumOfGenerations(); generation++) {
@@ -64,7 +63,6 @@ public class NSGAII implements IMetaheuristics {
             population = chooseNextGeneration(paretoFronts);
             if(generation == 1) {
                 appendParetoFrontToStringBuilder(sBFirstPopFront, population);
-//                appendPopulationToStringBuilder(sBFirstPopFront);
                 statistics(paretoFronts, generation);
             }
             addParetoToChartSeries(population);
@@ -79,6 +77,12 @@ public class NSGAII implements IMetaheuristics {
         sBMeasures.append(sBFirstPopFront);
         measures = sBMeasures.toString();
 
+        drawChart(chartName);
+
+        return measures;
+    }
+
+    private void drawChart(String chartName) {
         XYChart chart = getChart();
 //        XYSeries idealAndNadir = chart.addSeries(
 //                "Ideal and Nadir point",
@@ -87,10 +91,16 @@ public class NSGAII implements IMetaheuristics {
 //                );
 //        idealAndNadir.setMarkerColor(Color.BLACK);
         new SwingWrapper<>(chart).displayChart();
-
-        return measures;
+        try {
+            BitmapEncoder.saveBitmap(chart, chartName, BitmapEncoder.BitmapFormat.PNG);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
+    /**
+     * initializes population of zero-generation with random individuals and sets packing plan to them
+     */
     private void initialize() {
         for (int i = 0; i < configuration.getPopSize(); i++) {
             population.add(new Individual_NSGAII(DataFromFile.getDimension()));
@@ -98,6 +108,11 @@ public class NSGAII implements IMetaheuristics {
         }
     }
 
+    /**
+     * generates as population of offspring and if "avoidClones" is chosen it mutates every found clone
+     * @param generation number of iteration
+     * @return group of new individuals with the size of parent population
+     */
     private Collection<? extends Individual> generateOffspring(int generation) {
         ArrayList<Individual_NSGAII> offspring = new ArrayList<>();
         while (offspring.size() < configuration.getPopSize()) {
@@ -116,6 +131,11 @@ public class NSGAII implements IMetaheuristics {
         return offspring;
     }
 
+    /**
+     * finds two new individuals. If they are clones it mutates them up to 3 times and if they're still clones it chooses again
+     * @param generation number of iteration of NSGA-II
+     * @return array of two individuals
+     */
     private Individual_NSGAII[] wardOffClones(int generation) {
         Individual_NSGAII[] children = matingPool(generation);
         for (int i = 0; i < children.length; i++) {
@@ -137,7 +157,12 @@ public class NSGAII implements IMetaheuristics {
         return children;
     }
 
-    //at this point population is already filled out with rank and crowding distance
+    /**
+     * performs the whole evolution process. Selects 2 individuals from population, crosses them and mutates them
+     * at this point population is already filled out with rank and crowding distance
+     * @param generation number of generation
+     * @return brand new individuals
+     */
     private Individual_NSGAII[] matingPool(int generation) {
         Individual_NSGAII[] children = configuration.getCrossingOver()
                 .crossOver(
@@ -147,6 +172,11 @@ public class NSGAII implements IMetaheuristics {
         return children;
     }
 
+    /**
+     * from two merged populations it chooses half of individuals by rank and crowding distance
+     * @param pareto two merged populations of parents and offspring
+     * @return half-size population
+     */
     private ArrayList<Individual> chooseNextGeneration(ArrayList<ArrayList<Individual>> pareto) {
         ArrayList<ArrayList<Individual>> temporaryPareto = new ArrayList<>(pareto);
         ArrayList<Individual> nextGeneration = new ArrayList<>();
@@ -168,6 +198,11 @@ public class NSGAII implements IMetaheuristics {
         return nextGeneration;
     }
 
+    /**
+     * performs tournament selection. Selects best individual from random group from population
+     * @param population all individuals of one generation with rank and crowding distance assigned
+     * @return individual being a winner of selection
+     */
     private Individual_NSGAII select(ArrayList<Individual> population) {
         Individual_NSGAII bestIndividual = (Individual_NSGAII)population.get(0);//just any individual to initialize
         int bestRank = Integer.MAX_VALUE;
@@ -188,6 +223,10 @@ public class NSGAII implements IMetaheuristics {
         return bestIndividual;
     }
 
+    /**
+     * adds new pareto-optimal front to the archive and choose only first front from a new group
+     * @param youngPareto first front from new population
+     */
     private void updateArchive(ArrayList<Individual> youngPareto) {
         for(Individual individual : youngPareto) {
             if(!archive.contains(individual)) {
@@ -197,6 +236,11 @@ public class NSGAII implements IMetaheuristics {
         archive = ParetoFrontsGenerator.generateFrontsWithAssignments(archive).get(0);
     }
 
+    /**
+     * adds to the global variables string builders with all measures and prints on a console how many clones have been found
+     * @param pareto population gouped for lists of fronts
+     * @param generation number of current generation
+     */
     private void statistics(ArrayList<ArrayList<Individual>> pareto, int generation) {
         sBMeasures.append("Generacja ").append(generation).append("\n");
         sBMeasures.append(ParetoFrontsGenerator.ED_measure(pareto)).append(", ")
@@ -209,31 +253,25 @@ public class NSGAII implements IMetaheuristics {
         }
     }
 
-//    private void appendPopulationToStringBuilder(StringBuilder sB) {
-//        int currentRank = 0;
-//        sB.append("Czas podrozy").append(", ").append("Zarobek").append(", ").append("Stworzony w generacji\n");
-//        for (individual.individual i : population) {
-//            if (i.getRank() != currentRank) {
-//                currentRank++;
-//                sB.append("\n");
-//            }
-//            sB.append(i.getFitnessTime()).append(", ").append(i.getFitnessWage()).append(", ").append(i.getBirthday());
-////                    .append(Arrays.toString(i.getRoute())).append(", ").append(Arrays.toString(i.getPackingPlan()));
-//            sB.append("\n");
-//        }
-//    }
-
+    /**
+     * adds string builder with all population's info to given string builder
+     * @param sB String Builder where all info should be saved
+     * @param groupOfIndividuals any population or it's part, of which statistic is needed
+     */
     private void appendParetoFrontToStringBuilder(StringBuilder sB, ArrayList<Individual> groupOfIndividuals) {
         sB.append("Czas podrozy").append(", ").append("Zarobek").append(", ").append("Stworzony w generacji\n");
         for (Individual i : groupOfIndividuals) {
             if (i.getRank() == 0) {
                 sB.append(i.getFitnessTime()).append(", ").append(i.getFitnessWage()).append(", ").append(i.getBirthday());
-//                    .append(Arrays.toString(i.getRoute())).append(", ").append(Arrays.toString(i.getPackingPlan()));
                 sB.append("\n");
             }
         }
     }
 
+    /**
+     * draws chart
+     * @return nice chart
+     */
     private XYChart getChart() {
         // Create Chart
         XYChart chart = new XYChartBuilder().width(1000).height(600).build();
@@ -253,10 +291,14 @@ public class NSGAII implements IMetaheuristics {
         previous.setMarkerColor(Color.LIGHT_GRAY);
         previous.setMarker(SeriesMarkers.CIRCLE);
         addColouredParetoToChart(population, chart);
-
+        addColouredParetoToChart(archive, chart, new Color(0, 0, 100));
         return chart;
     }
 
+    /**
+     * for population takes only first front and adds it to the chart
+     * @param population individuals with assigned rank and fitness
+     */
     private void addParetoToChartSeries(ArrayList<? extends Individual> population) {
         ArrayList<Individual> paretoFront = new ArrayList<>();
         for(Individual individual : population) {
@@ -270,8 +312,13 @@ public class NSGAII implements IMetaheuristics {
         }
     }
 
-
-    private void addColouredParetoToChart(ArrayList<? extends Individual> population, XYChart chart) {
+    /**
+     * adds the whole pareto-optimal front to the chart as many new series where the brighter color it shows,
+     * the younger individual is
+     * @param population individuals of last generation
+     * @param chart XYChart
+     */
+    private void addColouredParetoToChart(ArrayList<? extends Individual> population, XYChart chart, Color... startColor) {
         ArrayList<Individual> paretoFront = new ArrayList<>();
         for(Individual individual : population) {
             if(individual.getRank() == 0) {
@@ -283,13 +330,23 @@ public class NSGAII implements IMetaheuristics {
         ArrayList<Integer> wageSeries = new ArrayList<>();
         ArrayList<Double> timeSeries = new ArrayList<>();
         Color currentColor = new Color(100,0,0);
+        if(startColor.length != 0) {
+            currentColor = startColor[0];
+        }
         XYSeries currentSeries;
         for (Individual ind : paretoFront) {
             if (ind.getBirthday() == lastGeneration) {
                 wageSeries.add(ind.getFitnessWage());
                 timeSeries.add(ind.getFitnessTime());
             } else {
-                currentSeries = chart.addSeries(lastGeneration + "", wageSeries, timeSeries);
+                String name;
+                if(startColor.length == 0) {
+                    name = lastGeneration + "";
+                }
+                else {
+                    name = "a" + lastGeneration;
+                }
+                currentSeries = chart.addSeries(name, wageSeries, timeSeries);
                 currentSeries.setMarkerColor(currentColor);
                 currentSeries.setMarker(SeriesMarkers.CIRCLE);
                 currentSeries.setShowInLegend(false);
@@ -302,20 +359,30 @@ public class NSGAII implements IMetaheuristics {
                 timeSeries.add(ind.getFitnessTime());
             }
         }
-        currentSeries = chart.addSeries("Pareto Front", wageSeries, timeSeries);
+        if(startColor.length == 0) {
+            currentSeries = chart.addSeries("Pareto Front", wageSeries, timeSeries);
+        }
+        else {
+            currentSeries = chart.addSeries("Archive", wageSeries, timeSeries);
+        }
         currentSeries.setMarker(SeriesMarkers.CIRCLE);
-        currentSeries.setMarkerColor(Color.RED);
+        currentSeries.setMarkerColor(currentColor);
         currentSeries.setShowInLegend(true);
     }
 
+    /**
+     * for given color finds next color increased by 5 in order: Red, Green, Blue if last reached 255
+     * @param color last used color
+     * @return new color
+     */
     private Color nextColor(Color color) {
         int r = color.getRed();
         int g = color.getGreen();
         int b = color.getBlue();
-        if(r < 255) {
+        if(r < 250) {
             r += 5;
         }
-        else if (g < 255) {
+        else if (g < 250) {
             g += 5;
         }
         else {

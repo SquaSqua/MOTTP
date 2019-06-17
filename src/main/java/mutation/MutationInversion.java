@@ -2,25 +2,32 @@ package mutation;
 
 public class MutationInversion extends Mutation {
 
-    MutationInversion(float mutProb){
+    public MutationInversion(float mutProb){
         super(mutProb);
     }
 
-    public short[] mutateSpecifically(float mutProb) {
+    /**
+     * performs mutation with inversion PER INDIVIDUAL
+     * @param mutProb probability of mutation
+     * @return mutated route
+     */
+    public short[] mutateAccordingToType(float mutProb) {
+        short[] mutated;
+        int subarrayLength = stopIndex - startIndex;
         if(Math.random() < mutProb) {
-            fillInReversedOrder(subArray);
-            int j = 0;
-            for (int i = startIndex; i <= stopIndex; i++, j++) {
-                route[i] = subArray[j];
-            }
-            route[route.length - 1] = route[0];
+            mutated = new short[route.length];
+            int nextIndex = random.nextInt(route.length - subarrayLength);
+            fillInReversedOrder(mutated, nextIndex, subarrayLength);
+            fillTheRest(subarrayLength, mutated, nextIndex);
+            mutated[route.length - 1] = route[0];
+            route = mutated;
         }
         return route;
     }
 
-    private void fillInReversedOrder(short[] subArray){
-        int j = stopIndex;
-        for (int i = 0; i < subArray.length; i++, j--) {
+    private void fillInReversedOrder(short[] subArray, int nextIndex, int subarrayLength){
+        int j = stopIndex - 1;
+        for (int i = nextIndex; i < nextIndex + subarrayLength; i++, j--) {
             subArray[i] = route[j];
         }
     }

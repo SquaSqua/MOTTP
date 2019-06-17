@@ -17,16 +17,19 @@ public class PMX extends CrossingOver {
     }
 
     /**
-     * implements Partially Mapped Crossing
+     * crossover routes with Partially Mapped Crossing
      * @param route1 route of first parent without last city (doubled with first one)
      * @param route2 route of first parent without last city (doubled with first one)
      * @return crossed routes without doubled first city
      */
-    protected short[][] crossOverSpecifically(short[] route1, short[] route2) {
+    protected short[][] crossOverAccordingToType(short[] route1, short[] route2, long... seed) {
         this.route1 = route1;
         this.route2 = route2;
 
         Random random = new Random();
+        if(seed.length != 0) {
+            random.setSeed(seed[0]);
+        }
         indexOfSplit1 = random.nextInt(route1.length);
         indexOfSplit2 = random.nextInt(route2.length);//element of this index is one after rewritten
         setInOrder();
@@ -144,14 +147,6 @@ public class PMX extends CrossingOver {
             if(child2[i] == 0) {
                 child2[i] = route2[i];
             }
-        }
-    }
-
-    void setInOrder(){
-        if (indexOfSplit1 > indexOfSplit2) {
-            int indexTemp = indexOfSplit1;
-            indexOfSplit1 = indexOfSplit2;
-            indexOfSplit2 = indexTemp;
         }
     }
 }

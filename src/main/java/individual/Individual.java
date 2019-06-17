@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
+/**
+ * abstract class for all (two) types of implemented metaheuristics for Travelling Thief Problem
+ * It has all needed fields to represent individual, but also fields for grouping results in fronts (rank) or crowding distance
+ */
 public abstract class Individual {
 
     public short[] route;
@@ -18,12 +22,22 @@ public abstract class Individual {
     private double crowdingDistance;
     private int rank;
 
+    /**
+     * constructor for new individual being offspring of another individual
+     * @param route order of visited cities with last city equal to the first one
+     * @param birthday number of generation when this individual was created
+     */
     Individual(short[] route, int birthday) {
         this.route = route;
         packingPlan = null;
         this.birthday = birthday;
     }
 
+    /**
+     * constructor for initialization of population. Only number of cities is needed.
+     * IMPORTANT! DataFromFile needs to be initialized
+     * @param dimension number of cities to visit
+     */
     Individual(int dimension) {
         short[] route = new short[dimension + 1];
         ArrayList<Integer> routeList = new ArrayList<>();
@@ -39,6 +53,11 @@ public abstract class Individual {
         this.birthday = 0;
     }
 
+    /**
+     * compares two individual in pareto-optimal sense
+     * @param o individual
+     * @return 1 if "this" individual is better, -1 if given is better, 0 if they are equal
+     */
     public int compareTo(Individual o) {
         return (int) Math.signum((Math.signum(fitnessTime - o.fitnessTime) * -1)+ Math.signum((fitnessWage - o.fitnessWage)));
     }
@@ -88,7 +107,10 @@ public abstract class Individual {
         this.rank = rank;
     }
 
-//    na genotyp
+    /** checks if genotypes (routes) are are equal
+     * @param individual individual to compare to
+     * @return if routes are equal
+     */
     public boolean equals(Object individual) {
         if(individual instanceof Individual_NSGAII) {
             Individual_NSGAII ind = (Individual_NSGAII) individual;
@@ -96,13 +118,4 @@ public abstract class Individual {
         }
         return false;
     }
-
-//    //na fenotyp
-//    public boolean equals(Object individual) {
-//        if(individual instanceof individual.Individual_NSGAII) {
-//            individual.Individual_NSGAII ind = (individual.Individual_NSGAII) individual;
-//            return fitnessTime == ind.getFitnessTime() && fitnessWage == ind.getFitnessWage();
-//        }
-//        return false;
-//    }
 }
