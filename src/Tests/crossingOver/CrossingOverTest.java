@@ -1,6 +1,10 @@
 package crossingOver;
 
-import individual.Individual_NSGAII;
+import ewasko.crossingOver.CX;
+import ewasko.crossingOver.CrossingOver;
+import ewasko.crossingOver.OX;
+import ewasko.crossingOver.PMX;
+import ewasko.individual.Individual_NSGAII;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

@@ -1,7 +1,8 @@
 package generator;
 
-import individual.Individual;
-import individual.Individual_NSGAII;
+import ewasko.generator.ParetoFrontsGenerator;
+import ewasko.individual.Individual;
+import ewasko.individual.Individual_NSGAII;
 import org.junit.Test;
 
 import java.util.ArrayList;

@@ -33,93 +33,65 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/metaheuristic/NSGAII.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/metaheuristic/NSGAII.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="59" column="76" lean-forward="true" selection-start-line="59" selection-start-column="76" selection-end-line="59" selection-end-column="76" />
+            <state relative-caret-position="104">
+              <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#NSGAII#0" />
                 <element signature="docComment;method#run#0;class#NSGAII#0" />
-                <element signature="e#2456#2604#1" />
-                <element signature="e#3429#3480#0" />
-                <element signature="docComment;method#initialize#0;class#NSGAII#0" />
                 <element signature="method#initialize#0;class#NSGAII#0" />
-                <element signature="e#4055#4224#1" />
                 <element signature="docComment;method#generateOffspring#0;class#NSGAII#0" />
                 <element signature="method#generateOffspring#0;class#NSGAII#0" />
-                <element signature="e#4683#5099#1" />
-                <element signature="e#4773#4842#1" />
-                <element signature="e#4860#4926#1" />
-                <element signature="e#5030#5089#1" />
                 <element signature="docComment;method#wardOffClones#0;class#NSGAII#0" />
                 <element signature="method#wardOffClones#0;class#NSGAII#0" />
-                <element signature="e#5550#6145#1" />
-                <element signature="e#5643#5969#1" />
-                <element signature="e#5699#5903#1" />
-                <element signature="e#5909#5955#1" />
-                <element signature="e#6019#6135#1" />
                 <element signature="docComment;method#matingPool#0;class#NSGAII#0" />
                 <element signature="method#matingPool#0;class#NSGAII#0" />
                 <element signature="docComment;method#chooseNextGeneration#0;class#NSGAII#0" />
                 <element signature="method#chooseNextGeneration#0;class#NSGAII#0" />
-                <element signature="e#7432#8042#1" />
-                <element signature="e#7535#7656#1" />
-                <element signature="e#7662#8032#1" />
-                <element signature="e#7850#8018#1" />
-                <element signature="e#7928#8000#1" />
                 <element signature="docComment;method#select#0;class#NSGAII#0" />
                 <element signature="method#select#0;class#NSGAII#0" />
-                <element signature="e#8758#9257#1" />
-                <element signature="e#8949#9042#1" />
-                <element signature="e#9070#9247#1" />
-                <element signature="e#9165#9233#1" />
                 <element signature="docComment;method#updateArchive#0;class#NSGAII#0" />
                 <element signature="method#updateArchive#0;class#NSGAII#0" />
-                <element signature="e#9584#9698#1" />
-                <element signature="e#9632#9688#1" />
-                <element signature="docComment;method#statistics#0;class#NSGAII#0" />
-                <element signature="method#statistics#0;class#NSGAII#0" />
-                <element signature="e#10529#10681#1" />
-                <element signature="docComment;method#appendParetoFrontToStringBuilder#0;class#NSGAII#0" />
-                <element signature="method#appendParetoFrontToStringBuilder#0;class#NSGAII#0" />
-                <element signature="e#11210#11428#1" />
-                <element signature="e#11246#11418#1" />
                 <element signature="docComment;method#getChart#0;class#NSGAII#0" />
-                <element signature="method#getChart#0;class#NSGAII#0" />
-                <element signature="e#12089#12135#0" />
                 <element signature="docComment;method#addParetoToChartSeries#0;class#NSGAII#0" />
-                <element signature="method#addParetoToChartSeries#0;class#NSGAII#0" />
-                <element signature="e#12806#12920#1" />
-                <element signature="e#12850#12910#1" />
-                <element signature="e#12970#13113#1" />
                 <element signature="docComment;method#addColouredParetoToChart#0;class#NSGAII#0" />
-                <element signature="method#addColouredParetoToChart#0;class#NSGAII#0" />
-                <element signature="e#13578#13692#1" />
-                <element signature="e#13622#13682#1" />
-                <element signature="e#14171#14207#1" />
-                <element signature="e#14320#15297#1" />
-                <element signature="e#14100#14223#1" />
-                <element signature="e#14504#15287#1" />
-                <element signature="e#14579#14626#1" />
-                <element signature="e#14668#14713#1" />
-                <element signature="e#15149#15245#1" />
-                <element signature="e#15259#15355#1" />
                 <element signature="docComment;method#nextColor#0;class#NSGAII#0" />
                 <element signature="method#nextColor#0;class#NSGAII#0" />
-                <element signature="e#15417#15448#1" />
-                <element signature="e#15475#15506#1" />
-                <element signature="e#15520#15551#1" />
+                <element signature="e#13492#13493#0" expanded="true" />
+                <element signature="e#13528#13529#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/generator/ParetoFrontsGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+            <state relative-caret-position="231">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/TestResults.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/Runner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="925">
+              <caret line="93" column="32" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -134,9 +106,9 @@
       <list>
         <option value="Interface" />
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Arquillian JUnit Test Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -154,21 +126,11 @@
     </findStrings>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/generator/ParetoFrontsGenerator.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/ewasko/generator/ParetoFrontsGenerator.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Selection_Tournament.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DataProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DataFromFile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Individual.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Configuration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Comparator_CrowdingDistance.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Comp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Comparator_Generation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Evolution.java" />
         <option value="$PROJECT_DIR$/src/main/java/CrossingOver_CX.java" />
         <option value="$PROJECT_DIR$/src/main/java/CrossingOver.java" />
         <option value="$PROJECT_DIR$/src/main/java/CrossingOver_PMX.java" />
@@ -185,7 +147,6 @@
         <option value="$PROJECT_DIR$/src/main/java/crossingOver/CXTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Tests/CXTest.java" />
         <option value="$PROJECT_DIR$/src/Tests/crossingOver/CrossingOverTest.java" />
-        <option value="$PROJECT_DIR$/src/Tests/mutation/MutationTest.java" />
         <option value="$PROJECT_DIR$/src/Tests/generator/PackingPlanGeneratorTest.java" />
         <option value="$PROJECT_DIR$/src/Tests/generator/ParetoFrontsGeneratorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/comparator/GenerationComp.java" />
@@ -195,7 +156,6 @@
         <option value="$PROJECT_DIR$/src/main/java/generator/ParetoFrontsGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/individual/Individual_NSGAII.java" />
         <option value="$PROJECT_DIR$/src/main/java/comparator/CrowdingDistanceComp.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/individual/Individual.java" />
         <option value="$PROJECT_DIR$/src/main/java/generator/PackingPlanGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/infoToRun/Configuration.java" />
@@ -206,10 +166,22 @@
         <option value="$PROJECT_DIR$/src/main/java/mutation/MutationInversion.java" />
         <option value="$PROJECT_DIR$/src/main/java/mutation/MutationSwap.java" />
         <option value="$PROJECT_DIR$/src/main/java/mutation/MutationDisplacement.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Runner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/metaheuristic/NSGAII.java" />
         <option value="$PROJECT_DIR$/src/main/java/metaheuristic/MultiObjectiveTabuSearch.java" />
         <option value="$PROJECT_DIR$/src/main/java/metaheuristic/IMetaheuristics.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Runner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/metaheuristic/NSGAII.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TestResults.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ewasko/metaheuristic/MultiObjectiveTabuSearch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ewasko/metaheuristic/IMetaheuristics.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ewasko/mutation/Mutation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ewasko/crossingOver/CrossingOver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ewasko/crossingOver/CX.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ewasko/crossingOver/OX.java" />
+        <option value="$PROJECT_DIR$/src/Tests/mutation/MutationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ewasko/TestResults.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ewasko/Runner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ewasko/metaheuristic/NSGAII.java" />
       </list>
     </option>
   </component>
@@ -247,7 +219,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="960" />
     <option name="width" value="965" />
     <option name="height" value="1040" />
@@ -258,6 +230,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,6 +262,51 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ewasko" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MOTTP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MOTTP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ewasko" type="462c0819:PsiDirectoryNode" />
+              <item name="comparator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MOTTP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MOTTP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ewasko" type="462c0819:PsiDirectoryNode" />
+              <item name="crossingOver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MOTTP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MOTTP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ewasko" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MOTTP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MOTTP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ewasko" type="462c0819:PsiDirectoryNode" />
+              <item name="infoToRun" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MOTTP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MOTTP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ewasko" type="462c0819:PsiDirectoryNode" />
               <item name="metaheuristic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -296,23 +314,14 @@
               <item name="MOTTP" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MOTTP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MOTTP" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Results" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MOTTP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ewasko" type="462c0819:PsiDirectoryNode" />
+              <item name="mutation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -353,11 +362,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Workspace\GitHub\MOTTP\src\main\java\ewasko" />
       <recent name="D:\Workspace\GitHub\MOTTP\src" />
       <recent name="D:\Workspace\GitHub\MOTTP\src\main\fxml" />
       <recent name="D:\Workspace\GitHub\MOTTP\src\main\java" />
       <recent name="D:\Workspace\GitHub\MOTTP\src\main" />
-      <recent name="D:\Workspace\GitHub\MOTTP\src\main\resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Workspace\GitHub\MOTTP\src\main\java" />
@@ -379,7 +388,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Runner">
+  <component name="RunManager" selected="Application.Runner (1)">
+    <configuration name="Runner (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ewasko.Runner" />
+      <module name="MOTTP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ewasko.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Runner" />
       <module name="MOTTP" />
@@ -395,7 +417,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MutationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MutationTest.mutateDisplacement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MOTTP" />
       <extension name="coverage">
         <pattern>
@@ -405,38 +427,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="mutation" />
       <option name="MAIN_CLASS_NAME" value="mutation.MutationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MutationTest.mutateSwap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MOTTP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mutation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mutation" />
-      <option name="MAIN_CLASS_NAME" value="mutation.MutationTest" />
-      <option name="METHOD_NAME" value="mutateSwap" />
+      <option name="METHOD_NAME" value="mutateDisplacement" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParetoFrontsGeneratorTest.generateFrontsWithAssignments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MutationTest.mutateInversion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MOTTP" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="generator.*" />
+          <option name="PATTERN" value="mutation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="generator" />
-      <option name="MAIN_CLASS_NAME" value="generator.ParetoFrontsGeneratorTest" />
-      <option name="METHOD_NAME" value="generateFrontsWithAssignments" />
+      <option name="PACKAGE_NAME" value="mutation" />
+      <option name="MAIN_CLASS_NAME" value="mutation.MutationTest" />
+      <option name="METHOD_NAME" value="mutateInversion" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -444,18 +451,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Runner" />
-      <item itemvalue="JUnit.MutationTest" />
-      <item itemvalue="JUnit.MutationTest.mutateSwap" />
+      <item itemvalue="Application.Runner (1)" />
       <item itemvalue="JUnit.All in MOTTP" />
-      <item itemvalue="JUnit.ParetoFrontsGeneratorTest.generateFrontsWithAssignments" />
+      <item itemvalue="JUnit.MutationTest.mutateDisplacement" />
+      <item itemvalue="JUnit.MutationTest.mutateInversion" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Runner" />
+        <item itemvalue="Application.Runner (1)" />
         <item itemvalue="JUnit.All in MOTTP" />
-        <item itemvalue="JUnit.ParetoFrontsGeneratorTest.generateFrontsWithAssignments" />
-        <item itemvalue="JUnit.MutationTest" />
-        <item itemvalue="JUnit.MutationTest.mutateSwap" />
+        <item itemvalue="JUnit.MutationTest.mutateInversion" />
+        <item itemvalue="JUnit.MutationTest.mutateDisplacement" />
+        <item itemvalue="Application.Runner" />
       </list>
     </recent_temporary>
   </component>
@@ -529,50 +536,85 @@
       <workItem from="1560525715957" duration="4339000" />
       <workItem from="1560587895839" duration="13360000" />
       <workItem from="1560753203551" duration="19199000" />
-      <workItem from="1560787043012" duration="8262000" />
+      <workItem from="1560787043012" duration="11158000" />
+      <workItem from="1560839765243" duration="31031000" />
+      <workItem from="1560886554344" duration="1319000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MutationTest - 2019.06.16 at 18h 15m 29s.xml">
-      <configuration name="MutationTest" configurationId="JUnit" />
+    <history-entry file="MutationTest_mutateDisplacement - 2019.06.18 at 18h 54m 49s.xml">
+      <configuration name="MutationTest.mutateDisplacement" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_MOTTP - 2019.06.16 at 18h 15m 34s.xml">
+    <history-entry file="MutationTest_mutateInversion - 2019.06.18 at 18h 54m 53s.xml">
+      <configuration name="MutationTest.mutateInversion" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MutationTest_mutateDisplacement - 2019.06.18 at 18h 55m 04s.xml">
+      <configuration name="MutationTest.mutateDisplacement" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MutationTest_mutateDisplacement - 2019.06.18 at 19h 13m 41s.xml">
+      <configuration name="MutationTest.mutateDisplacement" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MutationTest_mutateDisplacement - 2019.06.18 at 19h 14m 41s.xml">
+      <configuration name="MutationTest.mutateDisplacement" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MutationTest_mutateDisplacement - 2019.06.18 at 19h 14m 44s.xml">
+      <configuration name="MutationTest.mutateDisplacement" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MutationTest_mutateInversion - 2019.06.18 at 19h 15m 39s.xml">
+      <configuration name="MutationTest.mutateInversion" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MutationTest_mutateInversion - 2019.06.18 at 19h 15m 43s.xml">
+      <configuration name="MutationTest.mutateInversion" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_MOTTP - 2019.06.18 at 19h 15m 49s.xml">
       <configuration name="All in MOTTP" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_MOTTP - 2019.06.16 at 20h 40m 53s.xml">
-      <configuration name="All in MOTTP" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ParetoFrontsGeneratorTest_generateFrontsWithAssignments - 2019.06.16 at 22h 51m 32s.xml">
-      <configuration name="ParetoFrontsGeneratorTest.generateFrontsWithAssignments" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_MOTTP - 2019.06.16 at 22h 52m 01s.xml">
-      <configuration name="All in MOTTP" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_MOTTP - 2019.06.16 at 23h 15m 00s.xml">
-      <configuration name="All in MOTTP" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_MOTTP - 2019.06.17 at 08h 48m 50s.xml">
-      <configuration name="All in MOTTP" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_MOTTP - 2019.06.17 at 11h 55m 16s.xml">
-      <configuration name="All in MOTTP" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_MOTTP - 2019.06.17 at 13h 02m 57s.xml">
-      <configuration name="All in MOTTP" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_MOTTP - 2019.06.17 at 13h 03m 28s.xml">
+    <history-entry file="All_in_MOTTP - 2019.06.18 at 19h 32m 05s.xml">
       <configuration name="All in MOTTP" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="320828000" />
+    <option name="totallyTimeSpent" value="356074000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49433428" visible="true" weight="0.23355705" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49433428" visible="true" weight="0.1932886" />
+      <window_info id="Structure" order="1" sideWeight="0.5056657" side_tool="true" weight="0.18993288" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.5042493" side_tool="true" weight="0.18993288" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.31161472" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39093485" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2719547" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49932885" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.38243628" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24966443" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.3295302" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="8" side_tool="true" weight="0.3295302" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3295302" />
+      <window_info anchor="right" id="Database" order="10" weight="0.3295302" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49433428" visible="true" weight="0.19060403" />
       <window_info id="Structure" order="1" sideWeight="0.5056657" side_tool="true" weight="0.18993288" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -591,7 +633,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.14164306" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.38243628" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24966443" />
@@ -603,39 +645,6 @@
       <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="8" side_tool="true" weight="0.3295302" />
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3295302" />
       <window_info anchor="right" id="Database" order="10" weight="0.3295302" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49433428" visible="true" weight="0.18993288" />
-      <window_info id="Structure" order="1" sideWeight="0.5056657" side_tool="true" weight="0.18993288" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.5042493" side_tool="true" weight="0.18993288" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.31161472" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36827195" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32152975" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49932885" weight="0.3286119" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.14164306" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24966443" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" weight="0.3295302" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
-      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="9" side_tool="true" weight="0.3295302" />
-      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3295302" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -685,10 +694,22 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/metaheuristic/NSGAII.java</url>
-          <line>292</line>
+          <url>file://$PROJECT_DIR$/src/main/java/ewasko/metaheuristic/NSGAII.java</url>
+          <line>51</line>
           <properties />
-          <option name="timeStamp" value="50" />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ewasko/metaheuristic/NSGAII.java</url>
+          <line>311</line>
+          <properties />
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ewasko/metaheuristic/NSGAII.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="66" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -698,6 +719,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>generation == 90</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>cityA == -1 || cityB == -1</expression-string>
         <language-id>JAVA</language-id>
@@ -746,27 +772,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Comp.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/PackingPlanSetter.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/util/TimSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="862" selection-start-line="862" selection-end-line="862" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JUNE_15__14_40_51_Evolution.csv" />
-    <entry file="file://$PROJECT_DIR$/JUNE_15__14_21_7_Evolution.csv" />
-    <entry file="file://$PROJECT_DIR$/JUNE_15__14_41_23_Evolution.csv" />
-    <entry file="file://$PROJECT_DIR$/JUNE_15__14_28_58_Evolution.csv" />
-    <entry file="file://$PROJECT_DIR$/JUNE_15__14_38_49_Evolution.csv" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Tests/CXTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/definitionFiles/hard_4.ttp">
       <provider selected="true" editor-type-id="text-editor">
@@ -775,30 +780,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/mutation/MutationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/crossingOver/CrossingOverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JUNE_16__20_41_5_metaheuristic.NSGAII.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-51">
-          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/JUNE_16__20_41_5_metaheuristic.NSGAII.csv" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/definitionFiles/trivial_0.ttp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -814,24 +796,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/crossingOver/OX.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/crossingOver/PMX.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/individual/Individual_MOTS.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/individual/Individual_MOTS.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
@@ -843,14 +808,7 @@
         <state relative-caret-position="-612" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/generator/ParetoFrontsGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="50" column="43" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/comparator/CrowdingDistanceComp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/comparator/CrowdingDistanceComp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
@@ -860,7 +818,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/comparator/GenerationComp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/comparator/GenerationComp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
@@ -870,20 +828,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/comparator/ObjectiveFrontComp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/comparator/ObjectiveFrontComp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="62" lean-forward="true" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -894,7 +845,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/generator/PackingPlanGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/generator/PackingPlanGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="116" selection-start-line="116" selection-end-line="116" />
@@ -904,45 +855,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/individual/Individual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2175#2176#0" expanded="true" />
-            <element signature="e#2203#2204#0" expanded="true" />
-            <element signature="method#getBirthday#0;class#Individual#0" />
-            <element signature="e#2692#2693#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/individual/Individual_NSGAII.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/individual/Individual_NSGAII.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/infoToRun/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/infoToRun/Point.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/infoToRun/Point.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/infoToRun/DataFromFile.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/infoToRun/DataFromFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
@@ -984,7 +911,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/infoToRun/DataProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/infoToRun/DataProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1105">
           <caret line="25" column="83" selection-start-line="25" selection-start-column="83" selection-end-line="25" selection-end-column="83" />
@@ -994,60 +921,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/crossingOver/CX.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/crossingOver/CrossingOver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-629">
-          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mutation/Mutation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#681#682#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#377#378#0" expanded="true" />
-            <element signature="e#420#421#0" expanded="true" />
-            <element signature="method#setInOrder#0;class#Mutation#0" />
-            <element signature="method#fillTheRest#0;class#Mutation#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mutation/MutationInversion.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/mutation/MutationInversion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" selection-start-line="8" selection-end-line="12" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mutation/MutationSwap.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/mutation/MutationSwap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
           <folding>
             <element signature="e#470#517#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mutation/MutationDisplacement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1058,10 +945,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/knowm/xchart/xchart/3.5.4/xchart-3.5.4.jar!/org/knowm/xchart/internal/series/Series.class">
+    <entry file="file://$PROJECT_DIR$/src/ResultsJUNE_17__20_41_1_metaheuristic.NSGAII.csv" />
+    <entry file="file://$PROJECT_DIR$/chart_JUNE_17__20_51_12_metaheuristic.NSGAII.csv.png" />
+    <entry file="file://$PROJECT_DIR$/src/Results/JUNE_17__20_51_12_metaheuristic.NSGAII.csv" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="216">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/metaheuristic/MultiObjectiveTabuSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="80" column="27" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/metaheuristic/IMetaheuristics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/infoToRun/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/crossingOver/CrossingOver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4356#4357#0" expanded="true" />
+            <element signature="e#4388#4389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/crossingOver/PMX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/crossingOver/CX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/crossingOver/OX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests/crossingOver/CrossingOverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pm 0.0318__18_41_46_ewasko.metaheuristic.NSGAII.csv.png" />
+    <entry file="file://$PROJECT_DIR$/Pm 0.03___18__18_43_59_ewasko.metaheuristic.NSGAII.csv.png" />
+    <entry file="file://$PROJECT_DIR$/Pm 0.318__18_41_43_ewasko.metaheuristic.NSGAII.csv.png" />
+    <entry file="file://$PROJECT_DIR$/Pm 0.03  18__18_51_23_ewasko.metaheuristic.NSGAII.csv.png" />
+    <entry file="file://$PROJECT_DIR$/Pm 0.3___18__18_43_55_ewasko.metaheuristic.NSGAII.csv.png" />
+    <entry file="file://$PROJECT_DIR$/Pm 0.3  18__18_51_19_ewasko.metaheuristic.NSGAII.csv.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/mutation/Mutation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setInOrder#0;class#Mutation#0" />
+            <element signature="method#fillTheRest#0;class#Mutation#0" />
+            <element signature="e#2778#2779#0" expanded="true" />
+            <element signature="e#2808#2809#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/mutation/MutationDisplacement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests/mutation/MutationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sample_Chart.png" />
+    <entry file="file://$PROJECT_DIR$/.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/individual/Individual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2362#2363#0" expanded="true" />
+            <element signature="method#getBirthday#0;class#Individual#0" />
+            <element signature="e#2672#2673#0" expanded="true" />
+            <element signature="e#2706#2707#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/knowm/xchart/xchart/3.5.4/xchart-3.5.4.jar!/org/knowm/xchart/BitmapEncoder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1075,125 +1095,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sample_Chart.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ResultsJUNE_17__20_41_1_metaheuristic.NSGAII.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Runner.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/knowm/xchart/xchart/3.5.4/xchart-3.5.4.jar!/org/knowm/xchart/internal/series/Series.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+        <state relative-caret-position="765">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/TestResults.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chart_JUNE_17__20_51_12_metaheuristic.NSGAII.csv.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Results/JUNE_17__20_51_12_metaheuristic.NSGAII.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/metaheuristic/MultiObjectiveTabuSearch.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/generator/ParetoFrontsGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+        <state relative-caret-position="231">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/metaheuristic/IMetaheuristics.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        <state relative-caret-position="925">
+          <caret line="93" column="32" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/metaheuristic/NSGAII.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ewasko/metaheuristic/NSGAII.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="59" column="76" lean-forward="true" selection-start-line="59" selection-start-column="76" selection-end-line="59" selection-end-column="76" />
+        <state relative-caret-position="104">
+          <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#NSGAII#0" />
             <element signature="docComment;method#run#0;class#NSGAII#0" />
-            <element signature="e#2456#2604#1" />
-            <element signature="e#3429#3480#0" />
-            <element signature="docComment;method#initialize#0;class#NSGAII#0" />
             <element signature="method#initialize#0;class#NSGAII#0" />
-            <element signature="e#4055#4224#1" />
             <element signature="docComment;method#generateOffspring#0;class#NSGAII#0" />
             <element signature="method#generateOffspring#0;class#NSGAII#0" />
-            <element signature="e#4683#5099#1" />
-            <element signature="e#4773#4842#1" />
-            <element signature="e#4860#4926#1" />
-            <element signature="e#5030#5089#1" />
             <element signature="docComment;method#wardOffClones#0;class#NSGAII#0" />
             <element signature="method#wardOffClones#0;class#NSGAII#0" />
-            <element signature="e#5550#6145#1" />
-            <element signature="e#5643#5969#1" />
-            <element signature="e#5699#5903#1" />
-            <element signature="e#5909#5955#1" />
-            <element signature="e#6019#6135#1" />
             <element signature="docComment;method#matingPool#0;class#NSGAII#0" />
             <element signature="method#matingPool#0;class#NSGAII#0" />
             <element signature="docComment;method#chooseNextGeneration#0;class#NSGAII#0" />
             <element signature="method#chooseNextGeneration#0;class#NSGAII#0" />
-            <element signature="e#7432#8042#1" />
-            <element signature="e#7535#7656#1" />
-            <element signature="e#7662#8032#1" />
-            <element signature="e#7850#8018#1" />
-            <element signature="e#7928#8000#1" />
             <element signature="docComment;method#select#0;class#NSGAII#0" />
             <element signature="method#select#0;class#NSGAII#0" />
-            <element signature="e#8758#9257#1" />
-            <element signature="e#8949#9042#1" />
-            <element signature="e#9070#9247#1" />
-            <element signature="e#9165#9233#1" />
             <element signature="docComment;method#updateArchive#0;class#NSGAII#0" />
             <element signature="method#updateArchive#0;class#NSGAII#0" />
-            <element signature="e#9584#9698#1" />
-            <element signature="e#9632#9688#1" />
-            <element signature="docComment;method#statistics#0;class#NSGAII#0" />
-            <element signature="method#statistics#0;class#NSGAII#0" />
-            <element signature="e#10529#10681#1" />
-            <element signature="docComment;method#appendParetoFrontToStringBuilder#0;class#NSGAII#0" />
-            <element signature="method#appendParetoFrontToStringBuilder#0;class#NSGAII#0" />
-            <element signature="e#11210#11428#1" />
-            <element signature="e#11246#11418#1" />
             <element signature="docComment;method#getChart#0;class#NSGAII#0" />
-            <element signature="method#getChart#0;class#NSGAII#0" />
-            <element signature="e#12089#12135#0" />
             <element signature="docComment;method#addParetoToChartSeries#0;class#NSGAII#0" />
-            <element signature="method#addParetoToChartSeries#0;class#NSGAII#0" />
-            <element signature="e#12806#12920#1" />
-            <element signature="e#12850#12910#1" />
-            <element signature="e#12970#13113#1" />
             <element signature="docComment;method#addColouredParetoToChart#0;class#NSGAII#0" />
-            <element signature="method#addColouredParetoToChart#0;class#NSGAII#0" />
-            <element signature="e#13578#13692#1" />
-            <element signature="e#13622#13682#1" />
-            <element signature="e#14171#14207#1" />
-            <element signature="e#14320#15297#1" />
-            <element signature="e#14100#14223#1" />
-            <element signature="e#14504#15287#1" />
-            <element signature="e#14579#14626#1" />
-            <element signature="e#14668#14713#1" />
-            <element signature="e#15149#15245#1" />
-            <element signature="e#15259#15355#1" />
             <element signature="docComment;method#nextColor#0;class#NSGAII#0" />
             <element signature="method#nextColor#0;class#NSGAII#0" />
-            <element signature="e#15417#15448#1" />
-            <element signature="e#15475#15506#1" />
-            <element signature="e#15520#15551#1" />
+            <element signature="e#13492#13493#0" expanded="true" />
+            <element signature="e#13528#13529#0" expanded="true" />
           </folding>
         </state>
       </provider>
