@@ -2,9 +2,6 @@ package ewasko.mutation;
 
 public class MutationInversion extends Mutation {
 
-    public MutationInversion(float mutProb){
-        super(mutProb);
-    }
 
     /**
      * performs mutation with inversion PER INDIVIDUAL

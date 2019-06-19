@@ -3,10 +3,6 @@ package ewasko.crossingOver;
 public class CX extends CrossingOver {
 
 
-    public CX(float crossProb) {
-        super(crossProb);
-    }
-
     /**
      * crossover routes with Cycle Crossing
      * @param route1 route of first parent without last city (doubled with first one)

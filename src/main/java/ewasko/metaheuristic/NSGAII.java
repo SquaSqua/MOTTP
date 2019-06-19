@@ -1,6 +1,7 @@
 package ewasko.metaheuristic;
 
 import ewasko.Runner;
+import ewasko.TestGenerator;
 import ewasko.TestResults;
 import ewasko.comparator.CrowdingDistanceComp;
 import ewasko.comparator.GenerationComp;
@@ -78,10 +79,9 @@ public class NSGAII implements IMetaheuristics {
         new SwingWrapper<>(chart).displayChart();
         try {
             String imageName = chartName.replaceAll(" ", "_").replaceAll(":", "")
-                    + Runner.giveName(this);
+                    + TestGenerator.giveName(this);
             BitmapEncoder.saveBitmap(chart, imageName , BitmapEncoder.BitmapFormat.PNG);
         } catch (IOException e) {
-            System.out.println("Dotykam tylko zamiast czuć");
             e.printStackTrace();
         }
     }
@@ -240,7 +240,6 @@ public class NSGAII implements IMetaheuristics {
         chart.getStyler().setChartTitleVisible(true);
         chart.getStyler().setLegendPosition(Styler.LegendPosition.InsideNW);
         chart.getStyler().setChartPadding(20);
-//        chart.getStyler().setMarkerSize(16);
 
         //Series
         XYSeries previous = chart.addSeries("Fronty pareto-optymalne wcześniejszych generacji", wageDataAllPrevious, timeDataAllPrevious);

@@ -12,14 +12,6 @@ public abstract class Mutation {
 
 
     /**
-     * parent class of various kinds of mutation
-     * @param mutProb default probability of mutation for the whole test
-     */
-    Mutation(float mutProb) {
-        this.mutProb = mutProb;
-    }
-
-    /**
      * main parent method of mutation
      * @param individual to be mutated. Will be modified
      */
@@ -88,5 +80,9 @@ public abstract class Mutation {
 
     public float getMutProb() {
         return mutProb;
+    }
+
+    public void setMutProb(float mutProb) {
+        this.mutProb = mutProb;
     }
 }

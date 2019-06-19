@@ -5,10 +5,6 @@ import java.util.Random;
 public class OX extends CrossingOver {
 
 
-    public OX(float crossProb) {
-        super(crossProb);
-    }
-
     /**
      * crossover routes with Ordered Crossing
      * @param route1 route of first parent without last city (doubled with first one)

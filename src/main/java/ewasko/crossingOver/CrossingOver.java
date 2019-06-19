@@ -9,11 +9,7 @@ public abstract class CrossingOver {
     int indexOfSplit1;
     int indexOfSplit2;
 
-    /**
-     * parent class of various kinds of crossover
-     * @param crossProb default probability of crossing for the whole test
-     */
-    public CrossingOver(float crossProb) {
+    public void setCrossProb(float crossProb) {
         this.crossProb = crossProb;
     }
 

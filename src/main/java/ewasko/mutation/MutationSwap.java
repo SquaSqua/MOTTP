@@ -2,10 +2,6 @@ package ewasko.mutation;
 
 public class MutationSwap extends Mutation {
 
-    public MutationSwap(float mutProb) {
-        super(mutProb);
-    }
-
     /**
      * performs swap mutation PER INDIVIDUAL
      * @param mutProb probability of mutation

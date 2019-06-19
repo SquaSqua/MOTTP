@@ -2,10 +2,6 @@ package ewasko.mutation;
 
 public class MutationDisplacement extends Mutation{
 
-    public MutationDisplacement(float mutProb) {
-        super(mutProb);
-    }
-
     /**
      * performs mutation with displacement PER INDIVIDUAL
      * @param mutProb probability of mutation

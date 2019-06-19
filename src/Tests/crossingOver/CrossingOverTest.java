@@ -11,9 +11,9 @@ import static org.junit.Assert.*;
 
 public class CrossingOverTest {
 
-    private CrossingOver cx = new CX(1);
-    private CrossingOver pmx = new PMX(1);
-    private CrossingOver ox = new OX(1);
+    private CrossingOver cx = new CX();
+    private CrossingOver pmx = new PMX();
+    private CrossingOver ox = new OX();
     private short[] route1 = new short[] {0,1,2,3,4,5,6,7,8,9,10,11,12,13,0};
     private short[] route2 = new short[] {4,0,13,5,10,2,6,11,1,8,9,12,3,7,4};
     private Individual_NSGAII parent1 = new Individual_NSGAII(route1, 1);
@@ -30,6 +30,7 @@ public class CrossingOverTest {
 
     @Test
     public void crossOverCX() {
+        cx.setCrossProb(1f);
         assertArrayEquals(
                 new Individual_NSGAII[] {
                         new Individual_NSGAII(cxChild1, 1), new Individual_NSGAII(cxChild2, 1)
@@ -39,6 +40,7 @@ public class CrossingOverTest {
 
     @Test
     public void crossOverPMX() {
+        pmx.setCrossProb(1f);
         assertArrayEquals(
                 new Individual_NSGAII[] {
                         new Individual_NSGAII(pmxChild1, 1), new Individual_NSGAII(pmxChild2, 1)
@@ -48,6 +50,7 @@ public class CrossingOverTest {
 
     @Test
     public void crossOverOX() {
+        ox.setCrossProb(1f);
         assertArrayEquals(
                     new Individual_NSGAII[] {
                         new Individual_NSGAII(oxChild1, 1), new Individual_NSGAII(oxChild2, 1)

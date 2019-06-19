@@ -12,9 +12,6 @@ public class PMX extends CrossingOver {
     private short[] child2;
     private int indexOfSplit1, indexOfSplit2;
 
-    public PMX(float crossProb) {
-        super(crossProb);
-    }
 
     /**
      * crossover routes with Partially Mapped Crossing
