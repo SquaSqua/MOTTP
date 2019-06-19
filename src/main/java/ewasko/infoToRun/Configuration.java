@@ -3,6 +3,8 @@ package ewasko.infoToRun;
 import ewasko.crossingOver.CrossingOver;
 import ewasko.mutation.Mutation;
 //import lombok.AllArgsConstructor;
+import ewasko.simpleFactory.CrossingOverFactory;
+import ewasko.simpleFactory.MutationFactory;
 import lombok.Data;
 
 /**
@@ -30,10 +32,12 @@ public class Configuration {
         this.numOfGenerations = configuration.numOfGenerations;
         this.tournamentSize = configuration.tournamentSize;
         this.avoidClones = configuration.avoidClones;
-        this.crossingOver = configuration.crossingOver;
+        CrossingOverFactory crossingOverFactory = new CrossingOverFactory();
+        this.crossingOver = crossingOverFactory.createCrossingOver(configuration.getCrossingOver().getClass().getSimpleName());
         this.crossProb = configuration.crossProb;
         this.crossingOver.setCrossProb(crossProb);
-        this.mutation = configuration.mutation;
+        MutationFactory mutationFactory = new MutationFactory();
+        this.mutation = mutationFactory.createMutation(configuration.getMutation().getClass().getSimpleName());
         this.mutProb = configuration.mutProb;
         this.mutation.setMutProb(mutProb);
     }
@@ -47,4 +51,13 @@ public class Configuration {
     private Mutation mutation;
     private float mutProb;
 
+    public void setMutProb(float mutProb) {
+        this.mutProb = mutProb;
+        this.mutation.setMutProb(mutProb);
+    }
+
+    public void setCrossProb(float crossProb) {
+        this.crossProb = crossProb;
+        this.crossingOver.setCrossProb(crossProb);
+    }
 }

@@ -97,6 +97,7 @@ public class TestResults {
         return result;
     }
 
+
     static void getMatrixChart(String growingVariable) {
         List<XYChart> charts = new ArrayList<>();
 
@@ -127,7 +128,7 @@ public class TestResults {
     private static XYChart getMeasureChart(String[] titles, ArrayList<Double>[] data, Color color) {
 
         // Create Chart
-        XYChart chart = new XYChartBuilder().width(800).height(600).xAxisTitle(titles[1]).yAxisTitle(titles[2]).build();
+        XYChart chart = new XYChartBuilder().width(800).height(600).title(titles[0]).xAxisTitle(titles[1]).yAxisTitle(titles[2]).build();
 
         // Customize Chart
         chart.getStyler().setDefaultSeriesRenderStyle(XYSeries.XYSeriesRenderStyle.Scatter);
@@ -154,8 +155,9 @@ public class TestResults {
             standardDeviation += Math.pow(difference, 2);
         }
         standardDeviation /= measures.size();
+        standardDeviation = Math.sqrt(standardDeviation);
 
-        return new double[] {average, Math.sqrt(standardDeviation)};
+        return new double[] {average, standardDeviation};
     }
 
     private static double countArithmeticAverage(ArrayList<? extends Number> measures) {

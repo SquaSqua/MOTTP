@@ -230,8 +230,7 @@ public class NSGAII implements IMetaheuristics {
      */
     private XYChart getChart(String title) {
         // Create Chart
-        XYChart chart = new XYChartBuilder().width(1000).height(600).build();
-        chart.setTitle(title);
+        XYChart chart = new XYChartBuilder().width(1000).height(600).title(title).build();
         chart.setXAxisTitle("Wartość zebranych przedmiotów");
         chart.setYAxisTitle("Czas podróży");
 
