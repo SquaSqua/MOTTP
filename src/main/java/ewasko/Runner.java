@@ -16,7 +16,7 @@ public class Runner {
 
         TestGenerator testGenerator = new TestGenerator();
 
-        Configuration standardConfiguration = new Configuration(50, 100, 0.6f, false,
+        Configuration standardConfiguration = new Configuration(50, 300, 0.6f, false,
                 new PMX(), 0.3f,new MutationDisplacement(),0.2f);
 
 
@@ -24,7 +24,7 @@ public class Runner {
         Object[] changingCrossProb = new Object[] {0.01f, 0.03f, 0.1f, 0.3f, 0.7f, 1f};
 
 //        testGenerator.performTest(2, changingPopSize, TestGenerator.POP_SIZE, standardConfiguration);
-        testGenerator.performTest(2, changingCrossProb, TestGenerator.CROSS_PROB, standardConfiguration);
+        testGenerator.performTest(7, changingCrossProb, TestGenerator.CROSS_PROB, standardConfiguration);
     }
 
     /**

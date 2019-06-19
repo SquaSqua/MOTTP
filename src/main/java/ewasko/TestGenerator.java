@@ -20,7 +20,7 @@ public class TestGenerator {
     static final int CROSS_PROB = 6;
     static final int MUTATION = 7;
     static final int MUT_PROB = 8;
-    private static final int[] CHART_CREATABLE = new int[] {1,2,3,6,7};
+    private static final int[] CHART_CREATABLE = new int[] {1,2,3,6,8};
 
 
     void performTest(int numberOfCalls, Object[] changingParams, int paramChanged, Configuration configuration) {
