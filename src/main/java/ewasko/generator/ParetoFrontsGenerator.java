@@ -156,9 +156,9 @@ public class ParetoFrontsGenerator {
         ArrayList<Individual> paretoFront = paretoFronts.get(0);
         paretoFront.sort(new ObjectiveFrontComp());
         for (Individual ind : paretoFront) {
-            sumED += Math.sqrt((long)((ind.getFitnessTime() - ideal.x)
-                    * (ind.getFitnessTime() - ideal.x) + (ind.getFitnessWage() - ideal.y)
-                    * (ind.getFitnessWage() - ideal.y)));
+            double height = ind.getFitnessTime() - ideal.y;
+            int length = ind.getFitnessWage() - ideal.x;
+            sumED += Math.sqrt((long)(Math.pow(height, 2) + (long)Math.pow(length, 2)));
         }
 
         return (sumED / paretoFront.size());
@@ -184,9 +184,10 @@ public class ParetoFrontsGenerator {
         long hyperVolume = 0L;
         double lastY = nadir.y;
         for (Individual ind : paretoFront) {
-            hyperVolume += ((int) ((nadir.x - ind.getFitnessTime())
-                    * (lastY - ind.getFitnessWage())));
-            lastY = ind.getFitnessWage();
+            int length = Math.abs(nadir.x - ind.getFitnessWage());
+            double height = Math.abs(lastY - ind.getFitnessTime());
+            hyperVolume += length * height;
+            lastY = ind.getFitnessTime();
         }
         return hyperVolume;
     }

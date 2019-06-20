@@ -1,13 +1,11 @@
 package ewasko;
 
 
-import org.knowm.xchart.SwingWrapper;
-import org.knowm.xchart.XYChart;
-import org.knowm.xchart.XYChartBuilder;
-import org.knowm.xchart.XYSeries;
+import org.knowm.xchart.*;
 import org.knowm.xchart.style.markers.SeriesMarkers;
 
 import java.awt.*;
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -117,12 +115,14 @@ public class TestResults {
 
         clearTrends();
 
-//        try {
-//            String imageName = "trend_" + growingVariable;
-//            BitmapEncoder.saveBitmap(charts, 3, 1, imageName, BitmapEncoder.BitmapFormat.PNG);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        for(int i = 0; i < 3; i++) {
+            try {
+                String imageName = "trend_" + growingVariable + i;
+                BitmapEncoder.saveBitmap(charts.get(i), imageName , BitmapEncoder.BitmapFormat.PNG);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private static XYChart getMeasureChart(String[] titles, ArrayList<Double>[] data, Color color) {
@@ -193,10 +193,10 @@ public class TestResults {
     static void setXValues(Object[] values) {
         for(Object i : values) {
             if(i instanceof Integer) {
-                xValues.add((Integer)i);
+                xValues.add(i);
             }
             if(i instanceof Float) {
-                xValues.add((Float)i);
+                xValues.add(i);
             }
         }
     }

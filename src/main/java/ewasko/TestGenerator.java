@@ -27,19 +27,11 @@ public class TestGenerator {
 
         ArrayList<Configuration> allConfigs = setAllConfigurations(changingParams, paramChanged, configuration);
 
-        NSGAII test1 = new NSGAII(allConfigs.get(0));
-        NSGAII test2 = new NSGAII(allConfigs.get(1));
-        compareTwoConfigurations(test1, test2, numberOfCalls);
-
-        NSGAII test3 = new NSGAII(allConfigs.get(2));
-        NSGAII test4 = new NSGAII(allConfigs.get(3));
-        System.out.println();
-        compareTwoConfigurations(test3, test4, numberOfCalls);
-
-        NSGAII test5 = new NSGAII(allConfigs.get(4));
-        NSGAII test6 = new NSGAII(allConfigs.get(5));
-        System.out.println();
-        compareTwoConfigurations(test5, test6, numberOfCalls);
+        for(int i = 0; i < changingParams.length - 1; i++) {
+            NSGAII test1 = new NSGAII(allConfigs.get(i));
+            NSGAII test2 = new NSGAII(allConfigs.get(++i));
+            compareTwoConfigurations(test1, test2, numberOfCalls);
+        }
 
         if (IntStream.of(CHART_CREATABLE).anyMatch(x -> x == paramChanged)) {
             try {
@@ -55,11 +47,14 @@ public class TestGenerator {
 
     private static void compareTwoConfigurations(NSGAII test1, NSGAII test2, int numberOfCalls) {
         for (int i = 0; i < numberOfCalls - 1; i++) {
+            System.out.println("Zacząłem " + i);
             searchForPareto(test1, 1);
             searchForPareto(test2, 2);
+            System.out.println("Skończyłem " + i);
         }
         String[] configComparison = compareConfig(test1.getConfiguration(), test2.getConfiguration());
 
+        System.out.println("Ostatnie");
         searchForPareto(test1, 1, configComparison[1]);
         searchForPareto(test2, 2, configComparison[2]);
 

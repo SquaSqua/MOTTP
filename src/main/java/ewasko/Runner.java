@@ -16,15 +16,19 @@ public class Runner {
 
         TestGenerator testGenerator = new TestGenerator();
 
-        Configuration standardConfiguration = new Configuration(50, 300, 0.6f, false,
-                new PMX(), 0.3f,new MutationDisplacement(),0.2f);
+        Configuration standardConfiguration = new Configuration(150, 300, 0.6f, false,
+                new PMX(), 0.4f,new MutationDisplacement(),0.2f);
 
 
         Object[] changingPopSize = new Object[] {10, 50, 70, 100, 300, 1000};
-        Object[] changingCrossProb = new Object[] {0.01f, 0.03f, 0.1f, 0.3f, 0.7f, 1f};
+        Object[] changingNumberOfGenerations = new Object[] {10, 50, 70, 100, 300, 1000};
+        Object[] changingTournamentSize = new Object[] {0.0067f, 0.05f, 0.1f, 0.3f, 0.7f, 1f};
+//        Object[] changingCrossProb = new Object[] {0.01f, 0.03f, 0.1f, 0.3f, 0.7f, 1f};
 
-//        testGenerator.performTest(2, changingPopSize, TestGenerator.POP_SIZE, standardConfiguration);
-        testGenerator.performTest(7, changingCrossProb, TestGenerator.CROSS_PROB, standardConfiguration);
+        testGenerator.performTest(10, changingPopSize, TestGenerator.POP_SIZE, standardConfiguration);
+        testGenerator.performTest(10, changingNumberOfGenerations, TestGenerator.NUM_OF_GENERATIONS, standardConfiguration);
+        testGenerator.performTest(10, changingTournamentSize, TestGenerator.TOURNAMENT_SIZE, standardConfiguration);
+//        testGenerator.performTest(, changingCrossProb, TestGenerator.CROSS_PROB, standardConfiguration);
     }
 
     /**

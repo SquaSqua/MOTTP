@@ -63,7 +63,7 @@ public class NSGAII implements IMetaheuristics {
             drawChart(chartName[0]);
         }
 
-        return countMeasures(ParetoFrontsGenerator.generateFrontsWithAssignments(population));
+        return countMeasures(ParetoFrontsGenerator.generateFrontsWithAssignments(archive));
     }
 
     private Object[] countMeasures(ArrayList<ArrayList<Individual>> paretoFronts) {
