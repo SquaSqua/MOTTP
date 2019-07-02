@@ -17,7 +17,7 @@ public class OX extends CrossingOver {
         fillWithInitialValues(child1);
         fillWithInitialValues(child2);
         Random random = new Random();
-        if(seed != null) {
+        if(seed.length != 0) {
             random.setSeed(seed[0]);
         }
         indexOfSplit1 = random.nextInt(route1.length);

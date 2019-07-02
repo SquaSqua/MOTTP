@@ -16,6 +16,16 @@ public class PackingPlanGenerator {
     private static Integer[][] groupedItems = createGroupedItemsArray();
     private static double coefficient = (maxSpeed - DataFromFile.getMinSpeed()) / capacity;
 
+    public static void setAllData() {
+        maxSpeed = DataFromFile.getMaxSpeed();
+        capacity = DataFromFile.getCapacity();
+        dimension = DataFromFile.getDimension();
+        distances = DataFromFile.getDistances();
+        items = DataFromFile.getItems();
+        groupedItems = createGroupedItemsArray();
+        coefficient = (maxSpeed - DataFromFile.getMinSpeed()) / capacity;
+    }
+
     /**
      * finds and sets packing plan for one individual
       * @param individual will be modified

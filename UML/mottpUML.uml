@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1080.875" y="445.0">ewasko.mutation.MutationSwap</node>
+    <node x="1903.875" y="445.0">ewasko.crossingOver.PMX</node>
+    <node x="803.691708437761" y="562.0">ewasko.metaheuristic.NSGAII</node>
+    <node x="805.691708437761" y="659.0">ewasko.TestGenerator</node>
+    <node x="1337.375" y="338.0">ewasko.mutation.Mutation</node>
+    <node x="244.34181286549688" y="445.0">ewasko.TestResults</node>
+    <node x="338.5" y="0.0">ewasko.infoToRun.DataFromFile</node>
+    <node x="1658.875" y="445.0">ewasko.infoToRun.Configuration</node>
+    <node x="1989.875" y="445.0">ewasko.crossingOver.OX</node>
+    <node x="440.74999999999994" y="338.0">ewasko.comparator.ObjectiveFrontComp</node>
+    <node x="1811.582581453634" y="338.0">ewasko.crossingOver.CrossingOver</node>
+    <node x="0.0" y="77.0">ewasko.infoToRun.DataProvider</node>
+    <node x="1338.8881370091897" y="756.0">ewasko.Runner</node>
+    <node x="62.34181286549688" y="445.0">ewasko.metaheuristic.IMetaheuristics</node>
+    <node x="953.75" y="154.0">ewasko.individual.Individual_NSGAII</node>
+    <node x="647.75" y="338.0">ewasko.comparator.GenerationComp</node>
+    <node x="1238.875" y="445.0">ewasko.mutation.MutationDisplacement</node>
+    <node x="1825.875" y="445.0">ewasko.crossingOver.CX</node>
+    <node x="751.25" y="251.0">ewasko.individual.Individual</node>
+    <node x="674.6499999999999" y="154.0">ewasko.generator.PackingPlanGenerator</node>
+    <node x="822.75" y="338.0">ewasko.comparator.CrowdingDistanceComp</node>
+    <node x="1460.875" y="445.0">ewasko.mutation.MutationInversion</node>
+    <node x="428.74999999999994" y="445.0">ewasko.generator.ParetoFrontsGenerator</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ewasko.crossingOver.OX" target="ewasko.crossingOver.CrossingOver">
+      <point x="14.5" y="-13.5" />
+      <point x="2033.375" y="395.0" />
+      <point x="1941.9159147869673" y="395.0" />
+      <point x="61.33333333333337" y="13.5" />
+    </edge>
+    <edge source="ewasko.generator.ParetoFrontsGenerator" target="ewasko.comparator.ObjectiveFrontComp">
+      <point x="0.0" y="-13.5" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="ewasko.generator.ParetoFrontsGenerator" target="ewasko.infoToRun.DataFromFile">
+      <point x="-70.0" y="-13.5" />
+      <point x="463.74999999999994" y="425.0" />
+      <point x="395.8418128654969" y="425.0" />
+      <point x="395.8418128654969" y="52.0" />
+      <point x="424.75" y="52.0" />
+      <point x="17.25" y="13.5" />
+    </edge>
+    <edge source="ewasko.infoToRun.Configuration" target="ewasko.mutation.Mutation">
+      <point x="-18.25" y="-13.5" />
+      <point x="1713.625" y="395.0" />
+      <point x="1437.486111111111" y="395.0" />
+      <point x="47.111111111111086" y="13.5" />
+    </edge>
+    <edge source="ewasko.TestGenerator" target="ewasko.crossingOver.CrossingOver">
+      <point x="64.88888888888891" y="-13.5" />
+      <point x="943.5805973266499" y="639.0" />
+      <point x="1815.375" y="639.0" />
+      <point x="1815.375" y="405.0" />
+      <point x="1849.9159147869673" y="405.0" />
+      <point x="-30.66666666666663" y="13.5" />
+    </edge>
+    <edge source="ewasko.Runner" target="ewasko.TestGenerator">
+      <point x="-16.875" y="-13.5" />
+      <point x="1367.0131370091897" y="716.0" />
+      <point x="842.191708437761" y="716.0" />
+      <point x="-36.5" y="13.5" />
+    </edge>
+    <edge source="ewasko.metaheuristic.NSGAII" target="ewasko.comparator.CrowdingDistanceComp">
+      <point x="3.75" y="-13.5" />
+      <point x="852.441708437761" y="492.0" />
+      <point x="923.75" y="492.0" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="ewasko.crossingOver.CX" target="ewasko.crossingOver.CrossingOver">
+      <point x="14.5" y="-13.5" />
+      <point x="1869.375" y="425.0" />
+      <point x="1880.582581453634" y="425.0" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="ewasko.metaheuristic.NSGAII" target="ewasko.comparator.GenerationComp">
+      <point x="-11.25" y="-13.5" />
+      <point x="837.441708437761" y="502.0" />
+      <point x="724.75" y="502.0" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="ewasko.metaheuristic.NSGAII" target="ewasko.individual.Individual">
+      <point x="11.25" y="-13.5" />
+      <point x="859.941708437761" y="502.0" />
+      <point x="1035.25" y="502.0" />
+      <point x="1035.25" y="308.0" />
+      <point x="847.1071428571429" y="308.0" />
+      <point x="34.85714285714289" y="13.5" />
+    </edge>
+    <edge source="ewasko.generator.ParetoFrontsGenerator" target="ewasko.individual.Individual">
+      <point x="70.0" y="-13.5" />
+      <point x="603.75" y="425.0" />
+      <point x="637.25" y="425.0" />
+      <point x="637.25" y="308.0" />
+      <point x="777.3928571428571" y="308.0" />
+      <point x="-34.85714285714289" y="13.5" />
+    </edge>
+    <edge source="ewasko.comparator.GenerationComp" target="ewasko.individual.Individual">
+      <point x="0.0" y="-13.5" />
+      <point x="724.75" y="318.0" />
+      <point x="794.8214285714287" y="318.0" />
+      <point x="-17.42857142857133" y="13.5" />
+    </edge>
+    <edge source="ewasko.infoToRun.Configuration" target="ewasko.crossingOver.CrossingOver">
+      <point x="54.75" y="-13.5" />
+      <point x="1786.625" y="395.0" />
+      <point x="1834.582581453634" y="395.0" />
+      <point x="-46.0" y="13.5" />
+    </edge>
+    <edge source="ewasko.infoToRun.DataProvider" target="ewasko.infoToRun.DataFromFile">
+      <point x="0.0" y="-13.5" />
+      <point x="69.0" y="52.0" />
+      <point x="355.75" y="52.0" />
+      <point x="-51.75" y="13.5" />
+    </edge>
+    <edge source="ewasko.metaheuristic.NSGAII" target="ewasko.generator.ParetoFrontsGenerator">
+      <point x="-18.75" y="-13.5" />
+      <point x="829.941708437761" y="512.0" />
+      <point x="533.75" y="512.0" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="ewasko.comparator.CrowdingDistanceComp" target="ewasko.individual.Individual">
+      <point x="0.0" y="-13.5" />
+      <point x="923.75" y="318.0" />
+      <point x="829.6785714285713" y="318.0" />
+      <point x="17.42857142857133" y="13.5" />
+    </edge>
+    <edge source="ewasko.individual.Individual_NSGAII" target="ewasko.individual.Individual">
+      <point x="-25.428571428571445" y="13.5" />
+      <point x="1017.3214285714284" y="231.0" />
+      <point x="861.05" y="231.0" />
+      <point x="48.799999999999955" y="-13.5" />
+    </edge>
+    <edge source="ewasko.mutation.MutationInversion" target="ewasko.mutation.Mutation">
+      <point x="-44.5" y="-13.5" />
+      <point x="1505.375" y="425.0" />
+      <point x="1402.1527777777778" y="425.0" />
+      <point x="11.777777777777828" y="13.5" />
+    </edge>
+    <edge source="ewasko.metaheuristic.NSGAII" target="ewasko.metaheuristic.IMetaheuristics">
+      <point x="-41.25" y="-13.5" />
+      <point x="807.441708437761" y="542.0" />
+      <point x="183.84181286549688" y="542.0" />
+      <point x="40.5" y="13.5" />
+    </edge>
+    <edge source="ewasko.TestGenerator" target="ewasko.metaheuristic.NSGAII">
+      <point x="-32.44444444444434" y="-13.5" />
+      <point x="846.2472639933167" y="619.0" />
+      <point x="818.691708437761" y="619.0" />
+      <point x="-30.0" y="13.5" />
+    </edge>
+    <edge source="ewasko.TestGenerator" target="ewasko.infoToRun.Configuration">
+      <point x="48.66666666666674" y="-13.5" />
+      <point x="927.3583751044278" y="629.0" />
+      <point x="1737.375" y="629.0" />
+      <point x="1737.375" y="542.0" />
+      <point x="1744.0416666666665" y="542.0" />
+      <point x="12.166666666666629" y="13.5" />
+    </edge>
+    <edge source="ewasko.metaheuristic.NSGAII" target="ewasko.TestResults">
+      <point x="-33.75" y="-13.5" />
+      <point x="814.941708437761" y="532.0" />
+      <point x="341.8418128654969" y="532.0" />
+      <point x="32.5" y="13.5" />
+    </edge>
+    <edge source="ewasko.Runner" target="ewasko.infoToRun.DataProvider">
+      <point x="-39.375" y="-13.5" />
+      <point x="1344.5131370091897" y="736.0" />
+      <point x="40.84181286549688" y="736.0" />
+      <point x="40.84181286549688" y="129.0" />
+      <point x="23.0" y="129.0" />
+      <point x="-46.0" y="13.5" />
+    </edge>
+    <edge source="ewasko.TestGenerator" target="ewasko.metaheuristic.IMetaheuristics">
+      <point x="-64.88888888888891" y="-13.5" />
+      <point x="813.8028195488721" y="639.0" />
+      <point x="102.84181286549688" y="639.0" />
+      <point x="-40.5" y="13.5" />
+    </edge>
+    <edge source="ewasko.generator.PackingPlanGenerator" target="ewasko.individual.Individual">
+      <point x="50.5" y="13.5" />
+      <point x="826.1499999999999" y="201.0" />
+      <point x="787.8499999999999" y="201.0" />
+      <point x="-24.40000000000009" y="-13.5" />
+    </edge>
+    <edge source="ewasko.Runner" target="ewasko.crossingOver.PMX">
+      <point x="39.375" y="-13.5" />
+      <point x="1423.2631370091897" y="736.0" />
+      <point x="1936.875" y="736.0" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="ewasko.crossingOver.PMX" target="ewasko.crossingOver.CrossingOver">
+      <point x="-16.5" y="-13.5" />
+      <point x="1920.375" y="425.0" />
+      <point x="1895.9159147869673" y="425.0" />
+      <point x="15.333333333333343" y="13.5" />
+    </edge>
+    <edge source="ewasko.comparator.ObjectiveFrontComp" target="ewasko.individual.Individual">
+      <point x="0.0" y="-13.5" />
+      <point x="533.75" y="298.0" />
+      <point x="759.9642857142858" y="298.0" />
+      <point x="-52.28571428571422" y="13.5" />
+    </edge>
+    <edge source="ewasko.individual.Individual" target="ewasko.generator.PackingPlanGenerator">
+      <point x="-48.799999999999955" y="-13.5" />
+      <point x="763.45" y="231.0" />
+      <point x="725.1499999999999" y="231.0" />
+      <point x="-50.5" y="13.5" />
+    </edge>
+    <edge source="ewasko.metaheuristic.NSGAII" target="ewasko.infoToRun.DataFromFile">
+      <point x="-26.25" y="-13.5" />
+      <point x="822.441708437761" y="522.0" />
+      <point x="384.8418128654969" y="522.0" />
+      <point x="384.8418128654969" y="52.0" />
+      <point x="390.25" y="52.0" />
+      <point x="-17.25" y="13.5" />
+    </edge>
+    <edge source="ewasko.crossingOver.CrossingOver" target="ewasko.individual.Individual_NSGAII">
+      <point x="34.5" y="-13.5" />
+      <point x="1915.082581453634" y="318.0" />
+      <point x="1874.875" y="318.0" />
+      <point x="1874.875" y="221.0" />
+      <point x="1119.0357142857142" y="221.0" />
+      <point x="76.28571428571422" y="13.5" />
+    </edge>
+    <edge source="ewasko.mutation.MutationSwap" target="ewasko.mutation.Mutation">
+      <point x="34.5" y="-13.5" />
+      <point x="1184.375" y="415.0" />
+      <point x="1366.8194444444443" y="415.0" />
+      <point x="-23.555555555555543" y="13.5" />
+    </edge>
+    <edge source="ewasko.individual.Individual" target="ewasko.individual.Individual_NSGAII">
+      <point x="0.0" y="-13.5" />
+      <point x="812.25" y="211.0" />
+      <point x="966.4642857142858" y="211.0" />
+      <point x="-76.28571428571422" y="13.5" />
+    </edge>
+    <edge source="ewasko.mutation.MutationDisplacement" target="ewasko.mutation.Mutation">
+      <point x="-50.5" y="-13.5" />
+      <point x="1289.375" y="425.0" />
+      <point x="1378.5972222222222" y="425.0" />
+      <point x="-11.777777777777828" y="13.5" />
+    </edge>
+    <edge source="ewasko.metaheuristic.NSGAII" target="ewasko.infoToRun.Configuration">
+      <point x="33.75" y="-13.5" />
+      <point x="882.441708437761" y="532.0" />
+      <point x="1671.0416666666667" y="532.0" />
+      <point x="-60.833333333333314" y="13.5" />
+    </edge>
+    <edge source="ewasko.Runner" target="ewasko.infoToRun.Configuration">
+      <point x="28.125" y="-13.5" />
+      <point x="1412.0131370091897" y="726.0" />
+      <point x="1887.125" y="726.0" />
+      <point x="1887.125" y="502.0" />
+      <point x="1792.7083333333333" y="502.0" />
+      <point x="60.83333333333326" y="13.5" />
+    </edge>
+    <edge source="ewasko.Runner" target="ewasko.mutation.MutationDisplacement">
+      <point x="5.625" y="-13.5" />
+      <point x="1389.5131370091897" y="706.0" />
+      <point x="1865.125" y="706.0" />
+      <point x="1865.125" y="522.0" />
+      <point x="1339.875" y="522.0" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="ewasko.metaheuristic.NSGAII" target="ewasko.TestGenerator">
+      <point x="30.0" y="13.5" />
+      <point x="0.0" y="-13.5" />
+    </edge>
+    <edge source="ewasko.metaheuristic.NSGAII" target="ewasko.individual.Individual_NSGAII">
+      <point x="26.25" y="-13.5" />
+      <point x="874.941708437761" y="522.0" />
+      <point x="1050.25" y="522.0" />
+      <point x="1050.25" y="231.0" />
+      <point x="1068.1785714285716" y="231.0" />
+      <point x="25.42857142857156" y="13.5" />
+    </edge>
+    <edge source="ewasko.TestGenerator" target="ewasko.mutation.Mutation">
+      <point x="16.22222222222217" y="-13.5" />
+      <point x="894.9139306599832" y="609.0" />
+      <point x="1070.375" y="609.0" />
+      <point x="1070.375" y="395.0" />
+      <point x="1343.263888888889" y="395.0" />
+      <point x="-47.111111111111086" y="13.5" />
+    </edge>
+    <edge source="ewasko.generator.PackingPlanGenerator" target="ewasko.infoToRun.DataFromFile">
+      <point x="50.5" y="-13.5" />
+      <point x="826.1499999999999" y="52.0" />
+      <point x="459.25" y="52.0" />
+      <point x="51.75" y="13.5" />
+    </edge>
+    <edge source="ewasko.TestGenerator" target="ewasko.TestResults">
+      <point x="-48.66666666666674" y="-13.5" />
+      <point x="830.0250417710943" y="629.0" />
+      <point x="276.8418128654969" y="629.0" />
+      <point x="-32.5" y="13.5" />
+    </edge>
+    <edge source="ewasko.generator.PackingPlanGenerator" target="ewasko.infoToRun.DataProvider">
+      <point x="-50.5" y="-13.5" />
+      <point x="725.1499999999999" y="129.0" />
+      <point x="115.0" y="129.0" />
+      <point x="46.0" y="13.5" />
+    </edge>
+    <edge source="ewasko.mutation.Mutation" target="ewasko.individual.Individual">
+      <point x="0.0" y="-13.5" />
+      <point x="1390.375" y="298.0" />
+      <point x="864.5357142857142" y="298.0" />
+      <point x="52.28571428571422" y="13.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="1044.2857142857142" y="447.85714285714283" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

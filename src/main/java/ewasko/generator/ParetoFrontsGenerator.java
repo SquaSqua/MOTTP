@@ -48,7 +48,7 @@ public class ParetoFrontsGenerator {
                             currentFront.add(individual);
                             frontIndex = paretoFronts.size();
                             break;
-                        } else if (compared == 1) {//1 to idivFromPop wygrał z comparedInd
+                        } else if (compared == 1) {//1 to individual wygrał z comparedInd
                             //zamiana miejsc
                             ArrayList<Individual> betterFront = new ArrayList<>();
                             betterFront.add(individual);

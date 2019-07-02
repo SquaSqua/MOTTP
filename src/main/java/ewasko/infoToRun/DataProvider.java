@@ -1,7 +1,8 @@
 package ewasko.infoToRun;
 
+import ewasko.generator.PackingPlanGenerator;
+
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
@@ -26,14 +27,14 @@ public class DataProvider {
      * saves data from file and counts: Ideal, Nadir Point, creates distances array
      * @param definitionFile path to file containing data defining problem
      */
-    public void readFile(String definitionFile) {
+    public void readFile(String definitionFile) throws Exception{
         int dimension;
         int numOfItems;
         double[][] cities;
         int[][] items;
         double[][] distances;
         BufferedReader reader;
-        try {
+
             reader = new BufferedReader(new FileReader(definitionFile));
             reader.readLine();//PROBLEM NAME
             reader.readLine();//KNAPSACK DATA TYPE
@@ -66,11 +67,8 @@ public class DataProvider {
             DataFromFile.setItems(items);
             DataFromFile.setIdeal(countPoint(true, distances, dimension, items));
             DataFromFile.setNadir(countPoint(false, distances, dimension, items));
-        } catch (FileNotFoundException fnfe) {
-            System.out.println("A file doesn't exist or is in use now!");
-        } catch (Exception e) {
-            System.out.println("An error has occurred while reading data: " + e);
-        }
+
+        PackingPlanGenerator.setAllData();
     }
 
     private double[][] createDistancesArray(int dimension, double[][] cities) {

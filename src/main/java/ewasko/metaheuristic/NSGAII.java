@@ -1,6 +1,5 @@
 package ewasko.metaheuristic;
 
-import ewasko.Runner;
 import ewasko.TestGenerator;
 import ewasko.TestResults;
 import ewasko.comparator.CrowdingDistanceComp;
@@ -28,8 +27,7 @@ public class NSGAII implements IMetaheuristics {
 
     private static final int ATTEMPTS_TO_AVOID_CLONES = 3;
 
-    private static int howManyClones = 0;
-    private static int howManyClonesHopeless = 0;
+    private int howManyClones = 0;
 
     private Configuration configuration;
 
@@ -57,11 +55,15 @@ public class NSGAII implements IMetaheuristics {
             population.addAll(generateOffspring(generation));
             paretoFronts = ParetoFrontsGenerator.generateFrontsWithAssignments(population);
             population = chooseNextGeneration(paretoFronts);
-            addParetoToChartSeries(population);
+            addParetoToChartSeries(archive);
         }
         if(chartName.length != 0) {
             drawChart(chartName[0]);
         }
+        if (configuration.isAvoidClones()) {
+            System.out.println("Liczba znalezionych klonów:" + howManyClones);
+        }
+
 
         return countMeasures(ParetoFrontsGenerator.generateFrontsWithAssignments(archive));
     }
@@ -138,7 +140,6 @@ public class NSGAII implements IMetaheuristics {
                 }
             }
             if(population.contains(children[i])) {
-                howManyClonesHopeless++;
                 children[i] = wardOffClones(generation)[i];
             }
         }

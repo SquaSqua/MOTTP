@@ -1,6 +1,5 @@
 package ewasko.simpleFactory;
 
-import ewasko.generator.ParetoFrontsGenerator;
 import ewasko.mutation.Mutation;
 import ewasko.mutation.MutationDisplacement;
 import ewasko.mutation.MutationInversion;
@@ -10,11 +9,11 @@ public class MutationFactory {
 
     public Mutation createMutation(String type) {
         Mutation mutation;
-        if (type.equals("MutationDisplacement")) {
+        if (type.equals("MutationDisplacement") || type.equals("1")) {
             mutation = new MutationDisplacement();
 
         }
-        else if(type.equals("MutationInversion")){
+        else if(type.equals("MutationInversion") || type.equals("2")){
             mutation = new MutationInversion();
         }
         else {

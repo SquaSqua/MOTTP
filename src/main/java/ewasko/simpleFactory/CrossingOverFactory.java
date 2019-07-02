@@ -9,11 +9,11 @@ public class CrossingOverFactory {
 
     public CrossingOver createCrossingOver(String type) {
         CrossingOver crossingOver;
-        if (type.equals("CX")) {
+        if (type.equals("CX") || type.equals("1")) {
             crossingOver = new CX();
 
         }
-        else if(type.equals("PMX")){
+        else if(type.equals("PMX") || type.equals("2")){
             crossingOver = new PMX();
         }
         else {

@@ -12,14 +12,14 @@ import java.util.ArrayList;
 import java.util.stream.IntStream;
 
 public class TestGenerator {
-    static final int POP_SIZE = 1;
-    static final int NUM_OF_GENERATIONS = 2;
-    static final int TOURNAMENT_SIZE = 3;
-    static final int AVOID_CLONES = 4;
-    static final int CROSSING_OVER = 5;
-    static final int CROSS_PROB = 6;
-    static final int MUTATION = 7;
-    static final int MUT_PROB = 8;
+    private static final int POP_SIZE = 1;
+    private static final int NUM_OF_GENERATIONS = 2;
+    private static final int TOURNAMENT_SIZE = 3;
+    private static final int AVOID_CLONES = 4;
+    private static final int CROSSING_OVER = 5;
+    private static final int CROSS_PROB = 6;
+    private static final int MUTATION = 7;
+    private static final int MUT_PROB = 8;
     private static final int[] CHART_CREATABLE = new int[] {1,2,3,6,8};
 
 
@@ -39,13 +39,13 @@ public class TestGenerator {
                 TestResults.getMatrixChart(getChartName(paramChanged));
             }
             catch (Exception e) {
-                System.out.println(e);
+                System.out.println(e.toString());
             }
         }
 
     }
 
-    private static void compareTwoConfigurations(NSGAII test1, NSGAII test2, int numberOfCalls) {
+    static void compareTwoConfigurations(NSGAII test1, NSGAII test2, int numberOfCalls) {
         for (int i = 0; i < numberOfCalls - 1; i++) {
             System.out.println("Zacząłem " + i);
             searchForPareto(test1, 1);
@@ -95,14 +95,14 @@ public class TestGenerator {
         StringBuilder result = new StringBuilder();
         StringBuilder difference = new StringBuilder();
 
-        String testName1 = "";
-        String testName2 = "";
+        StringBuilder testName1 = new StringBuilder();
+        StringBuilder testName2 = new StringBuilder();
         if (config1.getPopSize() == config2.getPopSize()) {
             result.append("Rozmiar populacji: ").append(config1.getPopSize()).append(", ");
         } else {
             difference.append("\tRozmiar populacji: \n\t").append(config1.getPopSize()).append("\t").append(config2.getPopSize());
-            testName1 = "Rozmiar populacji: " + config1.getPopSize();
-            testName2 = "Rozmiar populacji: " + config2.getPopSize();
+            testName1.append("Rozmiar populacji: ").append(config1.getPopSize()).append(" ");
+            testName2.append("Rozmiar populacji: ").append(config2.getPopSize()).append(" ");
         }
 
         if (config1.getNumOfGenerations() == config2.getNumOfGenerations()) {
@@ -110,8 +110,8 @@ public class TestGenerator {
         } else {
             difference.append("\tLiczba generacji: \n\t").append(config1.getNumOfGenerations())
                     .append("\t").append(config2.getNumOfGenerations());
-            testName1 = "Liczba generacji: " + config1.getNumOfGenerations();
-            testName2 = "Liczba generacji: " + config2.getNumOfGenerations();
+            testName1.append("Liczba generacji: ").append(config1.getNumOfGenerations()).append(" ");
+            testName2.append("Liczba generacji: ").append(config2.getNumOfGenerations()).append(" ");
         }
 
         if (config1.getTournamentSize() == config2.getTournamentSize()) {
@@ -119,8 +119,8 @@ public class TestGenerator {
         } else {
             difference.append("\tRozmiar turnieju: \n\t").append(config1.getTournamentSize())
                     .append("\t").append(config2.getTournamentSize());
-            testName1 = "Rozmiar turnieju: " + config1.getTournamentSize();
-            testName2 = "Rozmiar turnieju: " + config2.getTournamentSize();
+            testName1.append("Rozmiar turnieju: ").append(config1.getTournamentSize()).append(" ");
+            testName2.append("Rozmiar turnieju: ").append(config2.getTournamentSize()).append(" ");
         }
 
         if (config1.getCrossingOver().getClass().getSimpleName().equals(config2.getCrossingOver().getClass().getSimpleName())) {
@@ -128,8 +128,8 @@ public class TestGenerator {
         } else {
             difference.append("\tKrzyżowanie \n\t").append(config1.getCrossingOver().getClass().getSimpleName())
                     .append("\t").append(config2.getCrossingOver().getClass().getSimpleName());
-            testName1 = "Krzyżowanie " + config1.getCrossingOver().getClass().getSimpleName();
-            testName2 = "Krzyżowanie " + config2.getCrossingOver().getClass().getSimpleName();
+            testName1.append("Krzyżowanie ").append(config1.getCrossingOver().getClass().getSimpleName()).append(" ");
+            testName2.append("Krzyżowanie ").append(config2.getCrossingOver().getClass().getSimpleName()).append(" ");
         }
 
         if (config1.getCrossingOver().getCrossProb() == config2.getCrossingOver().getCrossProb()) {
@@ -137,8 +137,8 @@ public class TestGenerator {
         } else {
             difference.append("\tPx \n\t").append(config1.getCrossingOver().getCrossProb())
                     .append("\t").append(config2.getCrossingOver().getCrossProb());
-            testName1 = "Px " + config1.getCrossingOver().getCrossProb();
-            testName2 = "Px " + config2.getCrossingOver().getCrossProb();
+            testName1.append("Px ").append(config1.getCrossingOver().getCrossProb()).append(" ");
+            testName2.append("Px ").append(config2.getCrossingOver().getCrossProb()).append(" ");
         }
 
         if (config1.getMutation().getClass().getSimpleName().equals(config2.getMutation().getClass().getSimpleName())) {
@@ -146,8 +146,8 @@ public class TestGenerator {
         } else {
             difference.append("\tMutacja \n\t").append(config1.getMutation().getClass().getSimpleName())
                     .append("\t").append(config2.getMutation().getClass().getSimpleName());
-            testName1 = "Mutacja " + config1.getMutation().getClass().getSimpleName();
-            testName2 = "Mutacja " + config2.getMutation().getClass().getSimpleName();
+            testName1.append("Mutacja ").append(config1.getMutation().getClass().getSimpleName()).append(" ");
+            testName2.append("Mutacja ").append(config2.getMutation().getClass().getSimpleName()).append(" ");
         }
 
         if (config1.getMutation().getMutProb() == config2.getMutation().getMutProb()) {
@@ -155,8 +155,8 @@ public class TestGenerator {
         } else {
             difference.append("\tPm \n\t").append(config1.getMutation().getMutProb())
                     .append("\t").append(config2.getMutation().getMutProb());
-            testName1 = "Pm " + config1.getMutation().getMutProb();
-            testName2 = "Pm " + config2.getMutation().getMutProb();
+            testName1.append("Pm ").append(config1.getMutation().getMutProb()).append(" ");
+            testName2.append("Pm ").append(config2.getMutation().getMutProb()).append(" ");
         }
 
         if (config1.isAvoidClones() == config2.isAvoidClones()) {
@@ -164,11 +164,11 @@ public class TestGenerator {
         } else {
             difference.append("\tUnikanie klonów \n\t").append(config1.isAvoidClones())
                     .append("\t").append(config2.isAvoidClones());
-            testName1 = config1.isAvoidClones() ? "Z unikaniem klonów" : "Z dopuszczaniem klonów";
-            testName2 = config1.isAvoidClones() ? "Z unikaniem klonów" : "Z dopuszczaniem klonów";
+            testName1.append(config1.isAvoidClones() ? "z unikaniem klonów" : "z dopuszczaniem klonów ");
+            testName2.append(config2.isAvoidClones() ? "z unikaniem klonów" : "z dopuszczaniem klonów ");
         }
         result.append("\n").append(difference);
-        return new String[]{result.toString(), testName1, testName2};
+        return new String[]{result.toString(), testName1.toString(), testName2.toString()};
     }
 
     private ArrayList<Configuration> setAllConfigurations(Object[] changingParams, int paramChanged, Configuration configuration) {
